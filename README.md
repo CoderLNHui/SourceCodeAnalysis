@@ -8,7 +8,7 @@
 >[GitHub工程【官方译文源码注解】](https://github.com/CustomPBWaters/OfficialTranslation-SourceAnnotation )
 
 
-![在技术嘉年华的「夜聊」中，谈到开源。当时我的表达不够清晰具体，重新梳理如下。](http://upload-images.jianshu.io/upload_images/2230763-62c5636949a53c24.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![在技术嘉年华的「夜聊」中，谈到开源。当时我的表达不够清晰具体，重新梳理如下。](http://upload-images.jianshu.io/upload_images/2230763-3471e189f31650c4.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## Write in the first【写在最前】
 
