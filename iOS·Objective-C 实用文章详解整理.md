@@ -233,8 +233,6 @@
 
 ### 感悟职场 学习整理
 
-- [他看了几千份技术简历，愿意把技术简历的秘籍传授给你](https://custompbwaters.github.io/感悟·生活/技术简历.html)。
-
 
 - [时间 ☕️ 知识](https://custompbwaters.github.io/感悟·生活/时间和知识管理.html)。
 
