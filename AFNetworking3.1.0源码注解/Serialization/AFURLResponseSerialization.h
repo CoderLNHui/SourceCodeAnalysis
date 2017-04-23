@@ -85,6 +85,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  The acceptable MIME types for responses. When non-`nil`, responses with a `Content-Type` with MIME types that do not intersect with the set will result in an error during validation.
  */
+/** 告诉AFN，再序列化服务器返回的数据的时候，支持此种类型 */
 @property (nonatomic, copy, nullable) NSSet <NSString *> *acceptableContentTypes;
 
 /**
