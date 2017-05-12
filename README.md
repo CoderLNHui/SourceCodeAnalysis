@@ -34,16 +34,16 @@
 //--------------------------- 【iOS·Apple官方译文 学习整理】 ------------------------------//
 //
 
-//【从 NSURLConnection 到 NSURLSession】✔️  
-//【官方文档】 https://www.objc.io/issues/5-ios7/from-nsurlconnection-to-nsurlsession/  
-//【博客译文】 https://custompbwaters.github.io/官方译文+活用/从%20NSURLConnection%20到%20NSURLSession.html
+-【从 NSURLConnection 到 NSURLSession】✔️  
+ 【官方文档】 https://www.objc.io/issues/5-ios7/from-nsurlconnection-to-nsurlsession/  
+ 【博客译文】 https://custompbwaters.github.io/官方译文+活用/从%20NSURLConnection%20到%20NSURLSession.html
 
 
 
 
-//【NSURLSession译文】✔️  
-//【官方文档】https://developer.apple.com/reference/foundation/urlsession#//apple_ref/occ/clm/NSURLSession/sharedSession  
-//【博客译文】https://custompbwaters.github.io/官方译文+活用/NSURLSession译文+活用.html
+-【NSURLSession译文】✔️  
+ 【官方文档】https://developer.apple.com/reference/foundation/urlsession#//apple_ref/occ/clm/NSURLSession/sharedSession  
+ 【博客译文】https://custompbwaters.github.io/官方译文+活用/NSURLSession译文+活用.html
 
 
 
