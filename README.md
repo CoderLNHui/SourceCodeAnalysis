@@ -193,28 +193,28 @@
  //--------------------------- 【library-SourceAnnotation】 ------------------------------//  
  //
 
-【AFNetworking-3.1.0】✔️ [库原地址: 向优秀的开源者致敬 !](https://github.com/AFNetworking/AFNetworking) 
-【源码注解】注解持续更新➕
+【AFNetworking-3.1.0】✔️ [库原地址: 向优秀的开源者致敬 ! https://github.com/AFNetworking/AFNetworking](https://github.com/AFNetworking/AFNetworking)   
+【源码注解】注解持续更新➕  
 【工具类】工具类持续➕  
 
 
-【SDWebImage-3.7.5】✔️ [库原地址: 向优秀的开源者致敬 !](https://github.com/rs/SDWebImage) 
-【源码注解】注解持续更新➕
+【SDWebImage-3.7.5】✔️ [库原地址: 向优秀的开源者致敬 ! https://github.com/rs/SDWebImage](https://github.com/rs/SDWebImage)   
+【源码注解】注解持续更新➕  
 【工具类】工具类持续➕
 
 
-【MBProgressHUD-】✔️ [库原地址: 向优秀的开源者致敬 !](https://github.com/rs/SDWebImage) 
-【源码注解】待注解➕
+【MBProgressHUD-】✔️ [库原地址: 向优秀的开源者致敬 ! https://github.com/rs/SDWebImage](https://github.com/rs/SDWebImage)   
+【源码注解】待注解➕  
 【工具类】工具类持续➕
 
 
-【MJRefresh-3.1.12】✔️ [库原地址: 向优秀的开源者致敬 !](https://github.com/CoderMJLee/MJRefresh) 
-【源码注解】注解持续更新➕
+【MJRefresh-3.1.12】✔️ [库原地址: 向优秀的开源者致敬 ! https://github.com/CoderMJLee/MJRefresh](https://github.com/CoderMJLee/MJRefresh)   
+【源码注解】注解持续更新➕  
 【工具类】待工具类➕
 
 
-【MJExtension-3.0.13】✔️ [库原地址: 向优秀的开源者致敬 !](https://github.com/CoderMJLee/MJExtension) 
-【源码注解】注解持续更新➕
+【MJExtension-3.0.13】✔️ [库原地址: 向优秀的开源者致敬 ! https://github.com/CoderMJLee/MJExtension](https://github.com/CoderMJLee/MJExtension)   
+【源码注解】注解持续更新➕  
 【工具类】待工具类➕
 
 
