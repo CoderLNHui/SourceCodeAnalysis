@@ -31,8 +31,8 @@
 
 
 
-//--------------------------- 【iOS·Apple官方译文 学习整理】 ------------------------------//  
-//
+ //--------------------------- 【iOS·Apple官方译文 学习整理】 ------------------------------//  
+ //
 
 【从 NSURLConnection 到 NSURLSession】✔️  
 【官方文档】 https://www.objc.io/issues/5-ios7/from-nsurlconnection-to-nsurlsession/  
@@ -115,8 +115,8 @@
 
 
 
-//--------------------------- 【iOS·三方框架 学习整理】 ------------------------------//  
-//
+ //--------------------------- 【iOS·三方框架 学习整理】 ------------------------------//  
+ //
 
 
 【AFNetworking（v3.0+）框架学习总结(一框架结构)】✔️  
@@ -188,13 +188,54 @@
 
 
 
-//--------------------------- 【优秀Blog 学习整理】 ------------------------------//  
-// 同步于：https://github.com/tangqiaoboy/iOSBlogCN
+
+
+ //--------------------------- 【library-SourceAnnotation】 ------------------------------//  
+ //
+
+【AFNetworking-3.1.0】✔️ [库原地址: 向优秀的开源者致敬 !](https://github.com/AFNetworking/AFNetworking) 
+【源码注解】注解持续更新➕
+【工具类】工具类持续➕  
+
+
+【SDWebImage-3.7.5】✔️ [库原地址: 向优秀的开源者致敬 !](https://github.com/rs/SDWebImage) 
+【源码注解】注解持续更新➕
+【工具类】工具类持续➕
+
+
+【MBProgressHUD-】✔️ [库原地址: 向优秀的开源者致敬 !](https://github.com/rs/SDWebImage) 
+【源码注解】待注解➕
+【工具类】工具类持续➕
+
+
+【MJRefresh-3.1.12】✔️ [库原地址: 向优秀的开源者致敬 !](https://github.com/CoderMJLee/MJRefresh) 
+【源码注解】注解持续更新➕
+【工具类】待工具类➕
+
+
+【MJExtension-3.0.13】✔️ [库原地址: 向优秀的开源者致敬 !](https://github.com/CoderMJLee/MJExtension) 
+【源码注解】注解持续更新➕
+【工具类】待工具类➕
+
+
+
+
+
+
+
+
+
+
+
+
+
+ //--------------------------- 【优秀Blog 学习整理】 ------------------------------//  
+ // "同步于"：https://github.com/tangqiaoboy/iOSBlogCN
 
 
 博客地址 | RSS地址
 ----- | -----
-[Plain boiled water](https://custompbwaters.github.io) | <http://www.jianshu.com/u/fd745d76c816>
+[Plain boiled water 无耻的写上](https://custompbwaters.github.io) | <http://www.jianshu.com/u/fd745d76c816>
 [OneV's Den](http://onevcat.com) | <http://onevcat.com/atom.xml>
 [一只魔法师的工坊](http://blog.ibireme.com/) | <http://blog.ibireme.com/feed/>
 [破船之家](http://beyondvincent.com) | <http://beyondvincent.com/atom.xml>
@@ -312,11 +353,17 @@
 
 ## About me
 
-【我也是对所花费时间的一个总结】
+【白开水ln】：(我) 也是对【所花费时间的一个总结】！
 
-我只是个【有思想的伐码猿🐒】加上【自己的学习总☕️】写出来的文章。
+【白开水ln】：(我) 只是个【有思想的伐码猿🐒】加上【自己的学习总结☕️】写出来的文章 ！
+
+【白开水ln】：(我) 得文章【对你有新思想 或是 习惯】，你的 「Star & Fork」 是对我最大的赞赏 ！
 
 
+
+
+
+***
 | `  ☕️ 分享是你我熟悉的味道 ☕️ 未完待续 ！` |
 | :-: |
 | :💥❤️💥: |
