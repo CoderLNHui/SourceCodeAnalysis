@@ -1,18 +1,6 @@
 ## iOS·Objective-C
 
 
-**@ iOS·Objective-C 实用文章详解整理专题**
-
-
-
-**主编：@程序员的你**
-
-
-
-## 如果你是聪明勇敢【且】也很风趣程序员，或者有一颗喜欢自豪写程序的心。本着好好学习，活学活用的目地，欢迎来到【iOS·Objective-C 实用文章详解】专题。
-
-
-
 ### iOS·Objective-C UI控件详解整理
 
 - [iOS UI控件详解—「UIScrollView滚动视图」](https://custompbwaters.github.io/iOS%20UI/UIScrollView滚动视图.html)。
@@ -256,15 +244,6 @@
 
 - [GitHubPages + Hexo—优化博客设置「持续更新」](https://custompbwaters.github.io/Hexo搭建个人博客/GitHubPages%20+%20Hexo—优化博客设置.html)。
 
-
-
-
-
-
-
-**可私信于我，注明来意 ！**
-
-**我非常想为这个工程增加更多实用的内容，以简化初学者入门和老司机回顾的繁索过程，尽快切入主题，快速使用起来。这里只等你的到来 ！Star & Fork 谢谢。**
 
 
 
