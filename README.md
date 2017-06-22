@@ -110,6 +110,10 @@
 【博客译文】http://www.pmcaff.com/article/index/514586365192320?from=label&pmc_param[label_name]=发现
 
 
+【Stack Overflow 2017 开发者调查报告】✔️  
+【官方文档】https://insights.stackoverflow.com/survey/2017#technology-most-loved-dreaded-and-wanted-languages 
+【博客译文】https://www.oschina.net/news/83164/stack-overflow-developer-survey-results-2017
+
 
 
 ***
@@ -336,7 +340,7 @@
 
 #### 劳驾你点一下 👇 工程地址 ❓
 
-- [Framework—Annotations & Category注解\工具类，归类整理，各分类文件注解](https://github.com/CustomPBWaters/Framework-Annotations-Category)【Star 同步👀】
+- [Framework—Annotations & Tools 效率工具类 \ 系统文件常用API注解](https://github.com/CustomPBWaters/Framework-Annotations-Tools)【Star 同步👀】
 
 
 
@@ -347,7 +351,7 @@
 
 - 如果你想为【本工程】分享点什么，也希望你能 Issues 我，我非常想为这篇文章增加更多实用的内容，谢谢。
 
-- [博客原文](http://custompbwaters.github.io/官方译文+活用/iOS·官方译文源码注解.html)、[简书原文](http://www.jianshu.com/p/f10e20ed7d90) 对本工程我会【不定时、持续更新、一些 学习心得与文章、实用才是硬道理】^_^.
+- 对本工程我会【不定时、持续更新、一些 学习心得与文章、实用才是硬道理】^_^.
 
 
 ## About me
