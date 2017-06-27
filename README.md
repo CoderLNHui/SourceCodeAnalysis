@@ -3,7 +3,7 @@
 
 >我们追求技术的提升，关注技术的发展历程；作为从事技术工作的伐码猿，有个想法（`仅是个人想法`），这个想法工程量之大（`遇到，用到，最新技术点，点点积累，及时补充吧`），从事技术多年也算是对所花费时间的一个总结（`算是对技术这块的一个目标吧`）。  
 >**重点 -> 重点 -> 重点**（`重要的事情说 2+1 遍`），      
-**「想法和行动」都在文章末尾** 
+**想法和行动都在文章末尾** 
 
 
 #### Elegant programming
@@ -224,22 +224,58 @@
 
 
 ***
- //--------------------------- 【分享者】 ------------------------------//  
+ //--------------------------- 【学习资源 学习整理】 ------------------------------//  
  //  
 
-【WWDC17【+ 往年全部整理】】[干货地址: 向优秀的分享者致敬 ! ](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/WWDC17%2B)
+- [iOS9-day-by-day](https://github.com/shinobicontrols/iOS9-day-by-day)
+- [iOS8-day-by-day](https://github.com/shinobicontrols/iOS8-day-by-day)
+- [iOS9AdaptationTips iOS9适配](https://github.com/ChenYilong/iOS9AdaptationTips)
+- [iOS开发最佳实践](https://github.com/KevinHM/ios-good-practices-the-lastest-version)
+- [iOS学习资源 包括WWDC心得等](https://github.com/100mango/zen)
+- [SwiftGuide swift语言指南](https://github.com/ipader/SwiftGuide)
+- [中文版Apple官方Swift教程](https://github.com/numbbbbb/the-swift-programming-language-in-chinese)
+- [Git教程](https://github.com/numbbbbb/Git-Tutorial-By-liaoxuefeng)
+- [iOS开源APP列表](https://github.com/dkhamsing/open-source-ios-apps)
+- [iOS博客文章列表](https://github.com/JanzTam/iOS-blog-acticle)
+- [Design-Patterns-In-Swift](https://github.com/ochococo/Design-Patterns-In-Swift)
+- [awesome-swift](https://github.com/matteocrippa/awesome-swift)
+- [iOS开发学习笔记 入门必看](https://github.com/leecade/ios-dev-flow)
+- [iOS学习笔记 推荐](http://chengway.in/tag/ios-9/)
 
 
-【三方集成【如：支付宝和微信SDK集成】】[干货地址: 向优秀的分享者致敬 ! ](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/三方集成%26授权)
 
 
 
+***
+//--------------------------- 【开源项目源码 学习整理】 ------------------------------//  
+// 
 
 
+- [PHPHub客户端](https://github.com/Aufree/phphub-ios)
+- [仿写知乎日报](https://github.com/hshpy/HPYZhiHuDaily)
+- [高仿美团1](https://github.com/tubie/JFMeiTuan)
+- [高仿美团2](https://github.com/zangqilong198812/MeituanDemo)
+- [高仿城觅](https://github.com/ZhongTaoTian/WNXHuntForCity)
+- [SegmentFault客户端](https://github.com/gaosboy/iOSSF)
+- [Monkey](https://github.com/coderyi/Monkey)
+- [高仿网易](https://github.com/chenqihui/NewsFourApp)
+- [高仿豆瓣](https://github.com/XVXVXXX/DoubanFM)
+- [码农周刊](https://github.com/icepy/manong-reading)
+- [Uber欢迎页](https://github.com/chinsyo/uber-video-welcome)
+- [Tropos](https://github.com/thoughtbot/Tropos)
+- [MVVM架构的计算器](https://github.com/bifidy/CalculatorDemo)
+- [网易新闻](https://github.com/dsxNiubility/SXNews)
+- [简阅](https://github.com/guojiubo/PlainReader)
 
-
-
-
+- [VVeboTableViewDemo 列表优化](https://github.com/johnil/VVeboTableViewDemo)
+- [ECMobile 手机商城](https://github.com/GeekZooStudio/ECMobile_iOS)
+- [阅读器](https://github.com/TigerWf/WFReader)
+- [高仿下厨房](https://github.com/STShenZhaoliang/XCFAPP)
+- [v2ex 客户端](https://github.com/singro/v2ex)
+- [watch开源项目](https://github.com/kostiakoval/WatchKit-Apps)
+- [热门标签](https://github.com/alienjun/MyTags)
+- [swift 天气](https://github.com/JakeLin/SwiftWeather)
+- [模仿微信二维码扫描](https://github.com/lcddhr/QRWeiXinDemo)
 
 
 
@@ -346,8 +382,8 @@
 总之，学习一门第三方框架库的时侯，需要追根溯源，才好提纲切领，即能掌握全局，又能深入细节。从框架源码出发，结合事件业务逻辑处理的机制，再深入到各个功能点或再次封装，就会胸有成竹而不乱阵脚了。
 
 
-温馨提示：☕️    
-简书-白开水ln，所有文章将「`迁移 & 后续`」对应两个工程下，这两个想法是个长期而持续的目标吧，如果你感觉看我写的文章对你 利大于弊 . . .（`由于个人 「时间 & 知识」 有限，是心有余而力有限，欢迎你的 Star & Fork`）。
+温馨提示：   
+简书-白开水ln，这两个想法是个长期而持续的目标吧，(`由于个人 「时间 & 知识」 有限，是心有余而力有限，欢迎你的 Star & Fork`)。
 
 
 
