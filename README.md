@@ -28,6 +28,9 @@
 ## Content progress
 
 
+`非官方 & 非大牛 & 非符合 ——> 只是一帮有思想的伐码猿 ——> 不准确 & 新思想 & 槽槽点 ——> (参考)欢迎你的槽点 || 补充 ！`
+
+
 ***
  //--------------------------- 【Apple官方译文 学习整理】 ------------------------------//  
  //
@@ -124,65 +127,65 @@
 
 【AFNetworking（v3.0+）框架学习总结(一框架结构)】✔️  
 【三方框架】https://github.com/AFNetworking/AFNetworking  
-【博客译文】https://custompbwaters.github.io/源码注解+活用/AFN（v3.1.0）框架学习总结(一框架结构).html
+【博客注解】https://custompbwaters.github.io/源码注解+活用/AFN（v3.1.0）框架学习总结(一框架结构).html
 
 
 
 
 【AFNetworking（v3.0+）源码学习总结(一框架结构)】✔️  
 【三方框架】https://github.com/AFNetworking/AFNetworking   
-【博客译文】https://custompbwaters.github.io/源码注解+活用/AFN（v3.1.0）框架学习总结(一框架结构).html
+【博客注解】https://custompbwaters.github.io/源码注解+活用/AFN（v3.1.0）框架学习总结(一框架结构).html
 
 
 
 
 【SDWebImage框架&源码学习总结】✔️  
 【三方框架】https://github.com/rs/SDWebImage  
-【博客译文】https://custompbwaters.github.io/源码注解+活用/SD框架学习总结.html  
-【博客译文】http://www.jianshu.com/p/82c7f2865c92
+【博客注解】https://custompbwaters.github.io/源码注解+活用/SD框架学习总结.html  
+【博客注解】http://www.jianshu.com/p/82c7f2865c92
 
 
 
 
 【MJExtension框架学习总结】✔️  
 【三方框架】https://github.com/CoderMJLee/MJExtension  
-【博客译文】https://custompbwaters.github.io/源码注解+活用/MJExtension框架学习总结.html
+【博客注解】https://custompbwaters.github.io/源码注解+活用/MJExtension框架学习总结.html
 
 
 
 
 【VVeboTableView源码解析】✔️  
 【三方框架】https://github.com/johnil/VVeboTableViewDemo  
-【博客译文】http://www.jianshu.com/p/78027a3a2c41
+【博客注解】http://www.jianshu.com/p/78027a3a2c41
 
 
 
 
 【MJRefresh解析与详细使用指导】✔️  
 【三方框架】https://github.com/CoderMJLee/MJRefresh  
-【博客译文】http://www.jianshu.com/p/4ea427bab0af  
-【博客译文】http://www.jianshu.com/p/437095c88717
+【博客注解】http://www.jianshu.com/p/4ea427bab0af  
+【博客注解】http://www.jianshu.com/p/437095c88717
 
 
 
 
 【iOS即时通讯进阶 - CocoaAsyncSocket源码解析(Connect篇)】✔️  
 【三方框架】  
-【博客译文】http://www.jianshu.com/p/0a11b2d0f4ae
+【博客注解】http://www.jianshu.com/p/0a11b2d0f4ae
 
 
 
 
 【Masonry 源码解析】✔️  
 【三方框架】https://github.com/SnapKit/Masonry  
-【博客译文】http://www.jianshu.com/p/3fce11e370b1
+【博客注解】http://www.jianshu.com/p/3fce11e370b1
 
 
 
 
 【基于AFNetworking3.1的二次封装和拓展】✔️  
 【三方框架】  
-【博客译文】http://www.jianshu.com/p/d0751b9a8d65
+【博客注解】http://www.jianshu.com/p/d0751b9a8d65
 
 
 
@@ -197,8 +200,8 @@
  //
 
 【AFNetworking-3.1.0】✔️ [库原地址: 向优秀的开源者致敬 ! https://github.com/AFNetworking/AFNetworking](https://github.com/AFNetworking/AFNetworking)   
-【源码注解】注解持续更新➕  
-【工具类】工具类持续➕  
+【源码注解】注解持续更新 +  
+【工具类】工具类持续 +  
 
 
 【SDWebImage-3.7.5】✔️ [库原地址: 向优秀的开源者致敬 ! https://github.com/rs/SDWebImage](https://github.com/rs/SDWebImage)   
