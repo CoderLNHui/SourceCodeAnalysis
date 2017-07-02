@@ -1,10 +1,14 @@
-//
-//  LNHttpTool.h
-//  ☕️（https://github.com/CustomPBWaters）
-//
-//  Created by 【Plain Boiled Water ln】 on Learning point.
-//  Copyright © 白开水ln（https://custompbwaters.github.io）All rights reserved.
-//
+/*
+ * LNHttpTool.h
+ * 白开水ln（https://github.com/CustomPBWaters）
+ *
+ * Created by 【Plain Boiled Water ln】 on Elegant programming16.
+ * Copyright © Unauthorized shall（https://custompbwaters.github.io）not be reproduced.
+ *
+ * @PBWLN_LICENSE_HEADER_END@
+ */
+
+
 //-------------- 【网络请求工具类，负责整个项目中所有的Http网络请求】 --------------//
 //
 

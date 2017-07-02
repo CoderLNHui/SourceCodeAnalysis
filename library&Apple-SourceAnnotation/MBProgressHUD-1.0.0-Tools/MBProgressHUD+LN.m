@@ -1,10 +1,12 @@
-//
-//  MBProgressHUD+LN.m
-//  Category（https://github.com/CustomPBWaters）
-//
-//  Created by 白开水ln on 16/-/-.
-//  Copyright © 2016年（https://custompbwaters.github.io）All rights reserved.
-//
+/*
+ * MBProgressHUD+LN.m
+ * 白开水ln（https://github.com/CustomPBWaters）
+ *
+ * Created by 【Plain Boiled Water ln】 on Elegant programming16.
+ * Copyright © Unauthorized shall（https://custompbwaters.github.io）not be reproduced.
+ *
+ * @PBWLN_LICENSE_HEADER_END@
+ */
 
 #import "MBProgressHUD+LN.h"
 

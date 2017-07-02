@@ -3,11 +3,12 @@
 //  Version 1.0.0
 //  Created by Matej Bukovinski on 2.4.09.
 //
-//  ☕️（https://github.com/CustomPBWaters）
+//  白开水ln（https://github.com/CustomPBWaters）
 //
-//  Created by 【Plain Boiled Water ln】 on Learning point.
-//  Copyright © 白开水ln（https://custompbwaters.github.io）All rights reserved.
+//  Created by 【Plain Boiled Water ln】 on Elegant programming16.
+//  Copyright © Unauthorized shall（https://custompbwaters.github.io）not be reproduced.
 //
+
 
 // This code is distributed under the terms and conditions of the MIT license. 
 

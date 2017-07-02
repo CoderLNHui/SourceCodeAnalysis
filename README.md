@@ -1,7 +1,7 @@
 
 ## 引导 📌 
 
->我们追求技术的提升，关注技术的发展历程；作为从事技术工作的伐码猿，有个想法（`仅是个人想法`），这个想法工程量之大（`遇到，用到，最新技术点，点点积累，及时补充吧`），从事技术多年也算是对所花费时间的一个总结（`算是对技术这块的一个目标吧`）。  
+>我们追求技术的提升，关注技术的发展历程；作为从事技术工作的伐码猿，有个想法（`2`），这个想法工程量之大（`遇到，用到，最新技术点，点点积累，及时补充吧`），从事技术多年也算是对所花费时间的一个总结（`算是对技术这块的一个目标吧`）。  
 >**重点 -> 重点 -> 重点**（`重要的事情说 2+1 遍`），      
 **想法和行动都在文章末尾** 
 
@@ -10,11 +10,7 @@
 
 ![ ](http://upload-images.jianshu.io/upload_images/2230763-3471e189f31650c4.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-
-
-
-| 我 GitHub 工程已创建好，只等你的到来，开始有意义的`▶️👀 👬 👄` |
-|:-:|
+ 
 
 | 不管谁的博客上面写的(`也包括自己`)，阅读的你要敢于去验证，停止无意义的`⏹copy 👬 paste`。 |
 |:-:|
@@ -28,7 +24,7 @@
 ## Content progress
 
 
-`非官方 & 非大牛 & 非符合 ——> 只是一帮有思想的伐码猿 ——> 不准确 & 新思想 & 槽槽点 ——> (参考)欢迎你的槽点 || 补充 ！`
+`非官方 & 非大牛 & 非符合 ——> 只是一帮有思想的伐码猿 ——> 不准确 & 新思想 & 槽槽点 ——> (参考)欢迎你的槽点 || 补充 ！【招募】`
 
 
 ***
@@ -188,7 +184,41 @@
 【博客注解】http://www.jianshu.com/p/d0751b9a8d65
 
 
+ 
 
+
+***
+ //--------------------------- 【Objective C-SourceAnnotation】 ------------------------------//  
+ //
+
+【AFNetworking-3.1.0】✔️ [网络请求; 库原地址: 向优秀的开源者致敬 ! https://github.com/AFNetworking/AFNetworking](https://github.com/AFNetworking/AFNetworking)   
+【源码注解】[待注解持续 +](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/AFNetworking-3.1.0源码注解)  
+【工具类】[待工具类持续 +](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/AFNetworking-3.1.0工具类)  
+
+
+【SDWebImage-3.7.5】✔️ [图片下载; 库原地址: 向优秀的开源者致敬 ! https://github.com/rs/SDWebImage](https://github.com/rs/SDWebImage)   
+【源码注解】[待注解持续 +](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/SDWebImage-3.7.5源码注解)  
+【工具类】[待工具类持续 +](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/SDWebImage-3.7.5工具类)
+
+
+【MBProgressHUD-】✔️ [进度提示; 库原地址: 向优秀的开源者致敬 ! https://github.com/rs/SDWebImage](https://github.com/rs/SDWebImage)   
+【源码注解】[待注解持续 +]()  
+【工具类】[待工具类持续 +](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/MBProgressHUD工具类)
+
+
+【MJRefresh-3.1.12】✔️ [刷新; 库原地址: 向优秀的开源者致敬 ! https://github.com/CoderMJLee/MJRefresh](https://github.com/CoderMJLee/MJRefresh)   
+【源码注解】[待注解持续 +](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/MJRefresh-3.1.12源码注解)   
+【工具类】[待工具类持续 +]()
+
+
+【MJExtension-3.0.13】✔️ [字典转模型; 库原地址: 向优秀的开源者致敬 ! https://github.com/CoderMJLee/MJExtension](https://github.com/CoderMJLee/MJExtension)   
+【源码注解】[待注解持续 +](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/MJExtension-3.0.13源码注解)   
+【工具类】[待工具类持续 +]()
+
+
+【SVProgressHUD-2.1.2】✔️ [进度提示; 库原地址: 向优秀的开源者致敬 ! https://github.com/SVProgressHUD/SVProgressHUD](https://github.com/SVProgressHUD/SVProgressHUD)   
+【源码注解】[待注解持续 +]()  
+【工具类】[待工具类持续 +]()
 
 
 
@@ -196,32 +226,25 @@
 
 
 ***
- //--------------------------- 【library-SourceAnnotation】 ------------------------------//  
- //
+//--------------------------- 【Swift-SourceAnnotation】 ------------------------------//  
+//
 
-【AFNetworking-3.1.0】✔️ [库原地址: 向优秀的开源者致敬 ! https://github.com/AFNetworking/AFNetworking](https://github.com/AFNetworking/AFNetworking)   
-【源码注解】注解持续更新 +  
-【工具类】工具类持续 +  
-
-
-【SDWebImage-3.7.5】✔️ [库原地址: 向优秀的开源者致敬 ! https://github.com/rs/SDWebImage](https://github.com/rs/SDWebImage)   
-【源码注解】注解持续更新 +  
-【工具类】工具类持续 +
+【SwiftyJSON-3.1.4】✔️ [Swift界JSON解析之王; 库原地址: 向优秀的开源者致敬 ! https://github.com/SwiftyJSON/SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)   
+【源码注解】[待 +]()  
+【工具类】[待 +]()
 
 
-【MBProgressHUD-】✔️ [库原地址: 向优秀的开源者致敬 ! https://github.com/rs/SDWebImage](https://github.com/rs/SDWebImage)   
-【源码注解】待注解 +  
-【工具类】工具类持续 +
+【DZNEmptyDataSet-1.8.1】✔️ [避免空白UITableView; 库原地址: 向优秀的开源者致敬 ! https://github.com/dzenbot/DZNEmptyDataSet](https://github.com/dzenbot/DZNEmptyDataSet)   
+【源码注解】[待 +]()  
+【工具类】[待 +]()
 
 
-【MJRefresh-3.1.12】✔️ [库原地址: 向优秀的开源者致敬 ! https://github.com/CoderMJLee/MJRefresh](https://github.com/CoderMJLee/MJRefresh)   
-【源码注解】注解持续更新+  
-【工具类】待工具类 +
 
 
-【MJExtension-3.0.13】✔️ [库原地址: 向优秀的开源者致敬 ! https://github.com/CoderMJLee/MJExtension](https://github.com/CoderMJLee/MJExtension)   
-【源码注解】注解持续更新 +  
-【工具类】待工具类 +
+
+
+
+
 
 
 

@@ -1,9 +1,17 @@
 /*
+ * UIImageView+WebCache.h
  * This file is part of the SDWebImage package.
  * (c) Olivier Poitrey <rs@dailymotion.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
+ *
+ * 白开水ln（https://github.com/CustomPBWaters）
+ *
+ * Created by 【Plain Boiled Water ln】 on Elegant programming16.
+ * Copyright © Unauthorized shall（https://custompbwaters.github.io）not be reproduced.
+ *
+ * @PBWLN_LICENSE_HEADER_END@
  */
 
 #import "SDWebImageCompat.h"
