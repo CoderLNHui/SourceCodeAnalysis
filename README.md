@@ -1,9 +1,14 @@
 
 ## 引导 📌 
 
->我们追求技术的提升，关注技术的发展历程；作为从事技术工作的伐码猿，有个想法（`2`），这个想法工程量之大（`遇到，用到，最新技术点，点点积累，及时补充吧`），从事技术多年也算是对所花费时间的一个总结（`算是对技术这块的一个目标吧`）。  
->**重点 -> 重点 -> 重点**（`重要的事情说 2+1 遍`），      
-**想法和行动都在文章末尾** 
+>Excellent design ideas are timeless, Give us a lot of reference and enlightenment to coding in the future, I enjoy sharing@码员白开水ln
+
+
+
+阅读源码 || 系统文件，不仅能使我们了解作者的功能实现方式，方便我们运用其功能，快速的fix使用中遇到的bug，更重要的是在阅读优秀源码时体会作者的设计思想和架构设计，具体的技术很快就会过时，优秀的设计思想却会历久弥新，给我们今后编码以很大的借鉴和启迪。**向优秀的开源者致敬！**   **向优秀的分享者致敬！**
+
+
+
 
 
 #### Elegant programming
@@ -112,6 +117,11 @@
 【Stack Overflow 2017 开发者调查报告】✔️  
 【官方文档】https://insights.stackoverflow.com/survey/2017#technology-most-loved-dreaded-and-wanted-languages 
 【博客译文】https://www.oschina.net/news/83164/stack-overflow-developer-survey-results-2017
+
+
+【Swift 4 JSON 解析指南】✔️  
+【官方文档】 
+【博客译文】http://bignerdcoding.com/archives/37.html
 
 
 
@@ -251,22 +261,23 @@
 
 ***
  //--------------------------- 【学习资源 学习整理】 ------------------------------//  
- //  
+ // "摘录于":  https://github.com/zhouhuanqiang/LearningIOS
 
-- [iOS9-day-by-day](https://github.com/shinobicontrols/iOS9-day-by-day)
-- [iOS8-day-by-day](https://github.com/shinobicontrols/iOS8-day-by-day)
-- [iOS9AdaptationTips iOS9适配](https://github.com/ChenYilong/iOS9AdaptationTips)
-- [iOS开发最佳实践](https://github.com/KevinHM/ios-good-practices-the-lastest-version)
-- [iOS学习资源 包括WWDC心得等](https://github.com/100mango/zen)
-- [SwiftGuide swift语言指南](https://github.com/ipader/SwiftGuide)
-- [中文版Apple官方Swift教程](https://github.com/numbbbbb/the-swift-programming-language-in-chinese)
-- [Git教程](https://github.com/numbbbbb/Git-Tutorial-By-liaoxuefeng)
-- [iOS开源APP列表](https://github.com/dkhamsing/open-source-ios-apps)
-- [iOS博客文章列表](https://github.com/JanzTam/iOS-blog-acticle)
-- [Design-Patterns-In-Swift](https://github.com/ochococo/Design-Patterns-In-Swift)
-- [awesome-swift](https://github.com/matteocrippa/awesome-swift)
-- [iOS开发学习笔记 入门必看](https://github.com/leecade/ios-dev-flow)
-- [iOS学习笔记 推荐](http://chengway.in/tag/ios-9/)
+地址  |  简介
+---- | ----
+[objc中国](https://objccn.io/)| 为中国 Objective-C 社区带来最佳实践和先进技术
+[NSHipster中文版](http://nshipster.cn)| NSHipster 关注被忽略的 Objective-C、Swift 和 Cocoa 特性。每周更新。
+[iOS Dev Weekly](http://iosdevweekly.com)| 如果你是老手精通英文，那么这个周刊是非常值得推荐订阅的，该周刊提供行业新闻、最新开发动态、开发工具、代码分享、UI设计、设计师招聘等丰富的资源。
+[Shinobicontrols](https://www.shinobicontrols.com/blog)| The latest technical blog posts
+[iOS Developer Tips](http://iosdevelopertips.com)| Code, tips and tricks for iOS developers
+[Raywenderlich](https://www.raywenderlich.com)| 国外iOS视频教程网站
+[trip-to-iOS](https://github.com/Aufree/trip-to-iOS)| 6000多个star的iOS学习资料整理
+[SwiftGuide](https://github.com/ipader/SwiftGuide)| 这份指南汇集了Swift语言主流学习资源，接近1W的star
+[TimLiu-iOS](https://github.com/Tim9Liu9/TimLiu-iOS)| 4000多个star，iOS、mac开源项目及库
+[skill-map](https://github.com/TeamStuQ/skill-map)|  IT技术领域（云计算，大数据，运维，安全，开发语言，智能硬件等）及互联网产品、运营等领域学习技能图谱
+[全球移动技术大会2016](http://pan.baidu.com/s/1o8SvZTK)| 全球移动技术大会2016PPT下载合集
+[atswift-2016-resources](https://github.com/atConf/atswift-2016-resources)| 2016中国Swift开发者大会源文件，包括keynote, pdf 和源工程文件
+[全球移动技术大会2017](http://ppt.geekbang.org/gmtc)| 全球移动技术大会2017PPT下载合集
 
 
 
@@ -277,34 +288,35 @@
 // 
 
 
-- [PHPHub客户端](https://github.com/Aufree/phphub-ios)
-- [仿写知乎日报](https://github.com/hshpy/HPYZhiHuDaily)
-- [高仿美团1](https://github.com/tubie/JFMeiTuan)
-- [高仿美团2](https://github.com/zangqilong198812/MeituanDemo)
-- [高仿城觅](https://github.com/ZhongTaoTian/WNXHuntForCity)
-- [SegmentFault客户端](https://github.com/gaosboy/iOSSF)
-- [Monkey](https://github.com/coderyi/Monkey)
-- [高仿网易](https://github.com/chenqihui/NewsFourApp)
-- [高仿豆瓣](https://github.com/XVXVXXX/DoubanFM)
-- [码农周刊](https://github.com/icepy/manong-reading)
-- [Uber欢迎页](https://github.com/chinsyo/uber-video-welcome)
-- [Tropos](https://github.com/thoughtbot/Tropos)
-- [MVVM架构的计算器](https://github.com/bifidy/CalculatorDemo)
-- [网易新闻](https://github.com/dsxNiubility/SXNews)
-- [简阅](https://github.com/guojiubo/PlainReader)
+-  地址  |  简介
+---- | ----
+[iOS-Source-Code-Analyze](https://github.com/Draveness/iOS-Source-Code-Analyze)| 收集了优秀的iOS开源框架源代码解析文章，强烈推荐
+[Yep](https://github.com/CatchChat/Yep)| 社交IM软件YEP，star5000+
+[TeamTalk](https://github.com/mogujie/TeamTalk)| 蘑菇街开源IM，star4500+
+[MessageDisplayKit](https://github.com/xhzengAIB/MessageDisplayKit)| 类似微信的IMapp，可发送图片，音频，视频，文字，位置信息等，star3800+
+[仿网易新闻](https://github.com/dsxNiubility/SXNews)| star3000+
+[高仿城觅](https://github.com/ZhongTaoTian/WNXHuntForCity)| star1800+
+[YoCelsius](https://github.com/YouXianMing/YoCelsius)| 天气预报的应用，动画和交互非常丰富，star2300+
+[Coding-iOS](https://github.com/Coding/Coding-iOS)| Coding iOS 客户端源代码, star2600+
+[v2ex](https://github.com/singro/v2ex)| v2ex.com客户端，star1700+
+[高仿微信](https://github.com/gsdios/GSD_WeiXin)| star2000+
+[高仿美团](https://github.com/lookingstars/meituan)|  star1500+
+[高仿喵播APP](https://github.com/SunLiner/MiaowShow)|  视频直播项目，star2000+
+[高仿Bilibili客户端](https://github.com/MichaelHuyp/Bilibili_Wuxianda)| star2000+
+[高仿最美应用](https://github.com/lyimin/beautifulApp)| swift, star800+
+[一个](https://github.com/meilbn/MyOne-iOS)|  《一个》 iOS 客户端, star600+
+[CocoaChina+](https://github.com/zixun/CocoaChinaPlus)|  开源的第三方CocoaChina移动端, star600+
+[高仿百度糯米](https://github.com/lookingstars/nuomi)|  star500+
+[Four](https://github.com/SketchK/FOUR)|  一个上线的任务记录app，star300+
+[PHPHub客户端](https://github.com/Aufree/phphub-ios)   |  star1100+
+[高仿美团1](https://github.com/tubie/JFMeiTuan)  |  star500+
+[高仿美团2](https://github.com/zangqilong198812/MeituanDemo)  |  star400+
+[高仿城觅](https://github.com/ZhongTaoTian/WNXHuntForCity)  |  star1800+
+[SegmentFault客户端](https://github.com/gaosboy/iOSSF)  |  star1200+
+[网易新闻](https://github.com/dsxNiubility/SXNews)  |  star3000+
 
-- [VVeboTableViewDemo 列表优化](https://github.com/johnil/VVeboTableViewDemo)
-- [ECMobile 手机商城](https://github.com/GeekZooStudio/ECMobile_iOS)
-- [阅读器](https://github.com/TigerWf/WFReader)
-- [高仿下厨房](https://github.com/STShenZhaoliang/XCFAPP)
-- [v2ex 客户端](https://github.com/singro/v2ex)
-- [watch开源项目](https://github.com/kostiakoval/WatchKit-Apps)
-- [热门标签](https://github.com/alienjun/MyTags)
-- [swift 天气](https://github.com/JakeLin/SwiftWeather)
-- [模仿微信二维码扫描](https://github.com/lcddhr/QRWeiXinDemo)
 
-
-
+ 
 
 
 
@@ -317,7 +329,7 @@
 
 
  //--------------------------- 【优秀Blog 学习整理】 ------------------------------//  
- // "同步于"：https://github.com/tangqiaoboy/iOSBlogCN
+ // "同步于": https://github.com/tangqiaoboy/iOSBlogCN
 
 
 博客地址 | RSS地址
@@ -402,16 +414,9 @@
 
 
 
-**阅读源码**，不仅能使我们了解作者的功能实现方式，方便我们运用其功能，快速的fix使用中遇到的bug，更重要的是在阅读优秀源码时体会作者的设计思想和架构设计，具体的技术很快就会过时，优秀的设计思想却会历久弥新，给我们今后编码以很大的借鉴和启迪。**向优秀的开源者致敬！**   **向优秀的分享者致敬！**
-
-
 总之，学习一门第三方框架库的时侯，需要追根溯源，才好提纲切领，即能掌握全局，又能深入细节。从框架源码出发，结合事件业务逻辑处理的机制，再深入到各个功能点或再次封装，就会胸有成竹而不乱阵脚了。
 
-
-温馨提示：   
-简书-白开水ln，这两个想法是个长期而持续的目标吧，(`由于个人 「时间 & 知识」 有限，是心有余而力有限，欢迎你的 Star & Fork`)。
-
-
+ 
 
 #### Demo示例
 
@@ -441,12 +446,10 @@
 【[博客](https://custompbwaters.github.io)】  【[简书](http://www.jianshu.com/u/fd745d76c816)】   【[掘金](https://juejin.im/post/5948b282da2f600067910186)】  【[公众号: 白开水ln](https://github.com/CustomPBWaters/Framework-Annotations-Category)】
 
 
-【白开水ln】：(我) 也是对【所花费时间的一个总结】！
-
-【白开水ln】：(我) 只是个【有思想的伐码猿🐒】加上【自己的学习总结☕️】写出来的文章 ！
 
 【白开水ln】：(我) 得文章【对你有新思想 或是 习惯】，你的 「Star & Fork」 是对我最大的赞赏 ！
 
+【简书-码员白开水ln】：这两个想法是个长期而持续的目标吧，(`由于个人 「时间 & 知识」 有限，是心有余而力有限，欢迎你的 Star & Fork`) ！
 
 
 
