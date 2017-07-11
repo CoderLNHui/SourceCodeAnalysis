@@ -1,7 +1,7 @@
 
 ## 引导 📌 
 
->Excellent design ideas are timeless, Give us a lot of reference and enlightenment to coding in the future, I enjoy sharing@码员白开水ln
+>Excellent design ideas are timeless, Give us a lot of reference and enlightenment to coding in the future, I enjoy sharing ©️码员白开水ln©️ .
 
 
 
@@ -19,12 +19,7 @@
 
 | 不管谁的博客上面写的(`也包括自己`)，阅读的你要敢于去验证，停止无意义的`⏹copy 👬 paste`。 |
 |:-:|
-
-
-| 在「`时间 & 知识`」有限内，总结的文章难免有「`未全、不足`」的地方，还望各位好友指出，以提高文章质量 |
-|:-:|
-
-
+ 
 
 ## Content progress
 
@@ -278,8 +273,7 @@
 [全球移动技术大会2016](http://pan.baidu.com/s/1o8SvZTK)| 全球移动技术大会2016PPT下载合集
 [atswift-2016-resources](https://github.com/atConf/atswift-2016-resources)| 2016中国Swift开发者大会源文件，包括keynote, pdf 和源工程文件
 [全球移动技术大会2017](http://ppt.geekbang.org/gmtc)| 全球移动技术大会2017PPT下载合集
-
-
+[iOS10-day-by-day](https://github.com/shinobicontrols/iOS10-day-by-day)| iOS新技术尝试
 
 
 
@@ -414,53 +408,30 @@
 
 
 
-总之，学习一门第三方框架库的时侯，需要追根溯源，才好提纲切领，即能掌握全局，又能深入细节。从框架源码出发，结合事件业务逻辑处理的机制，再深入到各个功能点或再次封装，就会胸有成竹而不乱阵脚了。
+In a word，学习一门第三方框架库的时侯，需要追根溯源，才好提纲切领，即能掌握全局，又能深入细节。从框架源码出发，结合事件业务逻辑处理的机制，再深入到各个功能点或再次封装，就会胸有成竹而不乱阵脚了。
 
  
+ 
 
-#### Demo示例
-
-- [File & Article 阅读对应点击](https://github.com/CustomPBWaters/Framework-Annotations-Tools)
-
-
-
-#### 劳驾你点一下 👇 工程地址 ❓
+###### 劳驾你点一下 👇 工程地址 ❓
 
 - [Framework—Annotations & Tools 效率工具类 \ 系统文件常用API注解](https://github.com/CustomPBWaters/Framework-Annotations-Tools)【Star 同步👀】
 
 
 
 
-## 期待
+## Reading
 
 - 如果在阅读过程中遇到 error，希望你能 Issues 我，谢谢。
 
-- 如果你想为【本工程】分享点什么，也希望你能 Issues 我，我非常想为这篇文章增加更多实用的内容，谢谢。
 
-- 对本工程我会【不定时、持续更新、一些 学习心得与文章、实用才是硬道理】^_^.
+- 点击右上角的 star 和 watch 按钮，可以收藏本仓库，并在文档、issue、Demo更新时收到邮件通知。
+
 
 
 ## About me
 
-
-【[博客](https://custompbwaters.github.io)】  【[简书](http://www.jianshu.com/u/fd745d76c816)】   【[掘金](https://juejin.im/post/5948b282da2f600067910186)】  【[公众号: 白开水ln](https://github.com/CustomPBWaters/Framework-Annotations-Category)】
-
-
-
-【白开水ln】：(我) 得文章【对你有新思想 或是 习惯】，你的 「Star & Fork」 是对我最大的赞赏 ！
-
-【简书-码员白开水ln】：这两个想法是个长期而持续的目标吧，(`由于个人 「时间 & 知识」 有限，是心有余而力有限，欢迎你的 Star & Fork`) ！
-
-
-
-
-***
-| `  ☕️ 分享是你我熟悉的味道 ☕️ 未完待续 ！` |
-| :-: |
-| :💥❤️💥: |
-| `To be continued ☕️ Plain boiled water ☕️ To be continued` |
-
-
+【[Plain boiled water ln - Code Member](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/blob/master/收录%20%26%20投稿须知.md)】
 
 
 
