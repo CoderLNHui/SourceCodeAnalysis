@@ -100,6 +100,11 @@
 - App内展现的内容乱码
 
 
+
+**点击 Issue、为你遇到蛋疼的被拒，找个发泄的地方，就是这里了。**
+
+
+
 #### 说明
 - 本内容 [原工程地址](https://github.com/jcccn/Why-Reject)，欢迎来一起完善 ！
 - 部分内容整理自[CocoaChina](http://www.cocoachina.com/appstore/20141107/10165.html)网站 ！

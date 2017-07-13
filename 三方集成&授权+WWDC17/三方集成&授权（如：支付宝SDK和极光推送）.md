@@ -10,7 +10,7 @@
 【JPush极光推送】✔️    
 【集成文档】 http://docs.jiguang.cn/jpush/client/iOS/ios_sdk/    
 【极光博客】 http://blog.jiguang.cn/updates-2017-05/  
-【博客注解】 
+【博客注解】 http://www.jianshu.com/p/53e0244e6081
 
  
 【UMAnalytics友盟统计】✔️    
