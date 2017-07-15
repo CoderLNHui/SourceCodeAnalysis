@@ -36,35 +36,35 @@
 
 【从 NSURLConnection 到 NSURLSession】✔️  
 【官方文档】 https://www.objc.io/issues/5-ios7/from-nsurlconnection-to-nsurlsession/  
-【博客译文】 https://custompbwaters.github.io/官方译文+活用/从%20NSURLConnection%20到%20NSURLSession.html
+【博客译文】https://githubidea.github.io/AppleTranslation/ConnectionToSession.html
 
 
 
 
 【NSURLSession译文】✔️  
 【官方文档】https://developer.apple.com/reference/foundation/urlsession#//apple_ref/occ/clm/NSURLSession/sharedSession  
-【博客译文】https://custompbwaters.github.io/官方译文+活用/NSURLSession译文+活用.html
+【博客译文】https://githubidea.github.io/AppleTranslation/NSURLSessionApple.html
 
 
 
 
 【UIWebView译文】✔️  
 【官方文档】https://developer.apple.com/reference/uikit/uiwebview  
-【博客译文】https://custompbwaters.github.io/官方译文+活用/UIWebView译文+活用.html
+【博客译文】https://githubidea.github.io/AppleTranslation/UIWebViewApple.html
 
 
 
 
 【UIBezierPath译文】✔️  
 【官方文档】https://developer.apple.com/reference/uikit/uibezierpath?language=objc  
-【博客译文】https://custompbwaters.github.io/官方译文+活用/UIBezierPath译文+活用.html
+【博客译文】https://githubidea.github.io/AppleTranslation/UIBezierPathApple.html
 
 
 
 
 【UIView API 官方文档译文】✔️  
 【官方文档】https://developer.apple.com/reference/uikit/uiview?language=objc  
-【博客译文】https://custompbwaters.github.io/官方译文+活用/UIView%20API%20官方译文.html
+【博客译文】https://githubidea.github.io/AppleTranslation/UIViewApple.html
 
 
 
@@ -129,32 +129,31 @@
  //
 
 
-【AFNetworking（v3.0+）框架学习总结(一框架结构)】✔️  
+【AFNetworking（v3.0+）框架结构】✔️  
 【三方框架】https://github.com/AFNetworking/AFNetworking  
-【博客注解】https://custompbwaters.github.io/源码注解+活用/AFN（v3.1.0）框架学习总结(一框架结构).html
+【博客注解】https://githubidea.github.io/SourceAnnotations/AFNLibraryStructure.html
 
 
 
 
-【AFNetworking（v3.0+）源码学习总结(一框架结构)】✔️  
+【AFNetworking（v3.0+）内部逻辑处理过程】✔️  
 【三方框架】https://github.com/AFNetworking/AFNetworking   
-【博客注解】https://custompbwaters.github.io/源码注解+活用/AFN（v3.1.0）框架学习总结(一框架结构).html
+【博客注解】https://githubidea.github.io/SourceAnnotations/AFNLibraryProcessingLogic.html
 
 
 
 
 【SDWebImage框架&源码学习总结】✔️  
 【三方框架】https://github.com/rs/SDWebImage  
-【博客注解】https://custompbwaters.github.io/源码注解+活用/SD框架学习总结.html  
-【博客注解】http://www.jianshu.com/p/82c7f2865c92
+【博客注解】https://githubidea.github.io/SourceAnnotations/SDLibrary.html 
+【博客注解】https://githubidea.github.io/SourceAnnotations/SDSourceCode1.html
 
 
 
 
 【MJExtension框架学习总结】✔️  
 【三方框架】https://github.com/CoderMJLee/MJExtension  
-【博客注解】https://custompbwaters.github.io/源码注解+活用/MJExtension框架学习总结.html
-
+【博客注解】https://githubidea.github.io/SourceAnnotations/MJExtensionLibrary.html
 
 
 
@@ -403,10 +402,6 @@
 
 
 
-`学习一门第三方框架库的时侯，需要追根溯源，才好提纲切领，即能掌握全局，又能深入细节。从框架源码出发，结合事件业务逻辑处理的机制，再深入到各个功能点或再次封装，就会胸有成竹而不乱阵脚了。`
-
- 
- 
 
 ###### 劳驾你点一下 👇 工程地址 ❓
 
