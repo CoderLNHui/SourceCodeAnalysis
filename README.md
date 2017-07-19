@@ -1,21 +1,19 @@
 
 
-## 引导 📌 
+## bootstrap 
 
 
->Excellent design ideas are timeless, Give us a lot of reference and enlightenment to coding in the future, I enjoy sharing ©️白开水ln©️ .
-
-
-
-阅读源码 || 系统文件，不仅能使我们了解作者的功能实现方式，方便我们运用其功能，快速的fix使用中遇到的bug，更重要的是在阅读优秀源码时体会作者的设计思想和架构设计，具体的技术很快就会过时，优秀的设计思想却会历久弥新，给我们今后编码以很大的借鉴和启迪。向优秀的开源者致敬！   向优秀的分享者致敬！
+>阅读源码 || 系统文件，不仅能使我们了解作者的功能实现方式，方便我们运用其功能，快速的fix使用中遇到的bug，更重要的是在阅读优秀源码时体会作者的设计思想和架构设计，具体的技术很快就会过时，优秀的设计思想却会历久弥新，给我们今后编码以很大的借鉴和启迪。向优秀的开源者致敬！   向优秀的分享者致敬！, I enjoy sharing ©️白开水ln©️ .
 
 
 
 
 
-#### Elegant programming
+<p align="center" style="font-size:24px">
+	Elegant programming<br>
+	![ ](http://upload-images.jianshu.io/upload_images/2230763-3471e189f31650c4.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+</p>
 
-![ ](http://upload-images.jianshu.io/upload_images/2230763-3471e189f31650c4.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
  
  
@@ -26,7 +24,7 @@
 `非官方 & 非大牛 & 非符合 ——> 只是一帮有思想的伐码猿 ——> 不准确 & 新思想 & 槽槽点 ——> (参考)欢迎你的槽点 || 补充 ！【招募】`
 
 
-`不管谁的博客上面写的(`也包括自己`)，阅读的你要敢于去验证，停止无意义的`⏹copy 👬 paste`。`
+`不管谁的博客上面写的(也包括自己)，阅读的你要敢于去验证，停止无意义的`⏹copy 👬 paste`。`
 
 
 
@@ -389,7 +387,7 @@
 
 | `未完` | `待续` | 
 | :-: | :-: |   
-| 每周末 | 更新 |   
+| 每周末(`争取`) | 更新 |   
 | 欢迎留言补充 ！ | 助你我便捷高效开发 ！ |
 
 
@@ -417,6 +415,8 @@
 
 - 点击右上角的 star 和 watch 按钮，可以收藏本仓库，并在文档、issue、Demo更新时收到邮件通知。
 
+
+- 提示：知识变成自己的才叫知识，而你 copy 下来的只是信息，愿你抽时验证 (共勉)^_^. 
 
 
 ## About me
