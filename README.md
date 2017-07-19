@@ -8,12 +8,12 @@
 
 
 
-<p align="center" style="font-size:50px">
+<p align="center" style="font-size:80px">
 	Elegant programming<br>	
 </p>
 
 <div align=center>
-![ ](http://upload-images.jianshu.io/upload_images/2230763-3471e189f31650c4.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](http://upload-images.jianshu.io/upload_images/2230763-3471e189f31650c4.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 </div>
  
  
