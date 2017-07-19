@@ -3,18 +3,18 @@
 ## bootstrap 
 
 
->阅读源码 || 系统文件，不仅能使我们了解作者的功能实现方式，方便我们运用其功能，快速的fix使用中遇到的bug，更重要的是在阅读优秀源码时体会作者的设计思想和架构设计，具体的技术很快就会过时，优秀的设计思想却会历久弥新，给我们今后编码以很大的借鉴和启迪。向优秀的开源者致敬！   向优秀的分享者致敬！, I enjoy sharing ©️白开水ln©️ .
+>阅读源码 || 系统文件，不仅能使我们了解作者的功能实现方式，方便我们运用其功能，快速的fix使用中遇到的bug，更重要的是在阅读优秀源码时体会作者的设计思想和架构设计，具体的技术很快就会过时，优秀的设计思想却会历久弥新，给我们今后编码以很大的借鉴和启迪。向优秀的开源者致敬！   向优秀的分享者致敬！
 
 
 
 
-
-<p align="center" style="font-size:24px">
-	Elegant programming<br>
-	![ ](http://upload-images.jianshu.io/upload_images/2230763-3471e189f31650c4.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+<p align="center" style="font-size:50px">
+	Elegant programming<br>	
 </p>
 
-
+<div align=center>
+![ ](http://upload-images.jianshu.io/upload_images/2230763-3471e189f31650c4.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+</div>
  
  
 
