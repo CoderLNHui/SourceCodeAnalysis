@@ -416,9 +416,9 @@
 - 提示：知识变成自己的才叫知识，而你 copy 下来的只是信息，愿你抽时验证 (共勉)^_^. 
 
 
-## About me
+## About me & appreciates
 
-【[Plain boiled water ln - Code Member](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/blob/master/收录%20%26%20投稿须知.md)】
+【[Plain boiled water ln - Code Member](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/blob/master/收录%20%26%20投稿须知.md)】 && 【[赞赏篇](http://plainboiledwaterln.cn/PerceptionWork/appreciates.html)】
 
 
 
