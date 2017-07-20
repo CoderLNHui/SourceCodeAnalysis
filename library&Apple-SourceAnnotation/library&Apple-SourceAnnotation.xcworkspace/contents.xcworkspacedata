@@ -9,8 +9,8 @@
       </FileRef>
    </Group>
    <Group
-      location = "group:AFNetworking3.1.0&#x6e90;&#x7801;&#x6ce8;&#x89e3;"
-      name = "AFNetworking3.1.0&#x6e90;&#x7801;&#x6ce8;&#x89e3;">
+      location = "group:AFNetworking-3.1.0-SourceAnnotation"
+      name = "AFNetworking-3.1.0-SourceAnnotation">
       <FileRef
          location = "group:AFNetworking.h">
       </FileRef>
@@ -145,8 +145,8 @@
       </Group>
    </Group>
    <Group
-      location = "group:AFNetworking3.1.0&#x8bf7;&#x6c42;&#x5de5;&#x5177;&#x7c7b;"
-      name = "AFNetworking3.1.0&#x8bf7;&#x6c42;&#x5de5;&#x5177;&#x7c7b;">
+      location = "group:AFNetworking-3.1.0-Tools"
+      name = "AFNetworking-3.1.0-Tools">
       <FileRef
          location = "group:LNHttpTool.h">
       </FileRef>
@@ -155,8 +155,260 @@
       </FileRef>
    </Group>
    <Group
-      location = "group:SDWebImage3.7.5&#x6e90;&#x7801;&#x6ce8;&#x89e3;&#x6574;&#x7406;"
-      name = "SDWebImage3.7.5&#x6e90;&#x7801;&#x6ce8;&#x89e3;&#x6574;&#x7406;">
+      location = "group:MBProgressHUD-1.0.0-SourceAnnotation"
+      name = "MBProgressHUD-1.0.0-SourceAnnotation">
+      <FileRef
+         location = "group:MBProgressHUD-Prefix.pch">
+      </FileRef>
+      <FileRef
+         location = "group:MBProgressHUD.bundle">
+      </FileRef>
+      <FileRef
+         location = "group:MBProgressHUD.h">
+      </FileRef>
+      <FileRef
+         location = "group:MBProgressHUD.m">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:MBProgressHUD-1.0.0-Tools"
+      name = "MBProgressHUD-1.0.0-Tools">
+      <FileRef
+         location = "group:MBProgressHUD+LN.h">
+      </FileRef>
+      <FileRef
+         location = "group:MBProgressHUD+LN.m">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:MJExtension-3.0.13-SourceAnnotation"
+      name = "MJExtension-3.0.13-SourceAnnotation">
+      <FileRef
+         location = "group:Info.plist">
+      </FileRef>
+      <FileRef
+         location = "group:MJExtension.h">
+      </FileRef>
+      <FileRef
+         location = "group:MJExtensionConst.h">
+      </FileRef>
+      <FileRef
+         location = "group:MJExtensionConst.m">
+      </FileRef>
+      <FileRef
+         location = "group:MJFoundation.h">
+      </FileRef>
+      <FileRef
+         location = "group:MJFoundation.m">
+      </FileRef>
+      <FileRef
+         location = "group:MJProperty.h">
+      </FileRef>
+      <FileRef
+         location = "group:MJProperty.m">
+      </FileRef>
+      <FileRef
+         location = "group:MJPropertyKey.h">
+      </FileRef>
+      <FileRef
+         location = "group:MJPropertyKey.m">
+      </FileRef>
+      <FileRef
+         location = "group:MJPropertyType.h">
+      </FileRef>
+      <FileRef
+         location = "group:MJPropertyType.m">
+      </FileRef>
+      <FileRef
+         location = "group:NSObject+MJClass.h">
+      </FileRef>
+      <FileRef
+         location = "group:NSObject+MJClass.m">
+      </FileRef>
+      <FileRef
+         location = "group:NSObject+MJCoding.h">
+      </FileRef>
+      <FileRef
+         location = "group:NSObject+MJCoding.m">
+      </FileRef>
+      <FileRef
+         location = "group:NSObject+MJKeyValue.h">
+      </FileRef>
+      <FileRef
+         location = "group:NSObject+MJKeyValue.m">
+      </FileRef>
+      <FileRef
+         location = "group:NSObject+MJProperty.h">
+      </FileRef>
+      <FileRef
+         location = "group:NSObject+MJProperty.m">
+      </FileRef>
+      <FileRef
+         location = "group:NSString+MJExtension.h">
+      </FileRef>
+      <FileRef
+         location = "group:NSString+MJExtension.m">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:MJExtension-3.0.13-Tools"
+      name = "MJExtension-3.0.13-Tools">
+   </Group>
+   <Group
+      location = "group:MJRefresh-3.1.12-SourceAnnotation"
+      name = "MJRefresh-3.1.12-SourceAnnotation">
+      <Group
+         location = "group:Base"
+         name = "Base">
+         <FileRef
+            location = "group:MJRefreshAutoFooter.h">
+         </FileRef>
+         <FileRef
+            location = "group:MJRefreshAutoFooter.m">
+         </FileRef>
+         <FileRef
+            location = "group:MJRefreshBackFooter.h">
+         </FileRef>
+         <FileRef
+            location = "group:MJRefreshBackFooter.m">
+         </FileRef>
+         <FileRef
+            location = "group:MJRefreshComponent.h">
+         </FileRef>
+         <FileRef
+            location = "group:MJRefreshComponent.m">
+         </FileRef>
+         <FileRef
+            location = "group:MJRefreshFooter.h">
+         </FileRef>
+         <FileRef
+            location = "group:MJRefreshFooter.m">
+         </FileRef>
+         <FileRef
+            location = "group:MJRefreshHeader.h">
+         </FileRef>
+         <FileRef
+            location = "group:MJRefreshHeader.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Custom"
+         name = "Custom">
+         <Group
+            location = "group:Footer"
+            name = "Footer">
+            <Group
+               location = "group:Auto"
+               name = "Auto">
+               <FileRef
+                  location = "group:MJRefreshAutoGifFooter.h">
+               </FileRef>
+               <FileRef
+                  location = "group:MJRefreshAutoGifFooter.m">
+               </FileRef>
+               <FileRef
+                  location = "group:MJRefreshAutoNormalFooter.h">
+               </FileRef>
+               <FileRef
+                  location = "group:MJRefreshAutoNormalFooter.m">
+               </FileRef>
+               <FileRef
+                  location = "group:MJRefreshAutoStateFooter.h">
+               </FileRef>
+               <FileRef
+                  location = "group:MJRefreshAutoStateFooter.m">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Back"
+               name = "Back">
+               <FileRef
+                  location = "group:MJRefreshBackGifFooter.h">
+               </FileRef>
+               <FileRef
+                  location = "group:MJRefreshBackGifFooter.m">
+               </FileRef>
+               <FileRef
+                  location = "group:MJRefreshBackNormalFooter.h">
+               </FileRef>
+               <FileRef
+                  location = "group:MJRefreshBackNormalFooter.m">
+               </FileRef>
+               <FileRef
+                  location = "group:MJRefreshBackStateFooter.h">
+               </FileRef>
+               <FileRef
+                  location = "group:MJRefreshBackStateFooter.m">
+               </FileRef>
+            </Group>
+         </Group>
+         <Group
+            location = "group:Header"
+            name = "Header">
+            <FileRef
+               location = "group:MJRefreshGifHeader.h">
+            </FileRef>
+            <FileRef
+               location = "group:MJRefreshGifHeader.m">
+            </FileRef>
+            <FileRef
+               location = "group:MJRefreshNormalHeader.h">
+            </FileRef>
+            <FileRef
+               location = "group:MJRefreshNormalHeader.m">
+            </FileRef>
+            <FileRef
+               location = "group:MJRefreshStateHeader.h">
+            </FileRef>
+            <FileRef
+               location = "group:MJRefreshStateHeader.m">
+            </FileRef>
+         </Group>
+      </Group>
+      <FileRef
+         location = "group:MJRefresh.bundle">
+      </FileRef>
+      <FileRef
+         location = "group:MJRefresh.h">
+      </FileRef>
+      <FileRef
+         location = "group:MJRefreshConst.h">
+      </FileRef>
+      <FileRef
+         location = "group:MJRefreshConst.m">
+      </FileRef>
+      <FileRef
+         location = "group:NSBundle+MJRefresh.h">
+      </FileRef>
+      <FileRef
+         location = "group:NSBundle+MJRefresh.m">
+      </FileRef>
+      <FileRef
+         location = "group:UIScrollView+MJExtension.h">
+      </FileRef>
+      <FileRef
+         location = "group:UIScrollView+MJExtension.m">
+      </FileRef>
+      <FileRef
+         location = "group:UIScrollView+MJRefresh.h">
+      </FileRef>
+      <FileRef
+         location = "group:UIScrollView+MJRefresh.m">
+      </FileRef>
+      <FileRef
+         location = "group:UIView+MJExtension.h">
+      </FileRef>
+      <FileRef
+         location = "group:UIView+MJExtension.m">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:MJRefresh-3.1.12-Tools"
+      name = "MJRefresh-3.1.12-Tools">
+   </Group>
+   <Group
+      location = "group:SDWebImage-3.7.5-SourceAnnotation"
+      name = "SDWebImage-3.7.5-SourceAnnotation">
       <FileRef
          location = "group:MKAnnotationView+WebCache.h">
       </FileRef>
@@ -258,8 +510,8 @@
       </FileRef>
    </Group>
    <Group
-      location = "group:SDWebImage3.7.5&#x4e0b;&#x8f7d;&#x5de5;&#x5177;&#x7c7b;"
-      name = "SDWebImage3.7.5&#x4e0b;&#x8f7d;&#x5de5;&#x5177;&#x7c7b;">
+      location = "group:SDWebImage-3.7.5-Tools"
+      name = "SDWebImage-3.7.5-Tools">
       <FileRef
          location = "group:LNWebImageTool.h">
       </FileRef>
@@ -268,22 +520,45 @@
       </FileRef>
    </Group>
    <Group
-      location = "group:MBProgressHUD(LNHUD)&#x5de5;&#x5177;&#x7c7b;"
-      name = "MBProgressHUD(LNHUD)&#x5de5;&#x5177;&#x7c7b;">
-      <FileRef
-         location = "group:MBProgressHUD+LN.h">
-      </FileRef>
-      <FileRef
-         location = "group:MBProgressHUD+LN.m">
-      </FileRef>
-      <FileRef
-         location = "group:MBProgressHUD.bundle">
-      </FileRef>
-      <FileRef
-         location = "group:MBProgressHUD.h">
-      </FileRef>
-      <FileRef
-         location = "group:MBProgressHUD.m">
-      </FileRef>
+      location = "group:SVProgressHUDC-2.1.2-SourceAnnotation"
+      name = "SVProgressHUDC-2.1.2-SourceAnnotation">
+      <Group
+         location = "group:SVProgressHUD"
+         name = "SVProgressHUD">
+         <FileRef
+            location = "group:SVIndefiniteAnimatedView.h">
+         </FileRef>
+         <FileRef
+            location = "group:SVIndefiniteAnimatedView.m">
+         </FileRef>
+         <FileRef
+            location = "group:SVProgressAnimatedView.h">
+         </FileRef>
+         <FileRef
+            location = "group:SVProgressAnimatedView.m">
+         </FileRef>
+         <FileRef
+            location = "group:SVProgressHUD-Prefix.pch">
+         </FileRef>
+         <FileRef
+            location = "group:SVProgressHUD.bundle">
+         </FileRef>
+         <FileRef
+            location = "group:SVProgressHUD.h">
+         </FileRef>
+         <FileRef
+            location = "group:SVProgressHUD.m">
+         </FileRef>
+         <FileRef
+            location = "group:SVRadialGradientLayer.h">
+         </FileRef>
+         <FileRef
+            location = "group:SVRadialGradientLayer.m">
+         </FileRef>
+      </Group>
+   </Group>
+   <Group
+      location = "group:SVProgressHUDC-2.1.2-Tools"
+      name = "SVProgressHUDC-2.1.2-Tools">
    </Group>
 </Workspace>

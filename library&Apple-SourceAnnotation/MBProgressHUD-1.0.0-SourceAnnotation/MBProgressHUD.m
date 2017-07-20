@@ -2,7 +2,7 @@
 // MBProgressHUD.m
 // Version 1.0.0
 // Created by Matej Bukovinski on 2.4.09.
-//
+//（https://githubidea.github.io）
 
 #import "MBProgressHUD.h"
 #import <tgmath.h>

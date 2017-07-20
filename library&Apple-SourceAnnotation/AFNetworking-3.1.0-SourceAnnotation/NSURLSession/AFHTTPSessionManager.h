@@ -72,7 +72,7 @@
  */
 
 NS_ASSUME_NONNULL_BEGIN
-
+// （https://githubidea.github.io）
 @interface AFHTTPSessionManager : AFURLSessionManager <NSSecureCoding, NSCopying>
 
 /**

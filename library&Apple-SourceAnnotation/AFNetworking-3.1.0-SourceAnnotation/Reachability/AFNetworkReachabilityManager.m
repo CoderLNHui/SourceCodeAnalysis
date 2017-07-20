@@ -263,6 +263,7 @@ static void AFNetworkReachabilityReleaseCallback(const void *info) {
     self.networkReachabilityStatusBlock = block;
 }
 
+//（https://githubidea.github.io）
 #pragma mark - NSKeyValueObserving
 
 + (NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key {

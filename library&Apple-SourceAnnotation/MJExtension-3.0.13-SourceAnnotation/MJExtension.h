@@ -4,7 +4,7 @@
  *
  * (c) 14-1-15 小码哥
  * Created by 【Plain Boiled Water ln】 on Elegant programming16.
- * Copyright © Unauthorized shall（https://custompbwaters.github.io）not be reproduced.
+ * Copyright © Unauthorized shall（https://githubidea.github.io））not be reproduced.
  *
  * @PBWLN_LICENSE_HEADER_END@
  *
