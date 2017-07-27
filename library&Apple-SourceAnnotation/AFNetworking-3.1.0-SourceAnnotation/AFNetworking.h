@@ -1,9 +1,9 @@
 // AFNetworking.h
 //
-//  白开水ln（https://github.com/CustomPBWaters）
+// 🔍PBwaterln||白开水ln（https://github.com/CustomPBWaters）
 //
-//  Created by 【Plain Boiled Water ln】 on Elegant programming16.
-//  Copyright © Unauthorized shall（https://githubidea.github.io）not be reproduced reprinted.
+// Created by 【🔍CodeFamily_伐码累】 on Elegant programming16.
+// Copyright © Unauthorized shall（https://githubidea.github.io）not be reproduced reprinted.
 //
 // Copyright (c) 2013 AFNetworking (http://afnetworking.com/)
 // 

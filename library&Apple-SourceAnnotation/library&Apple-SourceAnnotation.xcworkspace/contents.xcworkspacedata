@@ -561,4 +561,36 @@
       location = "group:SVProgressHUDC-2.1.2-Tools"
       name = "SVProgressHUDC-2.1.2-Tools">
    </Group>
+   <Group
+      location = "group:DZNEmptyDataSet-master-swift"
+      name = "DZNEmptyDataSet-master-swift">
+      <FileRef
+         location = "group:UIScrollView+EmptyDataSet.h">
+      </FileRef>
+      <FileRef
+         location = "group:UIScrollView+EmptyDataSet.m">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:SwiftyJSON-master-swift"
+      name = "SwiftyJSON-master-swift">
+      <FileRef
+         location = "group:Info-iOS.plist">
+      </FileRef>
+      <FileRef
+         location = "group:Info-OSX.plist">
+      </FileRef>
+      <FileRef
+         location = "group:Info-tvOS.plist">
+      </FileRef>
+      <FileRef
+         location = "group:Info-watchOS.plist">
+      </FileRef>
+      <FileRef
+         location = "group:SwiftyJSON.h">
+      </FileRef>
+      <FileRef
+         location = "group:SwiftyJSON.swift">
+      </FileRef>
+   </Group>
 </Workspace>

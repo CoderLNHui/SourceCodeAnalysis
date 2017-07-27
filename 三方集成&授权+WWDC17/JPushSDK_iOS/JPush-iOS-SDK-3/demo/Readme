@@ -1,7 +1,0 @@
-使用须知：
-1、Notification Service Extension无法在iOS9(XCode7)中使用，测试时请删除对应Target以防止不必要的误导。
-2、Notification Service Extension无法在iOS9(XCode7)中使用，测试时请将引入的'UserNotifications.framework'移除
-3、Notification Service Extension在使用时需要配置相关证书。
-4、Notification Service Extension在使用iOS 10富媒体推送时需要传"mutable-content" : 1
-5、关于宏命令NSFoundationVersionNumber_iOS_9_x_Max，由于在iOS9(XCode7)中Apple已经提前支持了宏命令__IPHONE_10_0，
-  所以本Demo在适配时使用了NSFoundationVersionNumber_iOS_9_x_Max代替__IPHONE_10_0。

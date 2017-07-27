@@ -2,7 +2,12 @@
 // MBProgressHUD.m
 // Version 1.0.0
 // Created by Matej Bukovinski on 2.4.09.
-//（https://githubidea.github.io）
+//  🔍PBwaterln||白开水ln（https://github.com/CustomPBWaters）
+//
+//  Created by 【🔍CodeFamily_伐码累】 on Elegant programming16.
+//  Copyright © Unauthorized shall（https://githubidea.github.io）not be reproduced reprinted.
+//
+
 
 #import "MBProgressHUD.h"
 #import <tgmath.h>

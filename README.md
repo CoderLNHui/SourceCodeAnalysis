@@ -21,7 +21,7 @@
 `非官方 & 非大牛 & 非符合 ——> 只是一帮有思想的伐码猿 ——> 不准确 & 新思想 & 槽槽点 ——> (参考)欢迎你的槽点 || 补充 ！【招募】。`
 
 
-`不管谁的博客上面写的(也包括自己)，阅读的你要敢于去验证，停止无意义的 ⏹copy 👬 paste【共勉】。`
+`不管谁的博客上面写的(也包括自己)，阅读的你要敢于去验证，停止无意义的 copy & paste【共勉】。`
 
 
 
@@ -194,33 +194,33 @@
  //
 
 【AFNetworking-3.1.0】✔️ [网络请求; 库原地址: 向优秀的开源者致敬 ! https://github.com/AFNetworking/AFNetworking](https://github.com/AFNetworking/AFNetworking)   
-【源码注解】[待注解持续 +](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/AFNetworking-3.1.0源码注解)  
-【工具类】[待工具类持续 +](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/AFNetworking-3.1.0工具类)  
+【源码注解】[待注解持续](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/AFNetworking-3.1.0源码注解)  
+【工具类】[待工具类持续](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/AFNetworking-3.1.0工具类)  
 
 
 【SDWebImage-3.7.5】✔️ [图片下载; 库原地址: 向优秀的开源者致敬 ! https://github.com/rs/SDWebImage](https://github.com/rs/SDWebImage)   
-【源码注解】[待注解持续 +](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/SDWebImage-3.7.5源码注解)  
-【工具类】[待工具类持续 +](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/SDWebImage-3.7.5工具类)
+【源码注解】[待注解持续](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/SDWebImage-3.7.5源码注解)  
+【工具类】[待工具类持续](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/SDWebImage-3.7.5工具类)
 
 
 【MBProgressHUD-】✔️ [进度提示; 库原地址: 向优秀的开源者致敬 ! https://github.com/rs/SDWebImage](https://github.com/rs/SDWebImage)   
-【源码注解】[待注解持续 +]()  
-【工具类】[待工具类持续 +](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/MBProgressHUD工具类)
+【源码注解】[待注解持续]()  
+【工具类】[待工具类持续](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/MBProgressHUD工具类)
 
 
 【MJRefresh-3.1.12】✔️ [刷新; 库原地址: 向优秀的开源者致敬 ! https://github.com/CoderMJLee/MJRefresh](https://github.com/CoderMJLee/MJRefresh)   
-【源码注解】[待注解持续 +](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/MJRefresh-3.1.12源码注解)   
-【工具类】[待工具类持续 +]()
+【源码注解】[待注解持续](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/MJRefresh-3.1.12源码注解)   
+【工具类】[待工具类持续]()
 
 
 【MJExtension-3.0.13】✔️ [字典转模型; 库原地址: 向优秀的开源者致敬 ! https://github.com/CoderMJLee/MJExtension](https://github.com/CoderMJLee/MJExtension)   
-【源码注解】[待注解持续 +](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/MJExtension-3.0.13源码注解)   
-【工具类】[待工具类持续 +]()
+【源码注解】[待注解持续](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/MJExtension-3.0.13源码注解)   
+【工具类】[待工具类持续]()
 
 
 【SVProgressHUD-2.1.2】✔️ [进度提示; 库原地址: 向优秀的开源者致敬 ! https://github.com/SVProgressHUD/SVProgressHUD](https://github.com/SVProgressHUD/SVProgressHUD)   
-【源码注解】[待注解持续 +]()  
-【工具类】[待工具类持续 +]()
+【源码注解】[待注解持续]()  
+【工具类】[待工具类持续]()
 
 
 
@@ -232,13 +232,13 @@
 //
 
 【SwiftyJSON-3.1.4】✔️ [Swift界JSON解析之王; 库原地址: 向优秀的开源者致敬 ! https://github.com/SwiftyJSON/SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)   
-【源码注解】[待 +]()  
-【工具类】[待 +]()
+【源码注解】[待注解持续]()  
+【工具类】[待工具类持续]()
 
 
 【DZNEmptyDataSet-1.8.1】✔️ [避免空白UITableView; 库原地址: 向优秀的开源者致敬 ! https://github.com/dzenbot/DZNEmptyDataSet](https://github.com/dzenbot/DZNEmptyDataSet)   
-【源码注解】[待 +]()  
-【工具类】[待 +]()
+【源码注解】[待注解持续]()  
+【工具类】[待工具类持续]()
 
 
 
@@ -413,12 +413,12 @@
 - 点击右上角的 star 和 watch 按钮，可以收藏本仓库，并在文档、issue、Demo更新时收到邮件通知。
 
 
-- 提示：知识变成自己的才叫知识，而你 copy 下来的只是信息，愿你抽时验证 (共勉)^_^. 
+- 提示：知识变成自己的才叫知识，而你 copy 下来的只是信息，愿你我抽时验证 (共勉)^_^. 
 
 
-## About me & appreciates
+## About me
 
-【[Plain boiled water ln - Code Member](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/blob/master/收录%20%26%20投稿须知.md)】 && 【[赞赏篇](http://plainboiledwaterln.cn/PerceptionWork/appreciates.html)】
+【[CodeFamily_伐码累](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/blob/master/收录%20%26%20投稿须知.md)】 && 【[赞赏篇](http://plainboiledwaterln.cn/PerceptionWork/appreciates.html)】
 
 
 
