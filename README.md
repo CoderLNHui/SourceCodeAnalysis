@@ -413,12 +413,11 @@
 - 点击右上角的 star 和 watch 按钮，可以收藏本仓库，并在文档、issue、Demo更新时收到邮件通知。
 
 
-- 提示：知识变成自己的才叫知识，而你 copy 下来的只是信息，愿你我抽时验证 (共勉)^_^. 
 
 
 ## About me
 
-【[CodeFamily_伐码累](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/blob/master/收录%20%26%20投稿须知.md)】 && 【[赞赏篇](http://plainboiledwaterln.cn/PerceptionWork/appreciates.html)】
+【[吾饮白开水，冷暖自知](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/blob/master/收录%20%26%20投稿须知.md)】 && 【[赞赏篇](http://plainboiledwaterln.cn/PerceptionWork/appreciates.html)】
 
 
 
