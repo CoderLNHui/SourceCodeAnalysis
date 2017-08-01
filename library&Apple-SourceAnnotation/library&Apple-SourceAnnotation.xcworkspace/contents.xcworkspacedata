@@ -2,10 +2,17 @@
 <Workspace
    version = "1.0">
    <Group
-      location = "group:Apple&#x5b98;&#x65b9;&#x8bd1;&#x6587;"
-      name = "Apple&#x5b98;&#x65b9;&#x8bd1;&#x6587;">
+      location = "group:Apple&#x8bd1;&#x6587;"
+      name = "Apple&#x8bd1;&#x6587;">
       <FileRef
-         location = "group:Apple &amp; library official translation.h">
+         location = "group:Apple Translation.md">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:GitHub&#x6e90;&#x7801;"
+      name = "GitHub&#x6e90;&#x7801;">
+      <FileRef
+         location = "group:GitHub SourceCode.md">
       </FileRef>
    </Group>
    <Group
@@ -410,6 +417,9 @@
       location = "group:SDWebImage-3.7.5-SourceAnnotation"
       name = "SDWebImage-3.7.5-SourceAnnotation">
       <FileRef
+         location = "group:SDWebImage.m">
+      </FileRef>
+      <FileRef
          location = "group:MKAnnotationView+WebCache.h">
       </FileRef>
       <FileRef
@@ -562,8 +572,8 @@
       name = "SVProgressHUDC-2.1.2-Tools">
    </Group>
    <Group
-      location = "group:DZNEmptyDataSet-master-swift"
-      name = "DZNEmptyDataSet-master-swift">
+      location = "group:DZNEmptyDataSet-1.8.1-swift"
+      name = "DZNEmptyDataSet-1.8.1-swift">
       <FileRef
          location = "group:UIScrollView+EmptyDataSet.h">
       </FileRef>
@@ -572,8 +582,8 @@
       </FileRef>
    </Group>
    <Group
-      location = "group:SwiftyJSON-master-swift"
-      name = "SwiftyJSON-master-swift">
+      location = "group:SwiftyJSON-3.1.4-swift"
+      name = "SwiftyJSON-3.1.4-swift">
       <FileRef
          location = "group:Info-iOS.plist">
       </FileRef>

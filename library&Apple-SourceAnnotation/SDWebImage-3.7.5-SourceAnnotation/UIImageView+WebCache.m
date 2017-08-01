@@ -42,7 +42,8 @@ static char TAG_ACTIVITY_SHOW;
     [self sd_setImageWithURL:url placeholderImage:placeholder options:options progress:nil completed:completedBlock];
 }
 
-//下载图片的核心方法
+// 下载图片的核心方法
+//【注解】:白开水ln✔️
 /*
  * url          图片的二进制数据
  * placeholder  UIImageView的占位图片

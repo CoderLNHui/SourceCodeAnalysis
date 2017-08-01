@@ -368,7 +368,8 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
     return [self.memCache objectForKey:key];
 }
 
-//查询内存缓存之后同步查询磁盘缓存
+// 查询内存缓存之后同步查询磁盘缓存
+//【注解】: 白开水ln✔️
 - (UIImage *)imageFromDiskCacheForKey:(NSString *)key {
 
     // First check the in-memory cache..

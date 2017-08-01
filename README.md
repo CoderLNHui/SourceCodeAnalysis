@@ -6,10 +6,6 @@
 >阅读源码 || 系统文件，不仅能使我们了解作者的功能实现方式，方便我们运用其功能，快速的fix使用中遇到的bug，更重要的是在阅读优秀源码时体会作者的设计思想和架构设计，具体的技术很快就会过时，优秀的设计思想却会历久弥新，给我们今后编码以很大的借鉴和启迪。向优秀的开源者致敬！   向优秀的分享者致敬！
 
 
-
-
-## Elegant programming
-
 ![1](http://upload-images.jianshu.io/upload_images/2230763-3471e189f31650c4.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
  
 
@@ -26,7 +22,7 @@
 
 
 ***
- //--------------------------- 【Apple官方译文 学习整理】 ------------------------------//  
+ //--------------------------- 【Apple译文 学习整理】 ------------------------------//  
  //
 
 【从 NSURLConnection 到 NSURLSession】✔️  
@@ -190,37 +186,37 @@
 
 
 ***
- //--------------------------- 【Objective C-SourceAnnotation】 ------------------------------//  
+ //--------------------------- 【Objective C-常用优秀三方库】 ------------------------------//  
  //
 
 【AFNetworking-3.1.0】✔️ [网络请求; 库原地址: 向优秀的开源者致敬 ! https://github.com/AFNetworking/AFNetworking](https://github.com/AFNetworking/AFNetworking)   
-【源码注解】[待注解持续](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/AFNetworking-3.1.0源码注解)  
-【工具类】[待工具类持续](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/AFNetworking-3.1.0工具类)  
+【源码注解】[待注解续更](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/AFNetworking-3.1.0-SourceAnnotation)  
+【工具类】[待工具类续更](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/AFNetworking-3.1.0-Tools)  
 
 
 【SDWebImage-3.7.5】✔️ [图片下载; 库原地址: 向优秀的开源者致敬 ! https://github.com/rs/SDWebImage](https://github.com/rs/SDWebImage)   
-【源码注解】[待注解持续](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/SDWebImage-3.7.5源码注解)  
-【工具类】[待工具类持续](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/SDWebImage-3.7.5工具类)
+【源码注解】[待注解续更](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/SDWebImage-3.7.5-SourceAnnotation)  
+【工具类】[待工具类续更](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/SDWebImage-3.7.5-Tools)
 
 
 【MBProgressHUD-】✔️ [进度提示; 库原地址: 向优秀的开源者致敬 ! https://github.com/rs/SDWebImage](https://github.com/rs/SDWebImage)   
-【源码注解】[待注解持续]()  
-【工具类】[待工具类持续](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/MBProgressHUD工具类)
+【源码注解】[待注解续更](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/MBProgressHUD-1.0.0-SourceAnnotation)  
+【工具类】[待工具类续更](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/MBProgressHUD-1.0.0-Tools)
 
 
 【MJRefresh-3.1.12】✔️ [刷新; 库原地址: 向优秀的开源者致敬 ! https://github.com/CoderMJLee/MJRefresh](https://github.com/CoderMJLee/MJRefresh)   
-【源码注解】[待注解持续](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/MJRefresh-3.1.12源码注解)   
-【工具类】[待工具类持续]()
+【源码注解】[待注解续更](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/MJRefresh-3.1.12-SourceAnnotation)   
+【工具类】[待工具类续更]()
 
 
 【MJExtension-3.0.13】✔️ [字典转模型; 库原地址: 向优秀的开源者致敬 ! https://github.com/CoderMJLee/MJExtension](https://github.com/CoderMJLee/MJExtension)   
-【源码注解】[待注解持续](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/tree/master/library%26Apple-SourceAnnotation/MJExtension-3.0.13源码注解)   
-【工具类】[待工具类持续]()
+【源码注解】[待注解续更](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/MJExtension-3.0.13-SourceAnnotation)   
+【工具类】[待工具类续更]()
 
 
 【SVProgressHUD-2.1.2】✔️ [进度提示; 库原地址: 向优秀的开源者致敬 ! https://github.com/SVProgressHUD/SVProgressHUD](https://github.com/SVProgressHUD/SVProgressHUD)   
-【源码注解】[待注解持续]()  
-【工具类】[待工具类持续]()
+【源码注解】[待注解续更](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/SVProgressHUDC-2.1.2-SourceAnnotation/SVProgressHUD)  
+【工具类】[待工具类续更]()
 
 
 
@@ -228,17 +224,17 @@
 
 
 ***
-//--------------------------- 【Swift-SourceAnnotation】 ------------------------------//  
+//--------------------------- 【Swift-常用优秀三方库】 ------------------------------//  
 //
 
 【SwiftyJSON-3.1.4】✔️ [Swift界JSON解析之王; 库原地址: 向优秀的开源者致敬 ! https://github.com/SwiftyJSON/SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)   
-【源码注解】[待注解持续]()  
-【工具类】[待工具类持续]()
+【源码注解】[待注解续更]()  
+【工具类】[待工具类续更]()
 
 
 【DZNEmptyDataSet-1.8.1】✔️ [避免空白UITableView; 库原地址: 向优秀的开源者致敬 ! https://github.com/dzenbot/DZNEmptyDataSet](https://github.com/dzenbot/DZNEmptyDataSet)   
-【源码注解】[待注解持续]()  
-【工具类】[待工具类持续]()
+【源码注解】[待注解续更]()  
+【工具类】[待工具类续更]()
 
 
 
@@ -252,7 +248,7 @@
 
 
 ***
- //--------------------------- 【学习资源 学习整理】 ------------------------------//  
+ //--------------------------- 【学习资源 整理】 ------------------------------//  
  // "摘录于":  https://github.com/zhouhuanqiang/LearningIOS
 
 地址  |  简介

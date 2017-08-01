@@ -220,12 +220,16 @@ typedef void(^SDWebImageCalculateSizeBlock)(NSUInteger fileCount, NSUInteger tot
  */
 - (UIImage *)imageFromMemoryCacheForKey:(NSString *)key;
 
+
 /**
  * Query the disk cache synchronously after checking the memory cache.
  *
  * @param key The unique key used to store the wanted image
  *
  * 查询内存缓存之后同步查询磁盘缓存
+ *【注解】: 白开水ln✔️
+ * 1.SDWebImage的图片缓存是用图片的（默认url字符串作为key） <--> UIImage
+ * 2.从沙盒加载(SD内部会先看内存中,有 直接返回\没有 然后再去沙盒中查找); 该方法只获取,不发请求;
  *
  * @param key  保存图像的唯一键
  */
