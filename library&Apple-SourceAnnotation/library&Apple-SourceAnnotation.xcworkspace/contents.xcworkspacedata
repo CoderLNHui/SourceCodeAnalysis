@@ -2,6 +2,10 @@
 <Workspace
    version = "1.0">
    <Group
+      location = "container:"
+      name = "&#x8bf7;&#x4e3a;&#x4f60;&#x7684; &#x9ad8;&#x6548;&#x9605;&#x8bfb;&#x8d5e;&#x8d4f;&#x652f;&#x6301; or Star&#x4e00;&#x6ce2; &#xff01;&#x5173;&#x6ce8; &#x5fae;&#x4f17;@&#x767d;&#x5f00;&#x6c34;ln &#x5206;&#x4eab;&#x4f10;&#x7801;&#x7ecf;&#x9a8c;&amp;&#x53ef;&#x5438;&#x6536;&#x601d;&#x60f3;&#x7684;&#x6587;&#x7ae0;&#xff01;&#x671f;&#x5f85;&#x4f60;">
+   </Group>
+   <Group
       location = "group:Apple&#x8bd1;&#x6587;"
       name = "Apple&#x8bd1;&#x6587;">
       <FileRef
