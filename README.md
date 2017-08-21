@@ -3,21 +3,17 @@
 ## bootstrap 
 
   
->阅读源码 || 系统文件，不仅能使我们了解作者的功能实现方式，方便我们运用其功能，快速的fix使用中遇到的bug，更重要的是在阅读优秀源码时体会作者的设计思想和架构设计，具体的技术很快就会过时，优秀的设计思想却会历久弥新，给我们今后编码以很大的借鉴和启迪。向优秀的开源者致敬！   向优秀的分享者致敬！
+> 阅读源码，不仅能使我们了解作者的功能实现方式，方便我们运用其功能，快速的fix使用中遇到的bug，更重要的是在阅读优秀源码时体会作者的设计思想和架构设计，具体的技术很快就会过时，优秀的设计思想却会历久弥新，给我们今后编码以很大的借鉴和启迪。向优秀的开源者致敬！向优秀的分享者致敬！
 
 
-![1](http://upload-images.jianshu.io/upload_images/2230763-3471e189f31650c4.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
- 
+![0-1.jpeg](http://upload-images.jianshu.io/upload_images/2230763-fba0789248416c0a.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
 ## Content progress
 
 
-`非官方 & 非大牛 & 非符合 ——> 只是一帮有思想的伐码猿 ——> 不准确 & 新思想 & 槽槽点 ——> (参考)欢迎你的槽点 || 补充 ！【招募】。`
-
-
-`不管谁的博客上面写的(也包括自己)，阅读的你要敢于去验证，停止无意义的 copy & paste【共勉】。`
+`不管谁的博客上面写的 (也包括自己)，阅读的你要敢于去验证，停止做无意义的 things ; (共勉)@白开水ln。`
 
   
 
@@ -381,7 +377,7 @@
 | `未完` | `待续` | 
 | :-: | :-: |   
 | 每周末(`争取`) | 更新 |   
-| 欢迎留言补充 ！ | 助你我便捷高效开发 ！ |
+
 
 
 
@@ -400,21 +396,13 @@
 
 
 
+#### Reading
+***
 
-## Reading
-
-- 如果在阅读过程中遇到 error || New ideas，希望你能 Issues 我，谢谢。
-
-
-- 点击右上角的 star 和 watch 按钮，可以收藏本仓库，并在文档、issue、Demo更新时收到邮件通知。
+- 如果在阅读过程中遇到 error || new ideas，希望你能 issue 我，我会及时补充谢谢。
 
 
-
-
-## About me
-
-【[吾饮白开水，冷暖自知](https://github.com/CustomPBWaters/Apple-OfficialTranslation-SourceAnnotation/blob/master/收录%20%26%20投稿须知.md)】 && 【[赞赏篇](http://plainboiledwaterln.cn/PerceptionWork/appreciates.html)】
-
+- 喜欢可 [赞赏](http://upload-images.jianshu.io/upload_images/2230763-bf7f4af3c678980b.gif?imageMogr2/auto-orient/strip) ，点击右上角的 star 和 watch 按钮，可以收藏本仓库，并在文档、issue、Demo更新时收到邮件通知。
 
 
 
