@@ -19,16 +19,16 @@
 
 >【Apple译文】
 
-【从 NSURLConnection 到 NSURLSession】   
-【官方文档】 https://www.objc.io/issues/5-ios7/from-nsurlconnection-to-nsurlsession/  
-【博客译文】https://githubidea.github.io/AppleTranslation/ConnectionToSession.html
+- 【从 NSURLConnection 到 NSURLSession】   
+  【官方文档】 https://www.objc.io/issues/5-ios7/from-nsurlconnection-to-nsurlsession/  
+  【博客译文】https://githubidea.github.io/AppleTranslation/ConnectionToSession.html
 
 
 
 
-【NSURLSession译文】   
-【官方文档】https://developer.apple.com/reference/foundation/urlsession#//apple_ref/occ/clm/NSURLSession/sharedSession  
-【博客译文】https://githubidea.github.io/AppleTranslation/NSURLSessionApple.html
+- 【NSURLSession译文】   
+  【官方文档】https://developer.apple.com/reference/foundation/urlsession#//apple_ref/occ/clm/NSURLSession/sharedSession  
+  【博客译文】https://githubidea.github.io/AppleTranslation/NSURLSessionApple.html
 
 
 
