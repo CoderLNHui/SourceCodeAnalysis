@@ -2,135 +2,144 @@
 
 ## bootstrap 
 
-  
-> 阅读源码，不仅能使我们了解作者的功能实现方式，方便我们运用其功能，快速的fix使用中遇到的bug，更重要的是在阅读优秀源码时体会作者的设计思想和架构设计，具体的技术很快就会过时，优秀的设计思想却会历久弥新，给我们今后编码以很大的借鉴和启迪。向优秀的开源者致敬！向优秀的分享者致敬！
+
+>阅读源码，不仅能使我们了解作者的功能实现方式，方便我们运用其功能，快速的fix使用中遇到的bug，更重要的是在阅读优秀源码时体会作者的设计思想和架构设计，具体的技术很快就会过时，优秀的设计思想却会历久弥新，给我们今后编码以很大的借鉴和启迪。向优秀的开源者致敬！向优秀的分享者致敬！
+> 
+>不管谁的博客上面写的 (也包括自己)，阅读的你要敢于去验证，停止做无意义的 things ; (共勉)@白开水ln。
+
+ 
 
 
-![0-1.jpeg](http://upload-images.jianshu.io/upload_images/2230763-fba0789248416c0a.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
-## Content progress
+
+## Content
 
 
-`不管谁的博客上面写的 (也包括自己)，阅读的你要敢于去验证，停止做无意义的 things ; (共勉)@白开水ln。`
+>【Apple译文】
 
-  
-
-***
- //--------------------------- 【Apple译文 学习整理】 ------------------------------//  
- //
-
-【从 NSURLConnection 到 NSURLSession】✔️  
+【从 NSURLConnection 到 NSURLSession】   
 【官方文档】 https://www.objc.io/issues/5-ios7/from-nsurlconnection-to-nsurlsession/  
 【博客译文】https://githubidea.github.io/AppleTranslation/ConnectionToSession.html
 
 
 
 
-【NSURLSession译文】✔️  
+【NSURLSession译文】   
 【官方文档】https://developer.apple.com/reference/foundation/urlsession#//apple_ref/occ/clm/NSURLSession/sharedSession  
 【博客译文】https://githubidea.github.io/AppleTranslation/NSURLSessionApple.html
 
 
 
 
-【UIWebView译文】✔️  
+【UIWebView译文】   
 【官方文档】https://developer.apple.com/reference/uikit/uiwebview  
 【博客译文】https://githubidea.github.io/AppleTranslation/UIWebViewApple.html
 
 
 
 
-【UIBezierPath译文】✔️  
+【UIBezierPath译文】   
 【官方文档】https://developer.apple.com/reference/uikit/uibezierpath?language=objc  
 【博客译文】https://githubidea.github.io/AppleTranslation/UIBezierPathApple.html
 
 
 
 
-【UIView API 官方文档译文】✔️  
+【UIView API 官方文档译文】   
 【官方文档】https://developer.apple.com/reference/uikit/uiview?language=objc  
 【博客译文】https://githubidea.github.io/AppleTranslation/UIViewApple.html
 
 
 
 
-【iOS RunLoop 编程手册 （译）】✔️  
+【iOS RunLoop 编程手册 （译）】   
 【官方文档】https://developer.apple.com/reference/foundation/runloop  
 【博客译文】http://www.jianshu.com/p/4c38d16a29f1
 
 
 
 
-【Podfile语法参考（译）】✔️  
+【Podfile语法参考（译）】   
 【官方文档】https://guides.cocoapods.org/syntax/podfile.html  
 【博客译文】http://www.jianshu.com/p/8af475c4f717
 
 
 
 
-【iOS自动布局框架-Masonry详解】✔️  
+【iOS自动布局框架-Masonry详解】   
 【官方文档】  
 【博客译文】http://www.jianshu.com/p/ea74b230c70d
 
 
 
 
-【OC_runtime运行时官方文档翻译】✔️  
+【OC_runtime运行时官方文档翻译】   
 【官方文档】https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40008048  
 【博客译文】http://blog.csdn.net/liangliang103377/article/details/39007683
 
 
 
 
-【苹果文档翻译 iOS10 NSAppTransportSecurity】✔️  
+【苹果文档翻译 iOS10 NSAppTransportSecurity】   
 【官方文档】https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW34  
 【博客译文】http://www.jianshu.com/p/1ec3fa1ec00f
 
 
-【iOS 9设计规范 中文版 完整版】✔️  
+【iOS 9设计规范 中文版 完整版】   
 【官方文档】  
 【博客译文】http://www.jianshu.com/p/fbdd713eb2ce
 
 
-【iOS 10设计规范笔记与整理】✔️  
+【iOS 10设计规范笔记与整理】   
 【官方文档】  
 【博客译文】http://www.pmcaff.com/article/index/514586365192320?from=label&pmc_param[label_name]=发现
 
 
-【Stack Overflow 2017 开发者调查报告】✔️  
+【Stack Overflow 2017 开发者调查报告】   
 【官方文档】https://insights.stackoverflow.com/survey/2017#technology-most-loved-dreaded-and-wanted-languages 
 【博客译文】https://www.oschina.net/news/83164/stack-overflow-developer-survey-results-2017
 
 
-【Swift 4 JSON 解析指南】✔️  
+【Swift 4 JSON 解析指南】   
 【官方文档】 
 【博客译文】http://bignerdcoding.com/archives/37.html
 
 
 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
 ***
 
- //--------------------------- 【三方框架 学习整理】 ------------------------------//  
- //
+>【三方框架】
 
-
-【AFNetworking（v3.0+）框架结构】✔️  
+【AFNetworking（v3.0+）框架结构】   
 【三方框架】https://github.com/AFNetworking/AFNetworking  
 【博客注解】https://githubidea.github.io/SourceAnnotations/AFNLibraryStructure.html
 
 
 
 
-【AFNetworking（v3.0+）内部逻辑处理过程】✔️  
+【AFNetworking（v3.0+）内部逻辑处理过程】   
 【三方框架】https://github.com/AFNetworking/AFNetworking   
 【博客注解】https://githubidea.github.io/SourceAnnotations/AFNLibraryProcessingLogic.html
 
 
 
 
-【SDWebImage框架&源码学习总结】✔️  
+【SDWebImage框架&源码学习总结】   
 【三方框架】https://github.com/rs/SDWebImage  
 【博客注解】https://githubidea.github.io/SourceAnnotations/SDLibrary.html 
 【博客注解】https://githubidea.github.io/SourceAnnotations/SDSourceCode1.html
@@ -138,20 +147,20 @@
 
 
 
-【MJExtension框架学习总结】✔️  
+【MJExtension框架学习总结】   
 【三方框架】https://github.com/CoderMJLee/MJExtension  
 【博客注解】https://githubidea.github.io/SourceAnnotations/MJExtensionLibrary.html
 
 
 
-【VVeboTableView源码解析】✔️  
+【VVeboTableView源码解析】   
 【三方框架】https://github.com/johnil/VVeboTableViewDemo  
 【博客注解】http://www.jianshu.com/p/78027a3a2c41
 
 
 
 
-【MJRefresh解析与详细使用指导】✔️  
+【MJRefresh解析与详细使用指导】   
 【三方框架】https://github.com/CoderMJLee/MJRefresh  
 【博客注解】http://www.jianshu.com/p/4ea427bab0af  
 【博客注解】http://www.jianshu.com/p/437095c88717
@@ -159,21 +168,21 @@
 
 
 
-【iOS即时通讯进阶 - CocoaAsyncSocket源码解析(Connect篇)】✔️  
+【iOS即时通讯进阶 - CocoaAsyncSocket源码解析(Connect篇)】   
 【三方框架】  
 【博客注解】http://www.jianshu.com/p/0a11b2d0f4ae
 
 
 
 
-【Masonry 源码解析】✔️  
+【Masonry 源码解析】   
 【三方框架】https://github.com/SnapKit/Masonry  
 【博客注解】http://www.jianshu.com/p/3fce11e370b1
 
 
 
 
-【基于AFNetworking3.1的二次封装和拓展】✔️  
+【基于AFNetworking3.1的二次封装和拓展】   
 【三方框架】  
 【博客注解】http://www.jianshu.com/p/d0751b9a8d65
 
@@ -181,36 +190,42 @@
  
 
 
-***
- //--------------------------- 【Objective C-常用优秀三方库】 ------------------------------//  
- //
 
-【AFNetworking-3.1.0】✔️ [网络请求; 库原地址: 向优秀的开源者致敬 ! https://github.com/AFNetworking/AFNetworking](https://github.com/AFNetworking/AFNetworking)   
+
+
+
+
+
+***
+
+>【Objective C-常用优秀三方库】
+
+【AFNetworking-3.1.0】  [网络请求; 库原地址: 向优秀的开源者致敬 ! https://github.com/AFNetworking/AFNetworking](https://github.com/AFNetworking/AFNetworking)   
 【源码注解】[待注解续更](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/AFNetworking-3.1.0-SourceAnnotation)  
 【工具类】[待工具类续更](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/AFNetworking-3.1.0-Tools)  
 
 
-【SDWebImage-3.7.5】✔️ [图片下载; 库原地址: 向优秀的开源者致敬 ! https://github.com/rs/SDWebImage](https://github.com/rs/SDWebImage)   
+【SDWebImage-3.7.5】  [图片下载; 库原地址: 向优秀的开源者致敬 ! https://github.com/rs/SDWebImage](https://github.com/rs/SDWebImage)   
 【源码注解】[待注解续更](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/SDWebImage-3.7.5-SourceAnnotation)  
 【工具类】[待工具类续更](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/SDWebImage-3.7.5-Tools)
 
 
-【MBProgressHUD-】✔️ [进度提示; 库原地址: 向优秀的开源者致敬 ! https://github.com/rs/SDWebImage](https://github.com/rs/SDWebImage)   
+【MBProgressHUD-】  [进度提示; 库原地址: 向优秀的开源者致敬 ! https://github.com/rs/SDWebImage](https://github.com/rs/SDWebImage)   
 【源码注解】[待注解续更](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/MBProgressHUD-1.0.0-SourceAnnotation)  
 【工具类】[待工具类续更](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/MBProgressHUD-1.0.0-Tools)
 
 
-【MJRefresh-3.1.12】✔️ [刷新; 库原地址: 向优秀的开源者致敬 ! https://github.com/CoderMJLee/MJRefresh](https://github.com/CoderMJLee/MJRefresh)   
+【MJRefresh-3.1.12】  [刷新; 库原地址: 向优秀的开源者致敬 ! https://github.com/CoderMJLee/MJRefresh](https://github.com/CoderMJLee/MJRefresh)   
 【源码注解】[待注解续更](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/MJRefresh-3.1.12-SourceAnnotation)   
 【工具类】[待工具类续更]()
 
 
-【MJExtension-3.0.13】✔️ [字典转模型; 库原地址: 向优秀的开源者致敬 ! https://github.com/CoderMJLee/MJExtension](https://github.com/CoderMJLee/MJExtension)   
+【MJExtension-3.0.13】  [字典转模型; 库原地址: 向优秀的开源者致敬 ! https://github.com/CoderMJLee/MJExtension](https://github.com/CoderMJLee/MJExtension)   
 【源码注解】[待注解续更](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/MJExtension-3.0.13-SourceAnnotation)   
 【工具类】[待工具类续更]()
 
 
-【SVProgressHUD-2.1.2】✔️ [进度提示; 库原地址: 向优秀的开源者致敬 ! https://github.com/SVProgressHUD/SVProgressHUD](https://github.com/SVProgressHUD/SVProgressHUD)   
+【SVProgressHUD-2.1.2】  [进度提示; 库原地址: 向优秀的开源者致敬 ! https://github.com/SVProgressHUD/SVProgressHUD](https://github.com/SVProgressHUD/SVProgressHUD)   
 【源码注解】[待注解续更](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/SVProgressHUDC-2.1.2-SourceAnnotation/SVProgressHUD)  
 【工具类】[待工具类续更]()
 
@@ -218,17 +233,17 @@
 
 
 
-
 ***
-//--------------------------- 【Swift-常用优秀三方库】 ------------------------------//  
-//
 
-【SwiftyJSON-3.1.4】✔️ [Swift界JSON解析之王; 库原地址: 向优秀的开源者致敬 ! https://github.com/SwiftyJSON/SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)   
+>【Swift-常用优秀三方库】
+
+
+【SwiftyJSON-3.1.4】  [Swift界JSON解析之王; 库原地址: 向优秀的开源者致敬 ! https://github.com/SwiftyJSON/SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)   
 【源码注解】[待注解续更]()  
 【工具类】[待工具类续更]()
 
 
-【DZNEmptyDataSet-1.8.1】✔️ [避免空白UITableView; 库原地址: 向优秀的开源者致敬 ! https://github.com/dzenbot/DZNEmptyDataSet](https://github.com/dzenbot/DZNEmptyDataSet)   
+【DZNEmptyDataSet-1.8.1】  [避免空白UITableView; 库原地址: 向优秀的开源者致敬 ! https://github.com/dzenbot/DZNEmptyDataSet](https://github.com/dzenbot/DZNEmptyDataSet)   
 【源码注解】[待注解续更]()  
 【工具类】[待工具类续更]()
 
@@ -243,9 +258,53 @@
 
 
 
+
+
+
+
+
+
 ***
- //--------------------------- 【学习资源 整理】 ------------------------------//  
- // "摘录于":  https://github.com/zhouhuanqiang/LearningIOS
+
+>【三方集成 & 授权】
+
+【JPush极光推送】     
+【集成文档】 http://docs.jiguang.cn/jpush/client/iOS/ios_sdk/    
+【极光博客】 http://blog.jiguang.cn/updates-2017-05/  
+【博客注解】 http://www.jianshu.com/p/53e0244e6081
+
+ 
+【UMAnalytics友盟统计】     
+【集成文档】 http://dev.umeng.com/analytics/ios-doc/integration#1_2    
+【友盟论坛】 http://bbs.umeng.com  
+【博客注解】 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+***
+
+>【学习资源】,"摘录于":  https://github.com/zhouhuanqiang/LearningIOS
+
+
+
+
 
 地址  |  简介
 ---- | ----
@@ -263,12 +322,20 @@
 [atswift-2016-resources](https://github.com/atConf/atswift-2016-resources)| 2016中国Swift开发者大会源文件，包括keynote, pdf 和源工程文件
 [全球移动技术大会2017](http://ppt.geekbang.org/gmtc)| 全球移动技术大会2017PPT下载合集
 [iOS10-day-by-day](https://github.com/shinobicontrols/iOS10-day-by-day)| iOS新技术尝试
+[WWDC 2017 Videos]() | 我们很高兴地告知您 [WWDC 2017](https://developer.apple.com/videos/wwdc2017/) 视频和 [Developer Insight](https://developer.apple.com/app-store/insights/) (开发者经验分享视频) ，现在皆已配有简体中文字幕。
+
+
+
+
+
+
+
 
 
 
 ***
-//--------------------------- 【开源项目源码 学习整理】 ------------------------------//  
-// 
+
+>【开源项目源码】
 
 
 地址  |  简介
@@ -310,9 +377,7 @@
 
 ***
 
-
- //--------------------------- 【优秀Blog 学习整理】 ------------------------------//  
- // "同步于": https://github.com/tangqiaoboy/iOSBlogCN
+>【优秀Blog】,"同步于": https://github.com/tangqiaoboy/iOSBlogCN
 
 
 博客地址 | RSS地址
@@ -371,36 +436,19 @@
 
 
 
+>未完、每周末(`争取`)、更新 ~
 
 
-
-| `未完` | `待续` | 
-| :-: | :-: |   
-| 每周末(`争取`) | 更新 |   
+###### 劳驾你点一下❓ [效率工具类\系统文件常用API注解](https://github.com/CustomPBWaters/Framework-Annotations-Tools)
 
 
 
 
 
- 
+## Reading
 
-
-***
-
-
-
-
-###### 劳驾你点一下 👇❓
-
-- [效率工具类\系统文件常用API注解](https://github.com/CustomPBWaters/Framework-Annotations-Tools)【Star 同步👀】
-
-
-
-#### Reading
-***
 
 - 如果在阅读过程中遇到 error || new ideas，希望你能 issue 我，我会及时补充谢谢。
-
 
 - 喜欢可 [赞赏](http://upload-images.jianshu.io/upload_images/2230763-bf7f4af3c678980b.gif?imageMogr2/auto-orient/strip) ，点击右上角的 star 和 watch 按钮，可以收藏本仓库，并在文档、issue、Demo更新时收到邮件通知。
 

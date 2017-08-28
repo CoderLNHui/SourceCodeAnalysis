@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <FileRef
+      location = "group:&#x652f;&#xb7;&#x8d5e;&#x8d4f;.gif">
+   </FileRef>
    <Group
       location = "group:Apple&#x8bd1;&#x6587;"
       name = "Apple&#x8bd1;&#x6587;">
