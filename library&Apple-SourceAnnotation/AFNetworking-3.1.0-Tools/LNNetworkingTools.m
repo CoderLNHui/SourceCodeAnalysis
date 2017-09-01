@@ -1,11 +1,14 @@
 /*
- * LNHttpTool.m
- * 🔍白开水ln（https://github.com/CustomPBWaters）
+ * LNAFNetworkingTools.m
+ * AFNetworking
+ * 白开水ln（https://github.com/CustomPBWaters）
  *
- * Created by 【🔍Plain boiled water ln】 on Elegant programming16.
- * Copyright © Unauthorized shall（https://githubidea.github.io）not be reproduced reprinted.
+ * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
+ * Copyright © Reprinted（https://githubidea.github.io）Please indicate the source.Mustbe.
  *
- * @PBWLN_LICENSE_HEADER_END@
+ * http://www.jianshu.com/u/fd745d76c816
+ *
+ * @HEADER_WELCOME YOU TO JOIN_GitHub & Codeidea_END@
  */
 
 #import "LNHttpTool.h"
