@@ -135,8 +135,8 @@
 [wikipedia-ios](https://github.com/wikimedia/wikipedia-ios)     | 维基百科官方App, 已上架，    star3000+
 [DSLolita](https://github.com/sam408130/DSLolita)     | 模仿新浪微博做的一款app，有发送博文，评论，点赞，私聊功能。    star500+
 [XiMaLaYa-by-HansRove](https://github.com/HansRove/XiMaLaYa-by-HansRove-)     | 仿喜马拉雅FM, 对AVFoundation框架的一次尝试，采用MVVM模式，    star0+    
-| [百思不得姐](https://github.com/targetcloud/baisibudejie)     |   百思不得姐4.5.6版本高仿，  star200+
-| [Animations 核心动画(大全)](https://github.com/YouXianMing/Animations) |   OC & Swift star2000+
+ [百思不得姐](https://github.com/targetcloud/baisibudejie)     |   百思不得姐4.5.6版本高仿，  star200+
+ [Animations 核心动画(大全)](https://github.com/YouXianMing/Animations) |   OC & Swift star2000+
 [『 WechatPublic-Codeidea 』](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)     |     [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)    
    
 
@@ -171,8 +171,8 @@
  [设计模式包教不包会](https://www.gitbook.com/book/wizardforcel/design-pattern-lessons/details)  | star100+
 [编程之法：面试和算法心得](https://www.gitbook.com/book/wizardforcel/the-art-of-programming-by-july/details)  | [The-Art-Of-Programming-By-July](https://github.com/julycoding/The-Art-Of-Programming-By-July)，star1100+
 [『 WechatPublic-Codeidea 』](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)     |     [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)    
-
-
+[SwiftGG翻译组](http://swift.gg)   | 翻译的文章来源于国外的优秀 Swift 网站和博客
+  
 
 
 
