@@ -168,12 +168,12 @@
 [WWDC 2017 Videos]() | 我们很高兴地告知您 [WWDC 2017](https://developer.apple.com/videos/wwdc2017/) 视频和 [Developer Insight](https://developer.apple.com/app-store/insights/) (开发者经验分享视频) ，现在皆已配有简体中文字幕。
 [Python 核心编程 第二版](https://www.gitbook.com/book/wizardforcel/core-python-2e/details)  | star360+
  [设计模式包教不包会](https://www.gitbook.com/book/wizardforcel/design-pattern-lessons/details)  | star100+
-[编程之法：面试和算法心得](https://www.gitbook.com/book/wizardforcel/the-art-of-programming-by-july/details)  | [The-Art-Of-Programming-By-July](https://github.com/julycoding/The-Art-Of-Programming-By-July)，star1100+
-[『 WechatPublic-Codeidea 』](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)     |     [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)    
+[编程之法：面试和算法心得](https://www.gitbook.com/book/wizardforcel/the-art-of-programming-by-july/details)  | [The-Art-Of-Programming-By-July](https://github.com/julycoding/The-Art-Of-Programming-By-July)，star1100+  
 [SwiftGG翻译组](http://swift.gg)   | 翻译的文章来源于国外的优秀 Swift 网站和博客
-  
-
-
+[Android开发技术周报](http://www.androidweekly.cn)   | 写代码，改变世界
+[Node.js](https://github.com/zenany/weekly/blob/master/resources/nodejs.md)   | 资源汇总
+[JavaScript](http://www.androidweekly.cn)   | 资源汇总
+[『 WechatPublic-Codeidea 』](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)     |     [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)  
 
 
 
