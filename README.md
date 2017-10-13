@@ -29,7 +29,7 @@
 | 【Swift 4 JSON 解析指南】  |  [--]()  | \   [Swift 4 JSON_解析指南](https://bignerdcoding.com/archives/37.html) |
 | 【Stack Overflow 2017 开发者调查报告】  |  [stackoverflow.com](https://insights.stackoverflow.com/survey/2017#technology-most-loved-dreaded-and-wanted-languages)  |  [Stack Overflow 2017 开发者调查报告](https://www.oschina.net/news/83164/stack-overflow-developer-survey-results-2017) \ |
 | 【App Store 审核指南(2017 中文版)】  |  [developer](https://developer.apple.com/app-store/review/guidelines/cn/)  | \   [--]() |
-| [GitHub发布2017年度开发者报告，用户超2400万]( )     |     [聊聊架构](https://mp.weixin.qq.com/s?__biz=MzIwMzg1ODcwMw%3D%3D&mid=2247486939&idx=1&sn=60735a9b29e7ec2374ee44aec57178f7&scene=45#wechat_redirect)   |  [GitHub Octoverse 2017](https://octoverse.github.com)   |
+| GitHub发布2017年度开发者报告，用户超2400万    |     [聊聊架构](https://mp.weixin.qq.com/s?__biz=MzIwMzg1ODcwMw%3D%3D&mid=2247486939&idx=1&sn=60735a9b29e7ec2374ee44aec57178f7&scene=45#wechat_redirect)   |  [GitHub Octoverse 2017](https://octoverse.github.com)   |
 | [WechatPublic-Codeidea](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)     |     [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)   |  [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)   | 
  
 
