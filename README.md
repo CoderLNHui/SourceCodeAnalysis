@@ -21,7 +21,7 @@
 | 【UIView 视图】  |  [developer](https://developer.apple.com/reference/uikit/uiview?language=objc)  |  [github.io](https://githubidea.github.io/AppleTranslation/UIViewApple.html) \ |
 | 【Runloop 运行循环】  |  [developer](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Multithreading/RunLoopManagement/RunLoopManagement.html)  |  [Run Loops_译](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/blob/master/library%26Apple-SourceAnnotation/Apple译文/Run%20Loops.pdf) 、[CFRunLoop.c (c) 2015_源码 ](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyFoundation-Annotations/RunLoop/CFRunLoop.c)、[NSRunLoop.h_源码](https://github.com/CustomPBWaters/Framework-Annotations-Tools/blob/master/Framework-Annotations%20%26%20Tools/MyFoundation-Annotations/RunLoop/NSRunLoop.h) \ [Runloop_博](https://githubidea.github.io/iOSNET/runloop.html) |
 | 【Runtime 运行时】  |  [developer](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40008048)  |  [runtime_译](http://blog.csdn.net/liangliang103377/article/details/39007683)、[runtime.h_源码](https://github.com/CustomPBWaters/Framework-Annotations-Tools/tree/master/Framework-Annotations%20%26%20Tools/OtherFrameworks-Annotations/Runtime) \ [Runtime_博](https://githubidea.github.io/iOSNET/runtime.html) |
-|  [『 WechatPublic-Codeidea 』](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)  |  [...]()  |  [...]()  |
+|  [WechatPublic-Codeidea](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)  |  [...]()  |  [...]()  |
 | 【iOS10 NSAppTransportSecurity】  |  [developer](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW34)  |  [NSAppTransportSecurity_译](http://www.jianshu.com/p/1ec3fa1ec00f) \ |
 | 【Podfile 语法】  |  [cocoapods](https://guides.cocoapods.org/syntax/podfile.html)  |  [Podfile 语法参考_译](http://www.jianshu.com/p/8af475c4f717) \ |
 | 【iOS 9设计规范 中文版】  |  [developer](https://developer.apple.com/design/)  |  \  [iOS 9设计规范 中文版 完整版](http://www.jianshu.com/p/fbdd713eb2ce) |
@@ -29,8 +29,8 @@
 | 【Swift 4 JSON 解析指南】  |  [--]()  | \   [Swift 4 JSON_解析指南](https://bignerdcoding.com/archives/37.html) |
 | 【Stack Overflow 2017 开发者调查报告】  |  [stackoverflow.com](https://insights.stackoverflow.com/survey/2017#technology-most-loved-dreaded-and-wanted-languages)  |  [Stack Overflow 2017 开发者调查报告](https://www.oschina.net/news/83164/stack-overflow-developer-survey-results-2017) \ |
 | 【App Store 审核指南(2017 中文版)】  |  [developer](https://developer.apple.com/app-store/review/guidelines/cn/)  | \   [--]() |
-| [『 WechatPublic-Codeidea 』](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)     |     [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)   |  [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)   |
- 
+| [GitHub发布2017年度开发者报告，用户超2400万]( )     |     [聊聊架构](https://mp.weixin.qq.com/s?__biz=MzIwMzg1ODcwMw%3D%3D&mid=2247486939&idx=1&sn=60735a9b29e7ec2374ee44aec57178f7&scene=45#wechat_redirect)   |  [GitHub Octoverse 2017](https://octoverse.github.com)   |
+| [WechatPublic-Codeidea](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)     |     [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)   |  [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)   | 
  
 
  
@@ -56,10 +56,10 @@
 | 【CocoaAsyncSocket 即时通讯】  |  [GitHub](https://github.com/robbiehanson/CocoaAsyncSocket)  |  [CocoaAsyncSocket_源码解析](http://www.jianshu.com/p/0a11b2d0f4ae)   \   []() |
 | 【Masonry 约束适配】  |  [GitHub](https://github.com/SnapKit/Masonry)  |  []()   \   [Masonry_详解](http://www.jianshu.com/p/ea74b230c70d)  、[Masonry_技巧使用](https://githubidea.github.io/iOSNET/Masonry.html)  、|
 | 【VVeboTableView 优化流畅度】  |  [GitHub](https://github.com/johnil/VVeboTableViewDemo)  |  [VVeboTableView_源码解析](http://www.jianshu.com/p/78027a3a2c41)   \   []() |
-|  [『 WechatPublic-Codeidea 』](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)  |  [...]()  |  [...]()  |
+|  [WechatPublic-Codeidea](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)  |  [...]()  |  [...]()  |
 | 【SwiftyJSON-3.1.4 JSON解析之王】  |  [GitHub](https://github.com/SwiftyJSON/SwiftyJSON)  |  [SwiftyJSON_源码(续)](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/SwiftyJSON-3.1.4-SourceAnnotation)   、[SwiftyJSON_Tools(续)](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/SwiftyJSON-3.1.4-Tools) \   [SwiftyJSON_译文](http://www.jianshu.com/p/1c0e6745921e)  、[SwiftyJSON_源码分析](http://blog.csdn.net/brycegao321/article/details/54427639)|
 | 【DZNEmptyDataSet-1.8.1 避免空白UITableView】  |  [GitHub](https://github.com/dzenbot/DZNEmptyDataSet)  |  [DZNEmptyDataSet_源码](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/DZNEmptyDataSet-1.8.1-swift)  \   [DZNEmptyDataSet_空白数据集显示](http://www.jianshu.com/p/f70dc3e0f436)  、[DZNEmptyDataSet源码细节](http://www.jianshu.com/p/8b2db71db449) |
-| [『 WechatPublic-Codeidea 』](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)     |     [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)   |  [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)   |
+| [WechatPublic-Codeidea](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)     |     [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)   |  [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)   |
 
 
 
@@ -92,7 +92,7 @@
 |【一篇文章，教你学会 Git】  | [博文 star1100+](http://www.jianshu.com/p/072587b47515)  | 理解Git的基本原理，掌握常用的一些命令。
   |  | 
 |【 git 快速上手】 | [git 快速上手 star700+](http://www.jianshu.com/p/feb6d2e90acd) |  Git 不等于 github大家注意了！git和github就是球和球场的关系！
-| [『 WechatPublic-Codeidea 』](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)     |     [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)     | [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip) 
+| [WechatPublic-Codeidea](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)     |     [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)     | [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip) 
 
 
 
@@ -136,7 +136,7 @@
 [XiMaLaYa-by-HansRove](https://github.com/HansRove/XiMaLaYa-by-HansRove-)     | 仿喜马拉雅FM, 对AVFoundation框架的一次尝试，采用MVVM模式，    star0+    
  [百思不得姐](https://github.com/targetcloud/baisibudejie)     |   百思不得姐4.5.6版本高仿，  star200+
  [Animations 核心动画(大全)](https://github.com/YouXianMing/Animations) |   OC & Swift star2000+
-[『 WechatPublic-Codeidea 』](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)     |     [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)    
+[WechatPublic-Codeidea](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)     |     [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)    
    
 
 
@@ -173,7 +173,7 @@
 [Android开发技术周报](http://www.androidweekly.cn)   | 写代码，改变世界
 [Node.js](https://github.com/zenany/weekly/blob/master/resources/nodejs.md)   | 资源汇总
 [JavaScript](http://www.androidweekly.cn)   | 资源汇总
-[『 WechatPublic-Codeidea 』](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)     |     [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)  
+[WechatPublic-Codeidea](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)     |     [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)  
 
 
 
@@ -244,7 +244,7 @@
 [coderyi](http://www.coderyi.com/)|<http://www.coderyi.com/feed>
 [雷纯锋的技术博客](http://blog.leichunfeng.com) | <http://blog.leichunfeng.com/atom.xml>
 [向晨宇的技术博客](http://www.iosxxx.com/) | <http://iosxxx.com/atom.xml>
-[『 WechatPublic-Codeidea 』](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)     |     [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)    
+[WechatPublic-Codeidea](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)     |     [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)    
 
 
 
