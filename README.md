@@ -249,14 +249,9 @@
 
 
 
->未完、每月末(`争取`)、更新 ~
+>未完、每月末(`争取`)、更新 ~ ; 劳驾你点一下❓ [效率工具类\系统文件常用API注解](https://github.com/CustomPBWaters/Framework-Annotations-Tools)
 
-
-###### 劳驾你点一下❓ [效率工具类\系统文件常用API注解](https://github.com/CustomPBWaters/Framework-Annotations-Tools)
-
-###### 不管谁的博客上面写的 (也包括自己)，阅读的你要敢于去验证，停止做无意义的 things ; (共勉)@白开水ln。
-
-
+ 
 
 
 #### Reading
