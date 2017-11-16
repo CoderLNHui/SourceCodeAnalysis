@@ -151,7 +151,7 @@
 [Android开发技术周报](http://www.androidweekly.cn)   | 写代码，改变世界
 [Node.js](https://github.com/zenany/weekly/blob/master/resources/nodejs.md)   | 资源汇总
 [JavaScript](http://www.androidweekly.cn)   | 资源汇总
- 
+[机器学习初学者必须知道的十大算法](http://mp.weixin.qq.com/s/ZZKsWGvgJXvHkVxhWAAOIA)   | 这篇机器学习算法工程师需要知道的十大算法是非常有用的。 
 
 
 
