@@ -351,9 +351,9 @@
 
 #### 说明
 - ⚠️本内容 [原工程地址](https://github.com/jcccn/Why-Reject)，[审核蛋疼一刻整理](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/blob/master/AppStore被拒（emoji表情告诉你）理由大全_16%7E17.md)，欢迎来一起完善 ！
-- ⚠️部分内容整理自[CocoaChina](http://www.cocoachina.com/appstore/20141107/10165.html)网站 ！
+- ⚠️部分内容整理自 [CocoaChina](http://www.cocoachina.com/appstore/20141107/10165.html)、[创业邦](http://www.cyzone.cn/a/20141103/265148.html) 网站 ！
 
-- ⚠️部分内容整理自[创业邦](http://www.cyzone.cn/a/20141103/265148.html)网站
+
 
 
 
