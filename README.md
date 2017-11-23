@@ -10,7 +10,7 @@
 | [UIWebView](https://developer.apple.com/reference/uikit/uiwebview)   |  [UIWebView 网页视图](https://githubidea.github.io/AppleTranslation/UIWebViewApple.html)  |
 |  [UIBezierPath](https://developer.apple.com/reference/uikit/uibezierpath?language=objc)  | [UIBezierPath 贝塞尔曲线](https://githubidea.github.io/AppleTranslation/UIBezierPathApple.html)   |
 |  [UIView](https://developer.apple.com/reference/uikit/uiview?language=objc)  |  [UIView 视图](https://githubidea.github.io/AppleTranslation/UIViewApple.html)  |
-|  [Runloop](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Multithreading/RunLoopManagement/RunLoopManagement.html)  | [Runloop 运行循环](https://github.com/CustomPBWaters/Framework-Codeidea/tree/master/Framework-Annotations%20%26%20Tools/MyFoundation-Annotations/RunLoop)、[Run Loops.pdf](https://github.com/CustomPBWaters/Apple-GitHub-Codeidea/blob/master/library%26Apple-SourceAnnotation/Apple译文/Run%20Loops.pdf)  |
+|  [Runloop](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Multithreading/RunLoopManagement/RunLoopManagement.html)  | [Runloop.h](https://github.com/CustomPBWaters/Framework-Codeidea/tree/master/Framework-Annotations%20%26%20Tools/MyFoundation-Annotations/RunLoop)、[Run Loops.pdf](https://github.com/CustomPBWaters/Apple-GitHub-Codeidea/blob/master/library%26Apple-SourceAnnotation/Apple译文/Run%20Loops.pdf)  |
 |  [Runtime](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40008048)  | [runtime.h](https://github.com/CustomPBWaters/Framework-Codeidea/tree/master/Framework-Annotations%20%26%20Tools/OtherFrameworks-Annotations/Runtime)、[runtime 运行时](http://blog.csdn.net/liangliang103377/article/details/39007683) |
 |  [iOS10 NSAppTransportSecurity](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW34)  |  [NSAppTransportSecurity](http://www.jianshu.com/p/1ec3fa1ec00f)  |
 |  [Podfile](https://guides.cocoapods.org/syntax/podfile.html)  |  [Podfile 语法参考](http://www.jianshu.com/p/8af475c4f717) |
@@ -33,7 +33,7 @@
 
 > 常用优秀三方框架 
 
-| [WechatPublic-Codeidea](http://upload-images.jianshu.io/upload_images/2230763-93b83d5b7a7b0a49.gif?imageMogr2/auto-orient/strip) #  OC_Swift | 库原址 - 博文 - 源码 |
+| [WechatPublic-Codeidea](http://upload-images.jianshu.io/upload_images/2230763-93b83d5b7a7b0a49.gif?imageMogr2/auto-orient/strip) #  OC_Swift | 博文 - 源码 |
 | :- | :- |  
 |  [AFNetworking-3.1.0 网络请求](https://github.com/AFNetworking/AFNetworking)  |  [SourceCode](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/AFNetworking-3.1.0-SourceAnnotation) 、[Tools](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/AFNetworking-3.1.0-Tools)  、   [AFN 框架结构&内部逻辑处理过程](https://githubidea.github.io/SourceAnnotations/AFNLibraryStructure.html)  、 [AFN 到底做了什么 ?](http://www.jianshu.com/p/856f0e26279d) 、[AFN 批量上传图片3种方法](http://www.jianshu.com/p/2cb9136c837a) |
 |  [SDWebImage-3.7.5 图片下载](https://github.com/rs/SDWebImage)  |  [SourceCode](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/SDWebImage-3.7.5-SourceAnnotation) 、[Tools](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/SDWebImage-3.7.5-Tools) \ [SDWebImage 框架结构](https://githubidea.github.io/SourceAnnotations/SDLibrary.html) |
