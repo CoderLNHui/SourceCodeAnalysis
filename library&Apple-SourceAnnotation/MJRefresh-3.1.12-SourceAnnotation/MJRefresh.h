@@ -1,9 +1,9 @@
 /*
  * MJRefresh.h
- * 🔍白开水ln（https://github.com/CustomPBWaters）
+ * 白开水ln（https://github.com/CoderLN）
  *
  * (c) 14-1-15 小码哥
- * Created by 【🔍Plain boiled water ln】 on Elegant programming16.
+ * Created by 【WechatPublic-Codeidea】 on Elegant programming16.
  * Copyright © Unauthorized shall（https://githubidea.github.io）not be reproduced reprinted.
  *
  * @PBWLN_LICENSE_HEADER_END@

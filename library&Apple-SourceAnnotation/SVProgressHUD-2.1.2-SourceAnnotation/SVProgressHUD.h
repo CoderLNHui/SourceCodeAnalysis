@@ -3,7 +3,7 @@
 //  SVProgressHUD, https://github.com/SVProgressHUD/SVProgressHUD
 //
 //  Copyright (c) 2011-2017 Sam Vermette and contributors. All rights reserved.
-// （https://githubidea.github.io）
+//  WechatPublic-Codeidea（https://github.com/CoderLN）
 
 #import <UIKit/UIKit.h>
 #import <AvailabilityMacros.h>
