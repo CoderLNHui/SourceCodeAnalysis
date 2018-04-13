@@ -30,6 +30,9 @@
  */
 + (void)get:(NSString *)url params:(NSDictionary *)params success:(void(^)(id responseObj))success failure:(void(^)(NSError *error))failure;
 
+
+
+
 /**
  *  发送一个POST请求
  *

@@ -66,9 +66,9 @@
     4.AFNetworkReachabilityManager 网络状态监听管理者
  5.UIKit+AFNetworking UIKit类库的扩展与工具类
  
- - NSURLSession（网络通信模块）
- - ReachAbility（网络状态监听模块）
- - Security（网络通信安全策略模块）
- - Serialization（网络通信信息序列化/反序列化模块）
- - UIKit（UIKit库的扩展）
+    - NSURLSession（网络通信模块）
+    - ReachAbility（网络状态监听模块）
+    - Security（网络通信安全策略模块）
+    - Serialization（网络通信信息序列化/反序列化模块）
+    - UIKit（UIKit库的扩展）
  */

@@ -2,13 +2,6 @@
 <Workspace
    version = "1.0">
    <Group
-      location = "group:Apple&#x8bd1;&#x6587;"
-      name = "Apple&#x8bd1;&#x6587;">
-      <FileRef
-         location = "group:Apple Translation.md">
-      </FileRef>
-   </Group>
-   <Group
       location = "group:AFNetworking-3.1.0-SourceAnnotation"
       name = "AFNetworking-3.1.0-SourceAnnotation">
       <FileRef
@@ -605,13 +598,6 @@
       name = "SwiftyJSON-3.1.4-Tools">
       <FileRef
          location = "group:LNSwiftyJSONTools.swift">
-      </FileRef>
-   </Group>
-   <Group
-      location = "group:GitHub&#x6e90;&#x7801;"
-      name = "GitHub&#x6e90;&#x7801;">
-      <FileRef
-         location = "group:GitHub SourceCode.md">
       </FileRef>
    </Group>
    <Group
