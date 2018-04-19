@@ -138,13 +138,13 @@
       </Group>
    </Group>
    <Group
-      location = "group:AFNetworking-3.1.0-Tools"
-      name = "AFNetworking-3.1.0-Tools">
-      <FileRef
-         location = "group:LNNetworkingTools.h">
-      </FileRef>
+      location = "group:/Users/sunhui/Documents/LNLearnPoint/LN_GitHub/&#x5b98;&#x65b9;&#x8bd1;&#x6587;&amp;&#x6e90;&#x7801;&#x6ce8;&#x89e3;/library&amp;Apple-SourceAnnotation/AFNetworkingTools"
+      name = "AFNetworkingTools">
       <FileRef
          location = "group:LNNetworkingTools.m">
+      </FileRef>
+      <FileRef
+         location = "group:LNNetworkingTools.h">
       </FileRef>
    </Group>
    <Group
@@ -182,8 +182,8 @@
       </FileRef>
    </Group>
    <Group
-      location = "group:SVProgressHUD-2.1.2-Tools"
-      name = "SVProgressHUD-2.1.2-Tools">
+      location = "group:SVProgressHUDTools"
+      name = "SVProgressHUDTools">
       <FileRef
          location = "group:LNProgressHUDTools.h">
       </FileRef>
@@ -340,13 +340,13 @@
       </FileRef>
    </Group>
    <Group
-      location = "group:MJRefresh-3.1.12-Tools"
-      name = "MJRefresh-3.1.12-Tools">
-      <FileRef
-         location = "group:LNRefreshTools.h">
-      </FileRef>
+      location = "group:MJRefreshTools"
+      name = "MJRefreshTools">
       <FileRef
          location = "group:LNRefreshTools.m">
+      </FileRef>
+      <FileRef
+         location = "group:LNRefreshTools.h">
       </FileRef>
    </Group>
    <Group
@@ -417,16 +417,6 @@
       </FileRef>
       <FileRef
          location = "group:NSString+MJExtension.m">
-      </FileRef>
-   </Group>
-   <Group
-      location = "group:MJExtension-3.0.13-Tools"
-      name = "MJExtension-3.0.13-Tools">
-      <FileRef
-         location = "group:LNExtensionTools.h">
-      </FileRef>
-      <FileRef
-         location = "group:LNExtensionTools.m">
       </FileRef>
    </Group>
    <Group
@@ -536,13 +526,144 @@
       </FileRef>
    </Group>
    <Group
-      location = "group:SDWebImage-3.7.5-Tools"
-      name = "SDWebImage-3.7.5-Tools">
+      location = "group:SDWebImage-4.x-SourceAnnotation"
+      name = "SDWebImage-4.x-SourceAnnotation">
       <FileRef
-         location = "group:LNWebImageTools.h">
+         location = "group:UIImage+WebP.m">
       </FileRef>
       <FileRef
+         location = "group:MKAnnotationView+WebCache.m">
+      </FileRef>
+      <FileRef
+         location = "group:NSImage+WebCache.h">
+      </FileRef>
+      <FileRef
+         location = "group:UIImageView+WebCache.h">
+      </FileRef>
+      <FileRef
+         location = "group:NSData+ImageContentType.h">
+      </FileRef>
+      <FileRef
+         location = "group:SDWebImageManager.m">
+      </FileRef>
+      <FileRef
+         location = "group:SDWebImageDecoder.m">
+      </FileRef>
+      <FileRef
+         location = "group:SDWebImageDownloaderOperation.h">
+      </FileRef>
+      <FileRef
+         location = "group:UIImageView+HighlightedWebCache.m">
+      </FileRef>
+      <FileRef
+         location = "group:SDImageCache.h">
+      </FileRef>
+      <FileRef
+         location = "group:SDImageCacheConfig.h">
+      </FileRef>
+      <Group
+         location = "group:FLAnimatedImage"
+         name = "FLAnimatedImage">
+         <FileRef
+            location = "group:FLAnimatedImageView+WebCache.m">
+         </FileRef>
+         <FileRef
+            location = "group:FLAnimatedImageView+WebCache.h">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:SDWebImageDownloader.m">
+      </FileRef>
+      <FileRef
+         location = "group:UIImage+GIF.m">
+      </FileRef>
+      <FileRef
+         location = "group:UIButton+WebCache.h">
+      </FileRef>
+      <FileRef
+         location = "group:UIImage+MultiFormat.m">
+      </FileRef>
+      <FileRef
+         location = "group:SDWebImageCompat.m">
+      </FileRef>
+      <FileRef
+         location = "group:SDWebImagePrefetcher.m">
+      </FileRef>
+      <FileRef
+         location = "group:UIView+WebCache.h">
+      </FileRef>
+      <FileRef
+         location = "group:UIView+WebCacheOperation.h">
+      </FileRef>
+      <FileRef
+         location = "group:MKAnnotationView+WebCache.h">
+      </FileRef>
+      <FileRef
+         location = "group:UIImage+WebP.h">
+      </FileRef>
+      <FileRef
+         location = "group:SDImageCache.m">
+      </FileRef>
+      <FileRef
+         location = "group:UIImageView+HighlightedWebCache.h">
+      </FileRef>
+      <FileRef
+         location = "group:SDWebImageDownloaderOperation.m">
+      </FileRef>
+      <FileRef
+         location = "group:SDWebImageDecoder.h">
+      </FileRef>
+      <FileRef
+         location = "group:SDWebImageManager.h">
+      </FileRef>
+      <FileRef
+         location = "group:NSData+ImageContentType.m">
+      </FileRef>
+      <FileRef
+         location = "group:UIImageView+WebCache.m">
+      </FileRef>
+      <FileRef
+         location = "group:SDWebImageOperation.h">
+      </FileRef>
+      <FileRef
+         location = "group:NSImage+WebCache.m">
+      </FileRef>
+      <FileRef
+         location = "group:SDWebImageDownloader.h">
+      </FileRef>
+      <FileRef
+         location = "group:SDImageCacheConfig.m">
+      </FileRef>
+      <FileRef
+         location = "group:UIView+WebCacheOperation.m">
+      </FileRef>
+      <FileRef
+         location = "group:UIView+WebCache.m">
+      </FileRef>
+      <FileRef
+         location = "group:SDWebImagePrefetcher.h">
+      </FileRef>
+      <FileRef
+         location = "group:SDWebImageCompat.h">
+      </FileRef>
+      <FileRef
+         location = "group:UIImage+MultiFormat.h">
+      </FileRef>
+      <FileRef
+         location = "group:UIButton+WebCache.m">
+      </FileRef>
+      <FileRef
+         location = "group:UIImage+GIF.h">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:SDWebImageTools"
+      name = "SDWebImageTools">
+      <FileRef
          location = "group:LNWebImageTools.m">
+      </FileRef>
+      <FileRef
+         location = "group:LNWebImageTools.h">
       </FileRef>
    </Group>
    <Group
@@ -562,8 +683,8 @@
       </FileRef>
    </Group>
    <Group
-      location = "group:MBProgressHUD-1.0.0-Tools"
-      name = "MBProgressHUD-1.0.0-Tools">
+      location = "group:MBProgressHUDTools"
+      name = "MBProgressHUDTools">
       <FileRef
          location = "group:LNProgressHUDTools.h">
       </FileRef>
@@ -594,8 +715,8 @@
       </FileRef>
    </Group>
    <Group
-      location = "group:SwiftyJSON-3.1.4-Tools"
-      name = "SwiftyJSON-3.1.4-Tools">
+      location = "group:SwiftyJSONTools"
+      name = "SwiftyJSONTools">
       <FileRef
          location = "group:LNSwiftyJSONTools.swift">
       </FileRef>
