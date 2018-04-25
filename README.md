@@ -4,7 +4,7 @@
 > Apple译文
 
 
-| [WechatPublic-Codeidea](http://upload-images.jianshu.io/upload_images/2230763-93b83d5b7a7b0a49.gif?imageMogr2/auto-orient/strip) #  Apple  | 译文 - 博文 - 源码 |
+| [Public：Codeidea](http://upload-images.jianshu.io/upload_images/2230763-93b83d5b7a7b0a49.gif?imageMogr2/auto-orient/strip) #  Apple  | 译文 - 博文 - 源码 |
 | :- | :- | 
 |  [From NSURLConnection to NSURLSession](https://www.objc.io/issues/5-ios7/from-nsurlconnection-to-nsurlsession/)  |  [从 NSURLConnection 到 NSURLSession](https://githubidea.github.io/AppleTranslation/ConnectionToSession.html)  |
 | [UIWebView](https://developer.apple.com/reference/uikit/uiwebview)   |  [UIWebView 网页视图](https://githubidea.github.io/AppleTranslation/UIWebViewApple.html)  |
@@ -33,7 +33,7 @@
 
 > 常用优秀三方框架 
 
-| [WechatPublic-Codeidea](http://upload-images.jianshu.io/upload_images/2230763-93b83d5b7a7b0a49.gif?imageMogr2/auto-orient/strip) #  OC_Swift | 博文 - 源码 |
+| [Public：Codeidea](http://upload-images.jianshu.io/upload_images/2230763-93b83d5b7a7b0a49.gif?imageMogr2/auto-orient/strip) #  OC_Swift | 博文 - 源码 |
 | :- | :- |  
 |  [AFNetworking-3.1.0 网络请求](https://github.com/AFNetworking/AFNetworking)  |  [SourceCode](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/AFNetworking-3.1.0-SourceAnnotation) 、[Tools](https://github.com/CoderLN/Apple-GitHub-Codeidea/tree/master/library%26Apple-SourceAnnotation/AFNetworkingTools)  、   [AFN 框架结构&内部逻辑处理过程](https://githubidea.github.io/SourceAnnotations/AFNLibraryStructure.html)  、 [AFN 到底做了什么 ?](http://www.jianshu.com/p/856f0e26279d) 、[AFN 批量上传图片3种方法](http://www.jianshu.com/p/2cb9136c837a) |
 |  [SDWebImage-3.7.5 图片下载](https://github.com/rs/SDWebImage)  |  [SourceCode](https://github.com/CustomPBWaters/Apple-GitHub-NewIdea/tree/master/library%26Apple-SourceAnnotation/SDWebImage-3.7.5-SourceAnnotation) 、[Tools](https://github.com/CoderLN/Apple-GitHub-Codeidea/tree/master/library%26Apple-SourceAnnotation/SDWebImageTools) \ [SDWebImage 框架结构](https://githubidea.github.io/SourceAnnotations/SDLibrary.html) |
@@ -65,7 +65,7 @@
 > 三方集成 & 授权
 
 
-| [WechatPublic-Codeidea](http://upload-images.jianshu.io/upload_images/2230763-93b83d5b7a7b0a49.gif?imageMogr2/auto-orient/strip) # 三方服务   | 文档 - 博文 |
+| [Public：Codeidea](http://upload-images.jianshu.io/upload_images/2230763-93b83d5b7a7b0a49.gif?imageMogr2/auto-orient/strip) # 三方服务   | 文档 - 博文 |
 | :- | :- | 
 |  [JPush 极光推送](http://docs.jiguang.cn/jpush/client/iOS/ios_sdk/)  |  [极光博客](http://blog.jiguang.cn/updates-2017-05/)   、   [Xcode8下快速集成并兼顾iOS10](http://www.jianshu.com/p/53e0244e6081) |
 |  [UMAnalytics 友盟统计](http://dev.umeng.com/analytics/ios-doc/integration#1_2)  |  [友盟论坛](http://bbs.umeng.com)   、   [集成友盟分享、登录、统计](http://www.jianshu.com/p/ccfa6bb0d17d) |
@@ -83,7 +83,7 @@
 
 > 开源项目源码
 
- [WechatPublic-Codeidea](http://upload-images.jianshu.io/upload_images/2230763-93b83d5b7a7b0a49.gif?imageMogr2/auto-orient/strip) #  GitHub  |  简阅
+ [Public：Codeidea](http://upload-images.jianshu.io/upload_images/2230763-93b83d5b7a7b0a49.gif?imageMogr2/auto-orient/strip) #  GitHub  |  简阅
 ---- | ----
 [iOS-Source-Code-Analyze](https://github.com/Draveness/iOS-Source-Code-Analyze)| 收集了优秀的iOS开源框架源代码解析文章，强烈推荐
 [open-source-ios-apps](https://github.com/dkhamsing/open-source-ios-apps)  |  iOS开源App集合，分：swift与Objective-C--国外人整理。star14200+
@@ -224,12 +224,12 @@
 [coderyi](http://www.coderyi.com/)|<http://www.coderyi.com/feed>
 [雷纯锋的技术博客](http://blog.leichunfeng.com) | <http://blog.leichunfeng.com/atom.xml>
 [向晨宇的技术博客](http://www.iosxxx.com/) | <http://iosxxx.com/atom.xml>
-[WechatPublic-Codeidea](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)     |     [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)    
+[Public：Codeidea](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)     |     [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)    
 
 
 
 
->未完、每月末(`争取`)、更新 ~ ❓ [效率工具类\系统文件常用API注解](https://github.com/CoderLN/Framework-Codeidea)
+>未完、每月末(`争取`)、更新 ~ ❓ [Tools \  .h文件API注解](https://github.com/CoderLN/Framework-Codeidea)
 
  
 
@@ -239,6 +239,6 @@
 
 ###### - 如果在阅读过程中遇到 error || new ideas，希望你能 issue 我，我会及时补充谢谢。
 
-###### - 喜欢可 [赞赏](http://upload-images.jianshu.io/upload_images/2230763-bf7f4af3c678980b.gif?imageMogr2/auto-orient/strip) ，点击右上角的 star 和 watch 按钮，可以收藏本仓库，并在文档、issue、Demo更新时收到邮件通知。
+###### - 喜欢可，点击右上角的 star 和 watch 按钮，可以收藏本仓库，并在文档、issue、Demo更新时收到邮件通知。
 
 
