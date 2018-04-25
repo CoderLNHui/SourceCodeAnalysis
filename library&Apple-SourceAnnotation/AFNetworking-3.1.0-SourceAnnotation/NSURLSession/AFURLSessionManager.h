@@ -490,21 +490,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Setting Download Task Delegate Callbacks 设置下载任务委托回调
 ///-----------------------------------------------
 
-/**
- Sets a block to be executed periodically to track download progress, as handled by the `NSURLSessionDownloadDelegate` method `URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesWritten:totalBytesExpectedToWrite:`.
 
- @param block A block object to be called when an undetermined number of bytes have been downloaded from the server. This block has no return value and takes five arguments: the session, the download task, the number of bytes read since the last time the download progress block was called, the total bytes read, and the total bytes expected to be read during the request, as initially determined by the expected content size of the `NSHTTPURLResponse` object. This block may be called multiple times, and will execute on the session manager operation queue.
- */
-/**
- 1.写数据(监听下载进度)
- bytesWritten 本次写入的数据大小
- totalBytesWritten 下载的数据总大小
- totalBytesExpectedToWrite 文件的总大小
- 
- // 获得文件的下载进度
- NSLog(@"%f",1.0 * totalBytesWritten / totalBytesExpectedToWrite);
- */
-- (void)setDownloadTaskDidWriteDataBlock:(nullable void (^)(NSURLSession *session, NSURLSessionDownloadTask *downloadTask, int64_t bytesWritten, int64_t totalBytesWritten, int64_t totalBytesExpectedToWrite))block;
 
 /**
  Sets a block to be executed when a download task has been resumed, as handled by the `NSURLSessionDownloadDelegate` method `URLSession:downloadTask:didResumeAtOffset:expectedTotalBytes:`.
@@ -512,7 +498,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param block A block object to be executed when a download task has been resumed. The block has no return value and takes four arguments: the session, the download task, the file offset of the resumed download, and the total number of bytes expected to be downloaded.
  */
 /**
- 2.当恢复下载的时候调用方法
+ 1.当恢复下载的时候调用方法
  
  fileOffset 从什么地方下载
  expectedTotalBytes 文件的总大小
@@ -524,6 +510,24 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param block A block object to be executed when a download task has completed. The block returns the URL the download should be moved to, and takes three arguments: the session, the download task, and the temporary location of the downloaded file. If the file manager encounters an error while attempting to move the temporary file to the destination, an `AFURLSessionDownloadTaskDidFailToMoveFileNotification` will be posted, with the download task as its object, and the user info of the error.
  */
+
+
+/**
+ Sets a block to be executed periodically to track download progress, as handled by the `NSURLSessionDownloadDelegate` method `URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesWritten:totalBytesExpectedToWrite:`.
+ 
+ @param block A block object to be called when an undetermined number of bytes have been downloaded from the server. This block has no return value and takes five arguments: the session, the download task, the number of bytes read since the last time the download progress block was called, the total bytes read, and the total bytes expected to be read during the request, as initially determined by the expected content size of the `NSHTTPURLResponse` object. This block may be called multiple times, and will execute on the session manager operation queue.
+ */
+/**
+ 2.写数据(监听下载进度)
+ bytesWritten 本次写入的数据大小
+ totalBytesWritten 下载的数据总大小
+ totalBytesExpectedToWrite 文件的总大小
+ 
+ // 获得文件的下载进度
+ NSLog(@"%f",1.0 * totalBytesWritten / totalBytesExpectedToWrite);
+ */
+- (void)setDownloadTaskDidWriteDataBlock:(nullable void (^)(NSURLSession *session, NSURLSessionDownloadTask *downloadTask, int64_t bytesWritten, int64_t totalBytesWritten, int64_t totalBytesExpectedToWrite))block;
+
 /**
  3.当下载完成的时候调用
  location 文件的临时存储路径
