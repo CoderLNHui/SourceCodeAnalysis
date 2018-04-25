@@ -155,7 +155,7 @@
 [Node.js](https://github.com/zenany/weekly/blob/master/resources/nodejs.md)   | 资源汇总
 [JavaScript](http://www.androidweekly.cn)   | 资源汇总
 [机器学习初学者必须知道的十大算法](http://mp.weixin.qq.com/s/ZZKsWGvgJXvHkVxhWAAOIA)   | 这篇机器学习算法工程师需要知道的十大算法是非常有用的。 
-
+[软件设计师视频资料](https://github.com/CoderLN/Apple-GitHub-Codeidea/blob/master/library%26Apple-SourceAnnotation/🏃🏻%E2%80%8D♂%EF%B8%8F/软件设计师.md)   | 如果你和我一样是自学的话，我想把我的经验分享给你，希望能够帮你顺利通过。
 
 
 
