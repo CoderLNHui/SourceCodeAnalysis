@@ -1,8 +1,5 @@
 <p align="center" style="font-size:24px">
 	苹果AppStore被拒理由大全<br>
-    <span style="font-size:24px"> 
-        『WechatPublic：Codeidea』
-    </span>
 	<span style="font-size:24px"> 
 		蛋疼一刻
 	</span>
@@ -12,7 +9,7 @@
 
 
 
-#### 简阅-AppStore官方版『WechatPublic：Codeidea』
+#### 简阅-AppStore官方版 
 
 
 - [Common App Rejections](https://developer.apple.com/app-store/review/rejections/)
@@ -29,7 +26,7 @@
 
 
  
-#### 简阅-版1 WechatPublic-Codeidea
+#### 简阅-版1 
 
 - 😀 截图中出现了Android
 - 😬 截图中出现了hack苹果的内容
@@ -135,7 +132,7 @@
 
 ***
 
-#### 简阅-版2 WechatPublic-Codeidea
+#### 简阅-版2 
 
 
 - 🐶1、程序有重大bug，程序不能启动，或者中途退出。
@@ -303,15 +300,7 @@
 
 
 
-
-
-#### 简阅-版3 (描述+解决) WechatPublic-Codeidea
-
-
-待续 ~
-
-
-
+ 
 
 
 
