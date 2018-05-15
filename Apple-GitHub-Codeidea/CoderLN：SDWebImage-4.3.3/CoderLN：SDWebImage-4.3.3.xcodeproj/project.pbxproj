@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		765A682020AAECC7001347E2 /* 最上层：UIView+WebCache下载核心方法.png in Resources */ = {isa = PBXBuildFile; fileRef = 765A681F20AAECC7001347E2 /* 最上层：UIView+WebCache下载核心方法.png */; };
+		765A682220AAECD0001347E2 /* 业务层：SDImageCache缓存&&磁盘操作Downloader.png in Resources */ = {isa = PBXBuildFile; fileRef = 765A682120AAECD0001347E2 /* 业务层：SDImageCache缓存&&磁盘操作Downloader.png */; };
+		765A682420AAECD7001347E2 /* 逻辑层：SDWebImageManager调度下载和缓存.png in Resources */ = {isa = PBXBuildFile; fileRef = 765A682320AAECD7001347E2 /* 逻辑层：SDWebImageManager调度下载和缓存.png */; };
 		768BEDA320A549E100050986 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 768BEDA120A549E100050986 /* Main.storyboard */; };
 		768BEDA520A549E100050986 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 768BEDA420A549E100050986 /* Assets.xcassets */; };
 		768BEDA820A549E100050986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 768BEDA620A549E100050986 /* LaunchScreen.storyboard */; };
@@ -50,6 +53,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		765A681F20AAECC7001347E2 /* 最上层：UIView+WebCache下载核心方法.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "最上层：UIView+WebCache下载核心方法.png"; sourceTree = "<group>"; };
+		765A682120AAECD0001347E2 /* 业务层：SDImageCache缓存&&磁盘操作Downloader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "业务层：SDImageCache缓存&&磁盘操作Downloader.png"; sourceTree = "<group>"; };
+		765A682320AAECD7001347E2 /* 逻辑层：SDWebImageManager调度下载和缓存.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "逻辑层：SDWebImageManager调度下载和缓存.png"; sourceTree = "<group>"; };
 		768BED9820A549E000050986 /* CoderLN：SDWebImage-4.3.3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoderLN：SDWebImage-4.3.3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		768BEDA220A549E100050986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		768BEDA420A549E100050986 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -225,8 +231,9 @@
 				768BEDC720A54A1900050986 /* UIImageView+HighlightedWebCache.m */,
 				768BEDC620A54A1900050986 /* UIImageView+WebCache.h */,
 				768BEDCD20A54A1900050986 /* UIImageView+WebCache.m */,
-				768BEDCF20A54A1900050986 /* UIView+WebCache.m */,
 				768BEDC920A54A1900050986 /* UIView+WebCache.h */,
+				768BEDCF20A54A1900050986 /* UIView+WebCache.m */,
+				765A681F20AAECC7001347E2 /* 最上层：UIView+WebCache下载核心方法.png */,
 			);
 			path = "WebCache Categories";
 			sourceTree = "<group>";
@@ -236,6 +243,7 @@
 			children = (
 				768BEDD220A54A1900050986 /* SDImageCache.h */,
 				768BEDD420A54A1900050986 /* SDImageCache.m */,
+				765A682120AAECD0001347E2 /* 业务层：SDImageCache缓存&&磁盘操作Downloader.png */,
 				768BEDD320A54A1900050986 /* SDImageCacheConfig.h */,
 				768BEDD520A54A1900050986 /* SDImageCacheConfig.m */,
 			);
@@ -294,6 +302,7 @@
 			children = (
 				768BEDF420A54A1900050986 /* SDWebImageManager.h */,
 				768BEDF120A54A1900050986 /* SDWebImageManager.m */,
+				765A682320AAECD7001347E2 /* 逻辑层：SDWebImageManager调度下载和缓存.png */,
 				768BEDF520A54A1900050986 /* SDWebImagePrefetcher.h */,
 				768BEDF220A54A1900050986 /* SDWebImagePrefetcher.m */,
 				768BEDF020A54A1900050986 /* SDWebImageTransition.h */,
@@ -380,7 +389,10 @@
 			files = (
 				768BEE0520A54A1900050986 /* Info.plist in Resources */,
 				768BEDA820A549E100050986 /* LaunchScreen.storyboard in Resources */,
+				765A682020AAECC7001347E2 /* 最上层：UIView+WebCache下载核心方法.png in Resources */,
 				768BEDA520A549E100050986 /* Assets.xcassets in Resources */,
+				765A682220AAECD0001347E2 /* 业务层：SDImageCache缓存&&磁盘操作Downloader.png in Resources */,
+				765A682420AAECD7001347E2 /* 逻辑层：SDWebImageManager调度下载和缓存.png in Resources */,
 				768BEDA320A549E100050986 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

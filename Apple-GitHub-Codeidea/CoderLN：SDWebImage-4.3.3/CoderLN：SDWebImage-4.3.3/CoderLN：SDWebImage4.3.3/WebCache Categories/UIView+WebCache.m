@@ -55,6 +55,23 @@ static char TAG_ACTIVITY_SHOW;
     return [self sd_internalSetImageWithURL:url placeholderImage:placeholder options:options operationKey:operationKey setImageBlock:setImageBlock progress:progressBlock completed:completedBlock context:nil];
 }
 
+
+
+
+#pragma mark - ↑
+#pragma mark - 最上层：UIView+WebCache； Bundle version 4.3.3
+#pragma mark - 核心代码：读取下载图片 (所有外部API sd_setImageWithURL:入口方法都将会汇总到这，只是传递的参数不同而已)
+
+/**
+ * @param url            图片地址链接
+ * @param placeholder    占位图
+ * @param options        下载图片的枚举。包括优先级、是否写入硬盘等
+ * @param operationKey   一个记录当前对象正在加载操作的key、保证只有最新的操作在进行、默认为类名。
+ * @param setImageBlock  给开发者自定义set图片的callback
+ * @param progressBlock  下载进度callback
+ * @param completedBlock 下载完成的callback（sd已经给你set好了、只是会把图片给你罢了）
+ * @param context        一些额外的上下文字典。比如你可以搞一个专属的imageManager进来干活。
+ */
 - (void)sd_internalSetImageWithURL:(nullable NSURL *)url
                   placeholderImage:(nullable UIImage *)placeholder
                            options:(SDWebImageOptions)options
@@ -62,31 +79,36 @@ static char TAG_ACTIVITY_SHOW;
                      setImageBlock:(nullable SDSetImageBlock)setImageBlock
                           progress:(nullable SDWebImageDownloaderProgressBlock)progressBlock
                          completed:(nullable SDExternalCompletionBlock)completedBlock
-                           context:(nullable NSDictionary<NSString *, id> *)context {
-    NSString *validOperationKey = operationKey ?: NSStringFromClass([self class]);
-    [self sd_cancelImageLoadOperationWithKey:validOperationKey];
-    objc_setAssociatedObject(self, &imageURLKey, url, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+                           context:(nullable NSDictionary *)context {
     
+     
+    //以当前实例的class作为OperationKey
+    NSString *validOperationKey = operationKey ?: NSStringFromClass([self class]);
+    //清除当前OperationKey下正在进行的操作。节省无用功
+    [self sd_cancelImageLoadOperationWithKey:validOperationKey];
+    //给对象实例绑定imageURLKey = url
+    objc_setAssociatedObject(self, &imageURLKey, url, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    //是否先加载占位图
     if (!(options & SDWebImageDelayPlaceholder)) {
         if ([context valueForKey:SDWebImageInternalSetImageGroupKey]) {
             dispatch_group_t group = [context valueForKey:SDWebImageInternalSetImageGroupKey];
             dispatch_group_enter(group);
         }
+        //到主线城更新UI
         dispatch_main_async_safe(^{
+            //set 占位图
             [self sd_setImage:placeholder imageData:nil basedOnClassOrViaCustomSetImageBlock:setImageBlock];
         });
     }
     
+    
     if (url) {
-        // check if activityView is enabled or not
+        // 小菊花
         if ([self sd_showActivityIndicatorView]) {
             [self sd_addActivityIndicator];
         }
         
-        // reset the progress
-        self.sd_imageProgress.totalUnitCount = 0;
-        self.sd_imageProgress.completedUnitCount = 0;
-        
+        // 允许开发者指定一个manager来进行操作
         SDWebImageManager *manager;
         if ([context valueForKey:SDWebImageExternalCustomManagerKey]) {
             manager = (SDWebImageManager *)[context valueForKey:SDWebImageExternalCustomManagerKey];
@@ -95,42 +117,56 @@ static char TAG_ACTIVITY_SHOW;
         }
         
         __weak __typeof(self)wself = self;
-        SDWebImageDownloaderProgressBlock combinedProgressBlock = ^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
-            wself.sd_imageProgress.totalUnitCount = expectedSize;
-            wself.sd_imageProgress.completedUnitCount = receivedSize;
-            if (progressBlock) {
-                progressBlock(receivedSize, expectedSize, targetURL);
-            }
-        };
-        id <SDWebImageOperation> operation = [manager loadImageWithURL:url options:options progress:combinedProgressBlock completed:^(UIImage *image, NSData *data, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+        id <SDWebImageOperation> operation = [manager loadImageWithURL:url options:options progress:progressBlock completed:^(UIImage *image, NSData *data, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+            //图片下载||读取完成
             __strong __typeof (wself) sself = wself;
+            //小菊花
+            [self sd_removeActivityIndicator];
             if (!sself) { return; }
-            [sself sd_removeActivityIndicator];
-            // if the progress not been updated, mark it to complete state
-            if (finished && !error && sself.sd_imageProgress.totalUnitCount == 0 && sself.sd_imageProgress.completedUnitCount == 0) {
-                sself.sd_imageProgress.totalUnitCount = SDWebImageProgressUnitCountUnknown;
-                sself.sd_imageProgress.completedUnitCount = SDWebImageProgressUnitCountUnknown;
-            }
+            
+            //是否不插入图片
+            /**
+             是：自动插入图片
+             1.有图片、但不是主动配置；targetImage = image;
+             2.没图片、设置了延迟加载占位图；targetImage = placeholder;
+             否：
+             1.图片下载完成、下载选项为手动设置图片，则直接执行completedBlock回调，并返回图片。
+             2.没图片、设置了延迟加载占位图；并刷新重绘视图。
+             
+             回调：
+             成功回调：completedBlock(image, error, cacheType, url);
+             失败回调：completedBlock(nil, error, SDImageCacheTypeNone, url);
+             */
+            
+            //如果图片下载完成，且传入的下载选项为手动设置图片则直接执行completedBlock回调，并返回
             BOOL shouldCallCompletedBlock = finished || (options & SDWebImageAvoidAutoSetImage);
+            //如果没有得到图像
+            //如果传入的下载选项为延迟显示占位图片，则设置占位图片到UIImageView上面，并刷新重绘视图
             BOOL shouldNotSetImage = ((image && (options & SDWebImageAvoidAutoSetImage)) ||
                                       (!image && !(options & SDWebImageDelayPlaceholder)));
             SDWebImageNoParamsBlock callCompletedBlockClojure = ^{
+                //
                 if (!sself) { return; }
                 if (!shouldNotSetImage) {
                     [sself sd_setNeedsLayout];
                 }
                 if (completedBlock && shouldCallCompletedBlock) {
+                    //操作完成的回调
                     completedBlock(image, error, cacheType, url);
                 }
             };
+            
             
             // case 1a: we got an image, but the SDWebImageAvoidAutoSetImage flag is set
             // OR
             // case 1b: we got no image and the SDWebImageDelayPlaceholder is not set
             if (shouldNotSetImage) {
+                //如果不显示图片、直接回调。
                 dispatch_main_async_safe(callCompletedBlockClojure);
                 return;
             }
+            
+            /**自动插入图片***/
             
             UIImage *targetImage = nil;
             NSData *targetData = nil;
@@ -144,16 +180,11 @@ static char TAG_ACTIVITY_SHOW;
                 targetData = nil;
             }
             
-            // check whether we should use the image transition
-            SDWebImageTransition *transition = nil;
-            if (finished && (options & SDWebImageForceTransition || cacheType == SDImageCacheTypeNone)) {
-                transition = sself.sd_imageTransition;
-            }
             if ([context valueForKey:SDWebImageInternalSetImageGroupKey]) {
                 dispatch_group_t group = [context valueForKey:SDWebImageInternalSetImageGroupKey];
                 dispatch_group_enter(group);
                 dispatch_main_async_safe(^{
-                    [sself sd_setImage:targetImage imageData:targetData basedOnClassOrViaCustomSetImageBlock:setImageBlock transition:transition cacheType:cacheType imageURL:imageURL];
+                    [sself sd_setImage:targetImage imageData:targetData basedOnClassOrViaCustomSetImageBlock:setImageBlock];
                 });
                 // ensure completion block is called after custom setImage process finish
                 dispatch_group_notify(group, dispatch_get_main_queue(), ^{
@@ -161,11 +192,13 @@ static char TAG_ACTIVITY_SHOW;
                 });
             } else {
                 dispatch_main_async_safe(^{
-                    [sself sd_setImage:targetImage imageData:targetData basedOnClassOrViaCustomSetImageBlock:setImageBlock transition:transition cacheType:cacheType imageURL:imageURL];
+                    [sself sd_setImage:targetImage imageData:targetData basedOnClassOrViaCustomSetImageBlock:setImageBlock];
                     callCompletedBlockClojure();
                 });
             }
         }];
+        
+        // 记录当前操作：在读取图片之前。向正在进行加载的HashMap中加入当前operation
         [self sd_setImageLoadOperation:operation forKey:validOperationKey];
     } else {
         dispatch_main_async_safe(^{
@@ -177,6 +210,9 @@ static char TAG_ACTIVITY_SHOW;
         });
     }
 }
+
+
+
 
 - (void)sd_cancelCurrentImageLoad {
     [self sd_cancelImageLoadOperationWithKey:NSStringFromClass([self class])];

@@ -96,7 +96,7 @@ typedef NS_OPTIONS(NSUInteger, SDWebImageOptions) {
      */
     SDWebImageScaleDownLargeImages = 1 << 12,
     
-    /**
+     /**
      * By default, we do not query disk data when the image is cached in memory. This mask can force to query disk data at the same time.
      * This flag is recommend to be used with `SDWebImageQueryDiskSync` to ensure the image is loaded in the same runloop.
      */

@@ -255,6 +255,8 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
     [self storeImage:image imageData:nil forKey:key toDisk:toDisk completion:completionBlock];
 }
 
+
+//写入缓存 && 磁盘
 - (void)storeImage:(nullable UIImage *)image
          imageData:(nullable NSData *)imageData
             forKey:(nullable NSString *)key
@@ -268,11 +270,13 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
     }
     // if memory cache is enabled
     if (self.config.shouldCacheImagesInMemory) {
+         //写入缓存
         NSUInteger cost = SDCacheCostForImage(image);
         [self.memCache setObject:image forKey:key cost:cost];
     }
-    
+
     if (toDisk) {
+        //写入磁盘
         dispatch_async(self.ioQueue, ^{
             @autoreleasepool {
                 NSData *data = imageData;
@@ -288,7 +292,7 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
                 }
                 [self _storeImageDataToDisk:data forKey:key];
             }
-            
+
             if (completionBlock) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     completionBlock();
@@ -302,6 +306,10 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
     }
 }
 
+
+
+
+
 - (void)storeImageDataToDisk:(nullable NSData *)imageData forKey:(nullable NSString *)key {
     if (!imageData || !key) {
         return;
@@ -311,24 +319,28 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
     });
 }
 
+
+//正式写入磁盘
 // Make sure to call form io queue by caller
 - (void)_storeImageDataToDisk:(nullable NSData *)imageData forKey:(nullable NSString *)key {
     if (!imageData || !key) {
         return;
     }
     
+    //如果文件中不存在磁盘缓存路径 则创建
     if (![self.fileManager fileExistsAtPath:_diskCachePath]) {
         [self.fileManager createDirectoryAtPath:_diskCachePath withIntermediateDirectories:YES attributes:nil error:NULL];
     }
     
-    // get cache Path for image key
+    // get cache Path for image key 得到该key的缓存路径
     NSString *cachePathForKey = [self defaultCachePathForKey:key];
-    // transform to NSUrl
+    // transform to NSUrl 将缓存路径转化为url
     NSURL *fileURL = [NSURL fileURLWithPath:cachePathForKey];
     
+    //将imageData存储起来
     [imageData writeToURL:fileURL options:self.config.diskCacheWritingOptions error:nil];
     
-    // disable iCloud backup
+    // disable iCloud backup 如果调用者关闭icloud 关闭iCloud备份
     if (self.config.shouldDisableiCloud) {
         [fileURL setResourceValue:@YES forKey:NSURLIsExcludedFromBackupKey error:nil];
     }
@@ -373,10 +385,6 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
     }
     
     return exists;
-}
-
-- (nullable UIImage *)imageFromMemoryCacheForKey:(nullable NSString *)key {
-    return [self.memCache objectForKey:key];
 }
 
 - (nullable UIImage *)imageFromDiskCacheForKey:(nullable NSString *)key {
@@ -434,6 +442,8 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
     return nil;
 }
 
+
+
 - (nullable UIImage *)diskImageForKey:(nullable NSString *)key {
     NSData *data = [self diskImageDataBySearchingAllPathsForKey:key];
     return [self diskImageForKey:key data:data];
@@ -443,10 +453,15 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
     return [self diskImageForKey:key data:data options:0];
 }
 
+
+//查询磁盘
 - (nullable UIImage *)diskImageForKey:(nullable NSString *)key data:(nullable NSData *)data options:(SDImageCacheOptions)options {
     if (data) {
+         //图片解码、调整方向
         UIImage *image = [[SDWebImageCodersManager sharedInstance] decodedImageWithData:data];
+        //调整图片缩放比例 @2x/@3x
         image = [self scaledImageForKey:key image:image];
+        //压缩图片
         if (self.config.shouldDecompressImages) {
             BOOL shouldScaleDown = options & SDImageCacheScaleDownLargeImages;
             image = [[SDWebImageCodersManager sharedInstance] decompressedImageWithImage:image data:&data options:@{SDWebImageCoderScaleDownLargeImagesKey: @(shouldScaleDown)}];
@@ -457,6 +472,7 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
     }
 }
 
+
 - (nullable UIImage *)scaledImageForKey:(nullable NSString *)key image:(nullable UIImage *)image {
     return SDScaledImageForKey(key, image);
 }
@@ -465,68 +481,90 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
     return [self queryCacheOperationForKey:key options:0 done:doneBlock];
 }
 
+
+
+
+#pragma mark - ↑
+#pragma mark - 业务层
+#pragma mark - 缓存&&磁盘操作：SDImageCache
+
+
+/*
+ 检查要下载图片的缓存情况
+ 1.先检查是否有内存缓存；如果有内存缓存，再从磁盘读取diskData一起回调；
+ 2.如果没有内存缓存则检查是否有沙盒缓存
+ 3.如果有沙盒缓存，则把该图片写入内存缓存并处理doneBlock回调
+ */
 - (nullable NSOperation *)queryCacheOperationForKey:(nullable NSString *)key options:(SDImageCacheOptions)options done:(nullable SDCacheQueryCompletedBlock)doneBlock {
+    //如果缓存对应的key为空，则直接返回，并把存储方式（无缓存）通过block块以参数的形式传递
     if (!key) {
         if (doneBlock) {
             doneBlock(nil, nil, SDImageCacheTypeNone);
         }
         return nil;
     }
-    
     // First check the in-memory cache...
+    // 检查该 URLKEY 对应的内存缓存，如果存在内存缓存，再从磁盘读取diskData一起回调；并把图片和存储方式（内存缓存）通过block块以参数的形式传递
     UIImage *image = [self imageFromMemoryCacheForKey:key];
-    BOOL shouldQueryMemoryOnly = (image && !(options & SDImageCacheQueryDataWhenInMemory));
-    if (shouldQueryMemoryOnly) {
+    if (image) {
+        NSData *diskData = nil;
+        if (image.images) {
+            diskData = [self diskImageDataBySearchingAllPathsForKey:key];
+        }
+       
         if (doneBlock) {
-            doneBlock(image, nil, SDImageCacheTypeMemory);
+            doneBlock(image, diskData, SDImageCacheTypeMemory);
         }
         return nil;
     }
     
-    NSOperation *operation = [NSOperation new];
-    void(^queryDiskBlock)(void) =  ^{
-        if (operation.isCancelled) {
+    NSOperation *operation = [NSOperation new];//创建一个操作
+    
+    //使用异步函数，添加任务到串行队列中（会开启一个子线程处理block块中的任务）
+    dispatch_async(self.ioQueue, ^{
+        if (operation.isCancelled) {//如果当前的操作被取消，则直接返回
             // do not call the completion if cancelled
             return;
         }
         
         @autoreleasepool {
+            // 检查该KEY对应的磁盘缓存
             NSData *diskData = [self diskImageDataBySearchingAllPathsForKey:key];
-            UIImage *diskImage;
-            SDImageCacheType cacheType = SDImageCacheTypeDisk;
-            if (image) {
-                // the image is from in-memory cache
-                diskImage = image;
-                cacheType = SDImageCacheTypeMemory;
-            } else if (diskData) {
-                // decode image data only if in-memory cache missed
-                diskImage = [self diskImageForKey:key data:diskData options:options];
-                if (diskImage && self.config.shouldCacheImagesInMemory) {
-                    NSUInteger cost = SDCacheCostForImage(diskImage);
-                    [self.memCache setObject:diskImage forKey:key cost:cost];
-                }
+            UIImage *diskImage = [self diskImageForKey:key];
+            //如果存在磁盘缓存，且应该把该图片保存一份到内存缓存中，则先计算该图片的cost(成本）并把该图片保存到内存缓存中
+            if (diskImage && self.config.shouldCacheImagesInMemory) {
+                NSUInteger cost = SDCacheCostForImage(diskImage);
+                //使用NSChache缓存。
+                [self.memCache setObject:diskImage forKey:key cost:cost];
             }
-            
             if (doneBlock) {
-                if (options & SDImageCacheQueryDiskSync) {
-                    doneBlock(diskImage, diskData, cacheType);
-                } else {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        doneBlock(diskImage, diskData, cacheType);
-                    });
-                }
+                //线程间通信，在主线程中回调doneBlock，并把图片和存储方式（磁盘缓存）通过block块以参数的形式传递
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    doneBlock(diskImage, diskData, SDImageCacheTypeDisk);
+                });
             }
         }
-    };
-    
-    if (options & SDImageCacheQueryDiskSync) {
-        queryDiskBlock();
-    } else {
-        dispatch_async(self.ioQueue, queryDiskBlock);
-    }
-    
+    });
     return operation;
 }
+
+
+
+
+//查询缓存
+- (nullable UIImage *)imageFromMemoryCacheForKey:(nullable NSString *)key {
+    //self.memCache  为NSCache实例
+    return [self.memCache objectForKey:key];
+}
+
+
+
+
+
+
+
+
+
 
 #pragma mark - Remove Ops
 

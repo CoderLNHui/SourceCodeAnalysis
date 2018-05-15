@@ -29,6 +29,7 @@
     }
 }
 
+
 @end
 
 
@@ -138,6 +139,7 @@
     }
 }
 
+ 
 - (void)dealloc {
     [self.session invalidateAndCancel];
     self.session = nil;
@@ -193,57 +195,91 @@
     }
 }
 
+
+
+
+
+#pragma mark - ↑
+#pragma mark - 下载操作：SDWebImageDownloader
+
+//核心方法：下载图片的操作
 - (nullable SDWebImageDownloadToken *)downloadImageWithURL:(nullable NSURL *)url
                                                    options:(SDWebImageDownloaderOptions)options
                                                   progress:(nullable SDWebImageDownloaderProgressBlock)progressBlock
                                                  completed:(nullable SDWebImageDownloaderCompletedBlock)completedBlock {
-    __weak SDWebImageDownloader *wself = self;
-
-    return [self addProgressCallback:progressBlock completedBlock:completedBlock forURL:url createCallback:^SDWebImageDownloaderOperation *{
+    __weak SDWebImageDownloader *wself = self;//为了避免block的循环引用
+    
+    //处理进度回调|完成回调等，如果该url在self.URLCallbacks并不存在，则调用createCallback block块
+    return [self addProgressCallback:progressBlock completedBlock:completedBlock forURL:url createCallback:^SDWebImageDownloaderOperation *{//创建下载operation
         __strong __typeof (wself) sself = wself;
-        NSTimeInterval timeoutInterval = sself.downloadTimeout;
+        NSTimeInterval timeoutInterval = sself.downloadTimeout;//处理下载超时，如果没有设置过则初始化为15秒
         if (timeoutInterval == 0.0) {
             timeoutInterval = 15.0;
         }
-
+        
         // In order to prevent from potential duplicate caching (NSURLCache + SDImageCache) we disable the cache for image requests if told otherwise
+        //创建下载策略
+        //SDWebImageDownloaderUseNSURLCache 则使用 NSURLRequestUseProtocolCachePolicy 缓存协议
+        //默认NSURLRequestReloadIgnoringLocalCacheData从原地址重新下载
+        /*
+         NSURLRequestUseProtocolCachePolicy:默认的缓存策略
+         1)如果缓存不存在，直接从服务端获取。
+         2)如果缓存存在，会根据response中的Cache-Control字段判断下一步操作，如: Cache-Control字段为must-revalidata, 则询问服务端该数据是否有更新，无更新的话直接返回给用户缓存数据，若已更新，则请求服务端.
+         NSURLRequestReloadIgnoringLocalCacheData:忽略本地缓存数据，直接请求服务端。
+         */
         NSURLRequestCachePolicy cachePolicy = options & SDWebImageDownloaderUseNSURLCache ? NSURLRequestUseProtocolCachePolicy : NSURLRequestReloadIgnoringLocalCacheData;
+        //创建下载请求
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url
                                                                     cachePolicy:cachePolicy
                                                                 timeoutInterval:timeoutInterval];
         
+        //设置是否使用Cookies(采用按位与）
         request.HTTPShouldHandleCookies = (options & SDWebImageDownloaderHandleCookies);
+        //开启HTTP管道，这可以显著降低请求的加载时间，但是由于没有被服务器广泛支持，默认是禁用的
         request.HTTPShouldUsePipelining = YES;
+        //设置请求头信息（过滤等）
         if (sself.headersFilter) {
             request.allHTTPHeaderFields = sself.headersFilter(url, [sself allHTTPHeaderFields]);
         }
         else {
             request.allHTTPHeaderFields = [sself allHTTPHeaderFields];
         }
+        
+        // 创建下载操作
         SDWebImageDownloaderOperation *operation = [[sself.operationClass alloc] initWithRequest:request inSession:sself.session options:options];
+        //设置是否需要解码
         operation.shouldDecompressImages = sself.shouldDecompressImages;
         
+        //身份认证(证书)
         if (sself.urlCredential) {
             operation.credential = sself.urlCredential;
         } else if (sself.username && sself.password) {
+            //设置 https 访问时身份验证使用的凭据(默认 账号密码为空的通用证书)
             operation.credential = [NSURLCredential credentialWithUser:sself.username password:sself.password persistence:NSURLCredentialPersistenceForSession];
         }
         
+        //判断下载策略是否是高优先级的或低优先级，以设置操作的队列优先级
         if (options & SDWebImageDownloaderHighPriority) {
             operation.queuePriority = NSOperationQueuePriorityHigh;
         } else if (options & SDWebImageDownloaderLowPriority) {
             operation.queuePriority = NSOperationQueuePriorityLow;
         }
         
+        //判断任务的执行优先级，如果是后进先出，则调整任务的依赖关系，优先执行当前的（最后添加）任务
         if (sself.executionOrder == SDWebImageDownloaderLIFOExecutionOrder) {
             // Emulate LIFO execution order by systematically adding new operations as last operation's dependency
             [sself.lastAddedOperation addDependency:operation];
             sself.lastAddedOperation = operation;
         }
-
+        
         return operation;
     }];
 }
+
+ 
+
+
+
 
 - (void)cancel:(nullable SDWebImageDownloadToken *)token {
     NSURL *url = token.url;
@@ -261,6 +297,10 @@
     UNLOCK(self.operationsLock);
 }
 
+
+
+
+//通过progressBlock&&completedBlock以及Url和SDWebImageDownloaderOperation对token进行包装
 - (nullable SDWebImageDownloadToken *)addProgressCallback:(SDWebImageDownloaderProgressBlock)progressBlock
                                            completedBlock:(SDWebImageDownloaderCompletedBlock)completedBlock
                                                    forURL:(nullable NSURL *)url
@@ -284,9 +324,13 @@
                 return;
             }
             LOCK(sself.operationsLock);
+            
+            //下载完成、移除操作
             [sself.URLOperations removeObjectForKey:url];
             UNLOCK(sself.operationsLock);
         };
+        
+        //将url作为key、对应的下载操作operation作为value保存。
         [self.URLOperations setObject:operation forKey:url];
         // Add operation to operation queue only after all configuration done according to Apple's doc.
         // `addOperation:` does not synchronously execute the `operation.completionBlock` so this will not cause deadlock.
@@ -294,8 +338,10 @@
     }
     UNLOCK(self.operationsLock);
 
+    //将成progressBlock以及completedBlock组装成SDCallbacksDictionary.
     id downloadOperationCancelToken = [operation addHandlersForProgress:progressBlock completed:completedBlock];
     
+    //生成下载任务标识。用于manager将来定位对应操作用
     SDWebImageDownloadToken *token = [SDWebImageDownloadToken new];
     token.downloadOperation = operation;
     token.url = url;

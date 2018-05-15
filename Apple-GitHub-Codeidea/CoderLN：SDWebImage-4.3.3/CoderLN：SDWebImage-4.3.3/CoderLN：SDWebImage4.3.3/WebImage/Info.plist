@@ -20,6 +20,8 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>4.3.3</string>
+	<key>CFBundleDisplayName</key>
+	<string></string>
 	<key>NSPrincipalClass</key>
 	<string></string>
 </dict>
