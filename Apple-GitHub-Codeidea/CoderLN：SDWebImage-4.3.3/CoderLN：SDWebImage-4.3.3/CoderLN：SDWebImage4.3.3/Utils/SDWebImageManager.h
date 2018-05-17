@@ -11,30 +11,44 @@
 #import "SDWebImageDownloader.h"
 #import "SDImageCache.h"
 
+//使用位移枚举，通过按位与&按位或|的组合方式传递多个值
 typedef NS_OPTIONS(NSUInteger, SDWebImageOptions) {
+    
     /**
      * By default, when a URL fail to be downloaded, the URL is blacklisted so the library won't keep trying.
      * This flag disable this blacklisting.
+     *
+     * 默认情况下，如果一个url在下载的时候失败了，那么这个url会被加入黑名单，不会尝试再次下载。如果使用该参数，则该URL不会被添加到黑名单中。意味着会对下载失败的URL尝试重新下载。
+     * 此标记取消黑名单
      */
-    SDWebImageRetryFailed = 1 << 0,
-
+    SDWebImageRetryFailed = 1 << 0, //失败后尝试重新下载
+    
     /**
      * By default, image downloads are started during UI interactions, this flags disable this feature,
      * leading to delayed download on UIScrollView deceleration for instance.
+     *
+     * 默认情况下，在 UI 交互时也会启动图像下载，此标记取消这一特性
+     * 会推迟到滚动视图停止滚动之后再继续下载
+     * 备注：NSURLConnection 的网络下载事件监听的运行循环模式是 NSDefaultRunLoopMode
      */
-    SDWebImageLowPriority = 1 << 1,
-
+    SDWebImageLowPriority = 1 << 1, //低优先级
+    
     /**
-     * This flag disables on-disk caching after the download finished, only cache in memory
+     * This flag disables on-disk caching
+     *
+     * 使用该参数，将禁止磁盘缓存，只做内存缓存
      */
-    SDWebImageCacheMemoryOnly = 1 << 2,
-
+    SDWebImageCacheMemoryOnly = 1 << 2, //只使用内存缓存
+    
     /**
      * This flag enables progressive download, the image is displayed progressively during download as a browser would do.
      * By default, the image is only displayed once completely downloaded.
+     *
+     * 此标记允许渐进式下载，就像浏览器中那样，下载过程中，图像会逐步显示出来
+     * 默认情况下，图像会在下载完成后一次性显示
      */
-    SDWebImageProgressiveDownload = 1 << 3,
-
+    SDWebImageProgressiveDownload = 1 << 3, //渐进式下载
+    
     /**
      * Even if the image is cached, respect the HTTP response cache control, and refresh the image from remote location if needed.
      * The disk caching will be handled by NSURLCache instead of SDWebImage leading to slight performance degradation.
@@ -42,63 +56,92 @@ typedef NS_OPTIONS(NSUInteger, SDWebImageOptions) {
      * If a cached image is refreshed, the completion block is called once with the cached image and again with the final image.
      *
      * Use this flag only if you can't make your URLs static with embedded cache busting parameter.
+     *
+     * 遵守 HTPP 响应的缓存控制，如果需要，从远程刷新图像
+     * 磁盘缓存将由 NSURLCache 处理，而不是 SDWebImage，这会对性能有轻微的影响
+     * 此选项用于处理URL指向图片发生变化的情况
+     * 如果缓存的图像被刷新，会调用一次 completion block，并传递最终的图像
      */
-    SDWebImageRefreshCached = 1 << 4,
-
+    SDWebImageRefreshCached = 1 << 4,   //刷新缓存
+    
     /**
      * In iOS 4+, continue the download of the image if the app goes to background. This is achieved by asking the system for
      * extra time in background to let the request finish. If the background task expires the operation will be cancelled.
+     *
+     * 如果系统版本是iOS 4+的，那么当App进入后台后仍然会继续下载图像。
+     * 这是向系统请求额外的后台时间以保证下载请求完成的
+     * 如果后台任务过期，请求将会被取消
      */
-    SDWebImageContinueInBackground = 1 << 5,
-
+    SDWebImageContinueInBackground = 1 << 5,    //后台下载
+    
     /**
      * Handles cookies stored in NSHTTPCookieStore by setting
      * NSMutableURLRequest.HTTPShouldHandleCookies = YES;
+     *
+     * 通过设置，处理保存在 NSHTTPCookieStore 中的 cookies
      */
-    SDWebImageHandleCookies = 1 << 6,
-
+    SDWebImageHandleCookies = 1 << 6,   //处理保存在NSHTTPCookieStore中的cookies
+    
     /**
      * Enable to allow untrusted SSL certificates.
      * Useful for testing purposes. Use with caution in production.
+     *
+     * 允许不信任的 SSL 证书
+     * 可以出于测试目的使用，在正式产品中慎用
      */
-    SDWebImageAllowInvalidSSLCertificates = 1 << 7,
-
+    SDWebImageAllowInvalidSSLCertificates = 1 << 7,     //允许不信任的 SSL 证书
+    
     /**
-     * By default, images are loaded in the order in which they were queued. This flag moves them to
-     * the front of the queue.
+     * By default, image are loaded in the order they were queued. This flag move them to
+     * the front of the queue and is loaded immediately instead of waiting for the current queue to be loaded (which
+     * could take a while).
+     *
+     *  默认情况下，图像会按照添加到队列中的顺序被加载，此标记会将它们移动到队列前端被立即加载
+     *  而不是等待当前队列被加载，因为等待队列加载会需要一段时间
      */
-    SDWebImageHighPriority = 1 << 8,
+    SDWebImageHighPriority = 1 << 8,    //高优先级（优先下载）
     
     /**
      * By default, placeholder images are loaded while the image is loading. This flag will delay the loading
      * of the placeholder image until after the image has finished loading.
+     *
+     * 默认情况下，在加载图像时，占位图像已经会被加载。
+     * 此标记会延迟加载占位图像，直到图像已经完成加载
      */
-    SDWebImageDelayPlaceholder = 1 << 9,
-
+    SDWebImageDelayPlaceholder = 1 << 9,    //延迟占位图片
+    
     /**
      * We usually don't call transformDownloadedImage delegate method on animated images,
      * as most transformation code would mangle it.
      * Use this flag to transform them anyway.
+     *
+     * 通常不会在可动画的图像上调用transformDownloadedImage代理方法，因为大多数转换代码会破坏动画文件
+     * 使用此标记尝试转换
      */
-    SDWebImageTransformAnimatedImage = 1 << 10,
+    SDWebImageTransformAnimatedImage = 1 << 10, //转换动画图像
     
     /**
      * By default, image is added to the imageView after download. But in some cases, we want to
      * have the hand before setting the image (apply a filter or add it with cross-fade animation for instance)
      * Use this flag if you want to manually set the image in the completion when success
+     *
+     * 下载完成后手动设置图片，默认是下载完成后自动放到ImageView上
      */
-    SDWebImageAvoidAutoSetImage = 1 << 11,
+    SDWebImageAvoidAutoSetImage = 1 << 11,   //手动设置图像
     
     /**
      * By default, images are decoded respecting their original size. On iOS, this flag will scale down the
      * images to a size compatible with the constrained memory of devices.
      * If `SDWebImageProgressiveDownload` flag is set the scale down is deactivated.
+     * 默认情况下，图像按照原始大小进行解码。在iOS上，这个标志将缩小
      */
-    SDWebImageScaleDownLargeImages = 1 << 12,
+    SDWebImageScaleDownLargeImages = 1 << 12,//
     
      /**
      * By default, we do not query disk data when the image is cached in memory. This mask can force to query disk data at the same time.
      * This flag is recommend to be used with `SDWebImageQueryDiskSync` to ensure the image is loaded in the same runloop.
+     * 默认情况下，当图像缓存在内存中时，我们不查询磁盘数据。这个属性可以强制同步到查询磁盘数据。
+     * 此标志建议与“SDWebImageQueryDiskSync”一起使用，以确保图像加载在同一个运行循环中。
      */
     SDWebImageQueryDataWhenInMemory = 1 << 13,
     
@@ -118,10 +161,13 @@ typedef NS_OPTIONS(NSUInteger, SDWebImageOptions) {
     SDWebImageForceTransition = 1 << 16
 };
 
+
 typedef void(^SDExternalCompletionBlock)(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL);
 
+//定义任务完成的block块
 typedef void(^SDInternalCompletionBlock)(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL);
 
+//定义缓存过滤器的block块
 typedef NSString * _Nullable(^SDWebImageCacheKeyFilterBlock)(NSURL * _Nullable url);
 
 typedef NSData * _Nullable(^SDWebImageCacheSerializerBlock)(UIImage * _Nonnull image, NSData * _Nullable data, NSURL * _Nullable imageURL);

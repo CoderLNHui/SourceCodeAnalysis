@@ -53,6 +53,8 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
         // At this case, we can sync weak cache back and do not need to load from disk cache
         self.weakCache = [[NSMapTable alloc] initWithKeyOptions:NSPointerFunctionsStrongMemory valueOptions:NSPointerFunctionsWeakMemory capacity:0];
         self.weakCacheLock = dispatch_semaphore_create(1);
+        
+        //监听到（应用程序发生内存警告）通知，调用didReceiveMemoryWarning方法，移除所有对象；
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(didReceiveMemoryWarning:)
                                                      name:UIApplicationDidReceiveMemoryWarningNotification
@@ -63,7 +65,7 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
 
 - (void)didReceiveMemoryWarning:(NSNotification *)notification {
     // Only remove cache, but keep weak cache
-    [super removeAllObjects];
+    [super removeAllObjects]; //把所有的内存缓存都删除
 }
 
 // `setObject:forKey:` just call this with 0 cost. Override this is enough
@@ -180,11 +182,14 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
 
 #if SD_UIKIT
         // Subscribe to app events
+        //监听应用程序通知
+        
+        //当监听到（程序将终止）调用deleteOldFiles方法,清理过期文件(默认大于一周)的磁盘缓存
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(deleteOldFiles)
                                                      name:UIApplicationWillTerminateNotification
                                                    object:nil];
-
+        //当监听到（程序进入后台），调用backgroundDeleteOldFiles方法,清理未完成、长期运行的任务缓存。
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(backgroundDeleteOldFiles)
                                                      name:UIApplicationDidEnterBackgroundNotification
@@ -486,14 +491,13 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
 
 #pragma mark - ↑
 #pragma mark - 业务层
-#pragma mark - 缓存&&磁盘操作：SDImageCache
-
+#pragma mark - 缓存&&磁盘操作：SDImageCache；Bundle version 4.3.3
 
 /*
  检查要下载图片的缓存情况
- 1.先检查是否有内存缓存；如果有内存缓存，再从磁盘读取diskData一起回调；
- 2.如果没有内存缓存则检查是否有沙盒缓存
- 3.如果有沙盒缓存，则把该图片写入内存缓存并处理doneBlock回调
+    1.先检查是否有内存缓存；如果有内存缓存，再从磁盘读取diskData一起回调；
+    2.如果没有内存缓存则检查是否有沙盒缓存
+    3.如果有沙盒缓存，则把该图片写入内存缓存并处理doneBlock回调
  */
 - (nullable NSOperation *)queryCacheOperationForKey:(nullable NSString *)key options:(SDImageCacheOptions)options done:(nullable SDCacheQueryCompletedBlock)doneBlock {
     //如果缓存对应的key为空，则直接返回，并把存储方式（无缓存）通过block块以参数的形式传递
@@ -637,10 +641,13 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
     });
 }
 
+
 - (void)deleteOldFiles {
     [self deleteOldFilesWithCompletionBlock:nil];
 }
 
+
+// 清除过期文件的磁盘缓存
 - (void)deleteOldFilesWithCompletionBlock:(nullable SDWebImageNoParamsBlock)completionBlock {
     dispatch_async(self.ioQueue, ^{
         NSURL *diskCacheURL = [NSURL fileURLWithPath:self.diskCachePath isDirectory:YES];
@@ -730,13 +737,13 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
     __block UIBackgroundTaskIdentifier bgTask = [application beginBackgroundTaskWithExpirationHandler:^{
         // Clean up any unfinished task business by marking where you
         // stopped or ending the task outright.
-        [application endBackgroundTask:bgTask];
+        [application endBackgroundTask:bgTask];// 清理任何未完成的任务
         bgTask = UIBackgroundTaskInvalid;
     }];
 
     // Start the long-running task and return immediately.
     [self deleteOldFilesWithCompletionBlock:^{
-        [application endBackgroundTask:bgTask];
+        [application endBackgroundTask:bgTask];// 清理长期运行的任务，并立即返回
         bgTask = UIBackgroundTaskInvalid;
     }];
 }

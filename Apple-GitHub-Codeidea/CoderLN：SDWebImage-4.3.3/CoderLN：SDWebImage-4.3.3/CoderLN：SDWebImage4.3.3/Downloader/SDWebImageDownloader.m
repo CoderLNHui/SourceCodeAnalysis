@@ -200,7 +200,7 @@
 
 
 #pragma mark - ↑
-#pragma mark - 下载操作：SDWebImageDownloader
+#pragma mark - 下载操作：SDWebImageDownloader；Bundle version 4.3.3
 
 //核心方法：下载图片的操作
 - (nullable SDWebImageDownloadToken *)downloadImageWithURL:(nullable NSURL *)url
@@ -219,13 +219,11 @@
         
         // In order to prevent from potential duplicate caching (NSURLCache + SDImageCache) we disable the cache for image requests if told otherwise
         //创建下载策略
-        //SDWebImageDownloaderUseNSURLCache 则使用 NSURLRequestUseProtocolCachePolicy 缓存协议
-        //默认NSURLRequestReloadIgnoringLocalCacheData从原地址重新下载
         /*
          NSURLRequestUseProtocolCachePolicy:默认的缓存策略
-         1)如果缓存不存在，直接从服务端获取。
-         2)如果缓存存在，会根据response中的Cache-Control字段判断下一步操作，如: Cache-Control字段为must-revalidata, 则询问服务端该数据是否有更新，无更新的话直接返回给用户缓存数据，若已更新，则请求服务端.
-         NSURLRequestReloadIgnoringLocalCacheData:忽略本地缓存数据，直接请求服务端。
+             1)如果缓存不存在，直接从服务端获取。
+             2)如果缓存存在，会根据response中的Cache-Control字段判断下一步操作，如: Cache-Control字段为must-revalidata, 则询问服务端该数据是否有更新，无更新的话直接返回给用户缓存数据，若已更新，则请求服务端.
+         NSURLRequestReloadIgnoringLocalCacheData:忽略本地缓存数据，直接请求服务端下载。
          */
         NSURLRequestCachePolicy cachePolicy = options & SDWebImageDownloaderUseNSURLCache ? NSURLRequestUseProtocolCachePolicy : NSURLRequestReloadIgnoringLocalCacheData;
         //创建下载请求

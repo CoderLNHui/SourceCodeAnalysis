@@ -151,7 +151,7 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
 
         //同步函数+串行队列：初始化文件管理者
         dispatch_sync(_ioQueue, ^{
-            _fileManager = [NSFileManager new];
+            self->_fileManager = [NSFileManager new];
         });
 
 #if TARGET_OS_IPHONE
@@ -606,7 +606,7 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
         //
         //  1. Removing files that are older than the expiration date.
         //  2. Storing file attributes for the size-based cleanup pass.
-        // 遍历缓存路径中的所有文件，此循环要实现两个目的
+        //  遍历缓存路径中的所有文件，此循环要实现两个目的
         //  1. 删除早于过期日期的文件
         //  2. 保存文件属性以计算磁盘缓存占用空间
         NSMutableArray *urlsToDelete = [[NSMutableArray alloc] init];
@@ -642,7 +642,7 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
 
         // If our remaining disk cache exceeds a configured maximum size, perform a second
         // size-based cleanup pass.  We delete the oldest files first.
-        //如果剩余磁盘缓存空间超出最大限额，再次执行清理操作，删除最早的文件
+        // 如果剩余磁盘缓存空间超出最大限额，再次执行清理操作，删除最早的文件
         if (self.maxCacheSize > 0 && currentCacheSize > self.maxCacheSize) {
             // Target half of our maximum cache size for this cleanup pass.
             const NSUInteger desiredCacheSize = self.maxCacheSize / 2;
@@ -654,7 +654,7 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
                                                             }];
 
             // Delete files until we fall below our desired cache size.
-            // 循环依次删除文件，直到低于期望的缓存限额
+            // 循环依次删除文件，直到低于期望的缓存限额的1/2
             for (NSURL *fileURL in sortedFiles) {
                 if ([_fileManager removeItemAtURL:fileURL error:nil]) {
                     NSDictionary *resourceValues = cacheFiles[fileURL];
@@ -693,7 +693,7 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
     }];
 
     // Start the long-running task and return immediately.
-    // 启动长期运行的任务，并立即返回
+    // 清理长期运行的任务，并立即返回
     [self cleanDiskWithCompletionBlock:^{
         [application endBackgroundTask:bgTask];
         bgTask = UIBackgroundTaskInvalid;

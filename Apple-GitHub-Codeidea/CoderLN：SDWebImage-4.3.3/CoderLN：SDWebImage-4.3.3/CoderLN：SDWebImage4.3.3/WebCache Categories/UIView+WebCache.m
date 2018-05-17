@@ -56,11 +56,11 @@ static char TAG_ACTIVITY_SHOW;
 }
 
 
-
-
+ 
 #pragma mark - ↑
 #pragma mark - 最上层：UIView+WebCache； Bundle version 4.3.3
 #pragma mark - 核心代码：读取下载图片 (所有外部API sd_setImageWithURL:入口方法都将会汇总到这，只是传递的参数不同而已)
+
 
 /**
  * @param url            图片地址链接
@@ -69,8 +69,15 @@ static char TAG_ACTIVITY_SHOW;
  * @param operationKey   一个记录当前对象正在加载操作的key、保证只有最新的操作在进行、默认为类名。
  * @param setImageBlock  给开发者自定义set图片的callback
  * @param progressBlock  下载进度callback
+          receivedSize   已经下载的数据大小
+          expectedSize   要下载图片的总大小
+          targetURL      URL地址
  * @param completedBlock 下载完成的callback（sd已经给你set好了、只是会把图片给你罢了）
- * @param context        一些额外的上下文字典。比如你可以搞一个专属的imageManager进来干活。
+          image          请求的 UIImage，如果出现错误image参数是nil
+          error          如果图片下载成功则error为nil,否则error有值
+          cacheType      图片缓存类型（TypeNone：网络下载、TypeDisk：使用磁盘缓存、TypeMemory：使用内存缓存）
+          imageURL       URL地址
+ * @param context         一些额外的上下文字典
  */
 - (void)sd_internalSetImageWithURL:(nullable NSURL *)url
                   placeholderImage:(nullable UIImage *)placeholder
@@ -80,15 +87,15 @@ static char TAG_ACTIVITY_SHOW;
                           progress:(nullable SDWebImageDownloaderProgressBlock)progressBlock
                          completed:(nullable SDExternalCompletionBlock)completedBlock
                            context:(nullable NSDictionary *)context {
-    
      
-    //以当前实例的class作为OperationKey
+    // 以当前实例的class作为OperationKey
     NSString *validOperationKey = operationKey ?: NSStringFromClass([self class]);
-    //清除当前OperationKey下正在进行的操作。节省无用功
+    // 取消当前OperationKey下正在进行的操作。
     [self sd_cancelImageLoadOperationWithKey:validOperationKey];
-    //给对象实例绑定imageURLKey = url
+    // SD会把这个 URL 通过运行时 objc_setAssociatedObject 的方法绑定到这个 UIView 中
     objc_setAssociatedObject(self, &imageURLKey, url, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    //是否先加载占位图
+    
+    // 首先判断如果传入的下载选项options不是SDWebImageDelayPlaceholder 延迟显示占位图片，那么在主线程中设置占位图片。
     if (!(options & SDWebImageDelayPlaceholder)) {
         if ([context valueForKey:SDWebImageInternalSetImageGroupKey]) {
             dispatch_group_t group = [context valueForKey:SDWebImageInternalSetImageGroupKey];
@@ -102,8 +109,8 @@ static char TAG_ACTIVITY_SHOW;
     }
     
     
-    if (url) {
-        // 小菊花
+    if (url) {//如果url不为空
+        // 首先先检查 activityView 是否可用，可用的话给 ImageView 正中间添加一个活动指示器并旋转，加载图片完成或失败都会清除掉
         if ([self sd_showActivityIndicatorView]) {
             [self sd_addActivityIndicator];
         }
@@ -116,11 +123,11 @@ static char TAG_ACTIVITY_SHOW;
             manager = [SDWebImageManager sharedManager];
         }
         
-        __weak __typeof(self)wself = self;
+        __weak __typeof(self)wself = self;// 避免循环引用
         id <SDWebImageOperation> operation = [manager loadImageWithURL:url options:options progress:progressBlock completed:^(UIImage *image, NSData *data, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
             //图片下载||读取完成
             __strong __typeof (wself) sself = wself;
-            //小菊花
+            //移除小菊花
             [self sd_removeActivityIndicator];
             if (!sself) { return; }
             
@@ -148,7 +155,7 @@ static char TAG_ACTIVITY_SHOW;
                 //
                 if (!sself) { return; }
                 if (!shouldNotSetImage) {
-                    [sself sd_setNeedsLayout];
+                    [sself sd_setNeedsLayout];//并刷新重绘视图
                 }
                 if (completedBlock && shouldCallCompletedBlock) {
                     //操作完成的回调
@@ -166,8 +173,7 @@ static char TAG_ACTIVITY_SHOW;
                 return;
             }
             
-            /**自动插入图片***/
-            
+            // 自动插入图片 //
             UIImage *targetImage = nil;
             NSData *targetData = nil;
             if (image) {
@@ -198,8 +204,10 @@ static char TAG_ACTIVITY_SHOW;
             }
         }];
         
-        // 记录当前操作：在读取图片之前。向正在进行加载的HashMap中加入当前operation
+        // 记录当前操作：在读取图片之前，将operation存到ImageView的 SDOperationsDictionary中，为前面取消当前OperationKey下正在进行的操作存储。
+        // typedef NSMapTable<NSString *, id<SDWebImageOperation>> SDOperationsDictionary;
         [self sd_setImageLoadOperation:operation forKey:validOperationKey];
+        
     } else {
         dispatch_main_async_safe(^{
             [self sd_removeActivityIndicator];
@@ -210,6 +218,10 @@ static char TAG_ACTIVITY_SHOW;
         });
     }
 }
+
+
+
+
 
 
 

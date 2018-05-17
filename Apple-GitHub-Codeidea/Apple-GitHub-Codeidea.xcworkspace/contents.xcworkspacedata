@@ -2,17 +2,30 @@
 <Workspace
    version = "1.0">
    <Group
-      location = "group:Apple-GitHub-Codeidea/&#x1f3c3;&#x1f3fb;&#x200d;&#x2642;&#xfe0f;Architecture&#xff1a;&#x56fe;&#x89e3;"
+      location = "group:&#x1f3c3;&#x1f3fb;&#x200d;&#x2642;&#xfe0f;Architecture&#xff1a;&#x56fe;&#x89e3;"
       name = "&#x1f3c3;&#x1f3fb;&#x200d;&#x2642;&#xfe0f;Architecture&#xff1a;&#x56fe;&#x89e3;">
-      <FileRef
-         location = "group:SDWebImage-4.3.3&#x5de5;&#x4f5c;&#x6d41;&#x7a0b;.png">
-      </FileRef>
-      <FileRef
-         location = "group:SDWebImageClass-4.3.3&#x56fe;&#x89e3;.png">
-      </FileRef>
+      <Group
+         location = "group:SDWebImage-4.3.3"
+         name = "SDWebImage-4.3.3">
+         <FileRef
+            location = "group:SDWebImageClass-4.3.3&#x56fe;&#x89e3;.png">
+         </FileRef>
+         <FileRef
+            location = "group:&#x903b;&#x8f91;&#x5c42;&#xff1a;SDWebImageManager&#x8c03;&#x5ea6;&#x4e0b;&#x8f7d;&#x548c;&#x7f13;&#x5b58;.png">
+         </FileRef>
+         <FileRef
+            location = "group:&#x6700;&#x4e0a;&#x5c42;&#xff1a;UIView+WebCache&#x4e0b;&#x8f7d;&#x6838;&#x5fc3;&#x65b9;&#x6cd5;.png">
+         </FileRef>
+         <FileRef
+            location = "group:&#x4e1a;&#x52a1;&#x5c42;&#xff1a;SDImageCache&#x7f13;&#x5b58;&amp;&amp;&#x78c1;&#x76d8;&#x64cd;&#x4f5c;Downloader.png">
+         </FileRef>
+         <FileRef
+            location = "group:SDWebImage-4.3.3&#x5de5;&#x4f5c;&#x6d41;&#x7a0b;.png">
+         </FileRef>
+      </Group>
    </Group>
    <Group
-      location = "group:Apple-GitHub-Codeidea/&#x1f3c3;&#x1f3fb;&#x200d;&#x2642;&#xfe0f;Public&#xff1a;Codeidea"
+      location = "group:&#x1f3c3;&#x1f3fb;&#x200d;&#x2642;&#xfe0f;Public&#xff1a;Codeidea"
       name = "&#x1f3c3;&#x1f3fb;&#x200d;&#x2642;&#xfe0f;Public&#xff1a;Codeidea">
       <FileRef
          location = "group:Swift&#x62d3;&#x5c55;&#x73ed;.md">
@@ -25,7 +38,7 @@
       </FileRef>
    </Group>
    <Group
-      location = "group:Apple-GitHub-Codeidea/Library Tools"
+      location = "group:Library Tools"
       name = "Library Tools">
       <Group
          location = "group:CoderLN&#xff1a;MJRefreshTools"

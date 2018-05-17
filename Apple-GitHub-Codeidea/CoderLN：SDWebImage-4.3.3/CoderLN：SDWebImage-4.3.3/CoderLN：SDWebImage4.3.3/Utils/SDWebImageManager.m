@@ -118,7 +118,7 @@
 
 
 #pragma mark - ↑
-#pragma mark - 逻辑层：SDWebImageManager；
+#pragma mark - 逻辑层：SDWebImageManager；Bundle version 4.3.3
 #pragma mark - 加载图片核心方法；调度图片的下载(Downloader)和缓存(Cache)，并不依托于 UIView+WebCache，完全可单独使用。
 
 /**
@@ -126,6 +126,15 @@
  * @param options        下载图片的枚举。包括优先级、是否写入硬盘等
  * @param progressBlock  下载进度callback
  * @param completedBlock 下载完成的callback
+          data           图片的二进制数据
+          finished
+                        1.如果图像下载完成、或没有使用SDWebImageDownloaderProgressiveDownload 则为YES 1
+                        2.如果使用了 SDWebImageDownloaderProgressiveDownload 渐进式下载选项，此block会被重复调用
+                            1)下载完成前，image 参数是部分图像，finished 参数是 NO 0
+                            2)最后一次被调用时，image 参数是完整图像，而 finished 参数是 YES
+                            3)如果出现错误，那么finished 参数也是 YES
+ *
+ * @return SDWebImageOperation对象
  */
 - (id <SDWebImageOperation>)loadImageWithURL:(nullable NSURL *)url
                                      options:(SDWebImageOptions)options
@@ -271,7 +280,6 @@
                         }
                     }
                     
-                    
                     //是否磁盘缓存
                     BOOL cacheOnDisk = !(options & SDWebImageCacheMemoryOnly);
                     
@@ -286,12 +294,9 @@
                         // Image refresh hit the NSURLCache cache, do not call the completion block
                     }
                     
-                    
                     //是否需要转换图片
                     //成功下载图片、自定义实现了图片处理的代理
                     else if (downloadedImage && (!downloadedImage.images || (options & SDWebImageTransformAnimatedImage)) && [self.delegate respondsToSelector:@selector(imageManager:transformDownloadedImage:withURL:)]) {
-                        
-                        
                         //开子线程处理(异步全局队列)
                         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
                             //获取转换用户后的图片
@@ -314,8 +319,7 @@
                             //回调
                             [self callCompletionBlockForOperation:strongSubOperation completion:completedBlock image:transformedImage data:downloadedData error:nil cacheType:SDImageCacheTypeNone finished:finished url:url];
                         });
-                  
-                        
+                
                     } else {//下载成功且未自定义代理--默认保存写入缓存 && 磁盘
                         if (downloadedImage && finished) {
                             if (self.cacheSerializer) {

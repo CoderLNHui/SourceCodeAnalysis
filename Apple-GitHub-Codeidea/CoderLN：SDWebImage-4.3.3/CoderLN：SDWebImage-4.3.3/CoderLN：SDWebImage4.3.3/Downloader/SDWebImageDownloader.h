@@ -10,49 +10,67 @@
 #import "SDWebImageCompat.h"
 #import "SDWebImageOperation.h"
 
+//图片下载选项
 typedef NS_OPTIONS(NSUInteger, SDWebImageDownloaderOptions) {
-    /**
-     * Put the download in the low queue priority and task priority.
-     */
+    
+    //低优先级
     SDWebImageDownloaderLowPriority = 1 << 0,
+    //渐进式下载
+    SDWebImageDownloaderProgressiveDownload = 1 << 1,
     
     /**
-     * This flag enables progressive download, the image is displayed progressively during download as a browser would do.
-     */
-    SDWebImageDownloaderProgressiveDownload = 1 << 1,
-
-    /**
-     * By default, request prevent the use of NSURLCache. With this flag, NSURLCache
+     * By default, request prevent the of NSURLCache. With this flag, NSURLCache
      * is used with default policies.
      */
+    /*
+     默认情况下，请求不使用 NSURLCache。使用此标记，会使用 NSURLCache 和默认缓存策略
+     */
     SDWebImageDownloaderUseNSURLCache = 1 << 2,
-
+    
     /**
      * Call completion block with nil image/imageData if the image was read from NSURLCache
      * (to be combined with `SDWebImageDownloaderUseNSURLCache`).
      */
-    SDWebImageDownloaderIgnoreCachedResponse = 1 << 3,
     
+    /*
+     * 如果图像是从 NSURLCache 读取的，则调用 completion block 时，image/imageData 传入 nil
+     * (此标记要和 `SDWebImageDownloaderUseNSURLCache` 组合使用)
+     */
+    SDWebImageDownloaderIgnoreCachedResponse = 1 << 3,
     /**
      * In iOS 4+, continue the download of the image if the app goes to background. This is achieved by asking the system for
      * extra time in background to let the request finish. If the background task expires the operation will be cancelled.
      */
+    /*
+     * 在 iOS 4+，当 App 进入后台后仍然会继续下载图像。这是向系统请求额外的后台时间以保证下载请求完成的
+     * 如果后台任务过期，请求将会被取消
+     */
     SDWebImageDownloaderContinueInBackground = 1 << 4,
-
+    
     /**
-     * Handles cookies stored in NSHTTPCookieStore by setting 
+     * Handles cookies stored in NSHTTPCookieStore by setting
      * NSMutableURLRequest.HTTPShouldHandleCookies = YES;
      */
+    /*
+     *  处理保存在 NSHTTPCookieStore 中的 cookies
+     */
     SDWebImageDownloaderHandleCookies = 1 << 5,
-
+    
     /**
      * Enable to allow untrusted SSL certificates.
      * Useful for testing purposes. Use with caution in production.
      */
+    /*
+     * 允许不信任的 SSL 证书
+     * 可以出于测试目的使用，在正式产品中慎用
+     */
     SDWebImageDownloaderAllowInvalidSSLCertificates = 1 << 6,
-
+    
     /**
-     * Put the download in the high queue priority and task priority.
+     * Put the image in the high priority queue.
+     */
+    /*
+     *  将图像放入高优先级队列
      */
     SDWebImageDownloaderHighPriority = 1 << 7,
     
@@ -62,14 +80,21 @@ typedef NS_OPTIONS(NSUInteger, SDWebImageDownloaderOptions) {
     SDWebImageDownloaderScaleDownLargeImages = 1 << 8,
 };
 
+//下载操作的执行方式
 typedef NS_ENUM(NSInteger, SDWebImageDownloaderExecutionOrder) {
     /**
      * Default value. All download operations will execute in queue style (first-in-first-out).
      */
+    /*
+     *  默认值，所有下载操作将按照队列的先进先出方式执行
+     */
     SDWebImageDownloaderFIFOExecutionOrder,
-
+    
     /**
      * All download operations will execute in stack style (last-in-first-out).
+     */
+    /*
+     *  所有下载操作将按照堆栈的后进先出方式执行
      */
     SDWebImageDownloaderLIFOExecutionOrder
 };
@@ -77,13 +102,16 @@ typedef NS_ENUM(NSInteger, SDWebImageDownloaderExecutionOrder) {
 FOUNDATION_EXPORT NSString * _Nonnull const SDWebImageDownloadStartNotification;
 FOUNDATION_EXPORT NSString * _Nonnull const SDWebImageDownloadStopNotification;
 
+//定义下载进度回调
 typedef void(^SDWebImageDownloaderProgressBlock)(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL);
 
+//定义下载完成回调
 typedef void(^SDWebImageDownloaderCompletedBlock)(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished);
 
 typedef NSDictionary<NSString *, NSString *> SDHTTPHeadersDictionary;
 typedef NSMutableDictionary<NSString *, NSString *> SDHTTPHeadersMutableDictionary;
 
+//定义'头部过滤'回调，有返回值（字典）
 typedef SDHTTPHeadersDictionary * _Nullable (^SDWebImageDownloaderHeadersFilterBlock)(NSURL * _Nullable url, SDHTTPHeadersDictionary * _Nullable headers);
 
 /**

@@ -25,10 +25,10 @@
     if (!data) {
         return SDImageFormatUndefined;
     }
-    
+    //在判断图片类型的时候，只匹配NSData数据第一个字节。
     // File signatures table: http://www.garykessler.net/library/file_sigs.html
     uint8_t c;
-    [data getBytes:&c length:1];
+    [data getBytes:&c length:1];//获得传入的图片二进制数据的第一个字节
     switch (c) {
         case 0xFF:
             return SDImageFormatJPEG;
@@ -40,9 +40,11 @@
         case 0x4D:
             return SDImageFormatTIFF;
         case 0x52: {
-            if (data.length >= 12) {
+            if (data.length >= 12) { //WEBP :是一种同时提供了有损压缩与无损压缩的图片文件格式
                 //RIFF....WEBP
+                //获取前12个字节
                 NSString *testString = [[NSString alloc] initWithData:[data subdataWithRange:NSMakeRange(0, 12)] encoding:NSASCIIStringEncoding];
+                //如果以『RIFF』开头，且以『WEBP』结束，那么就认为该图片是Webp类型的
                 if ([testString hasPrefix:@"RIFF"] && [testString hasSuffix:@"WEBP"]) {
                     return SDImageFormatWebP;
                 }
