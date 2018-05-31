@@ -1,6 +1,0 @@
-{
-"uid":123456,
-"name":"Harry",
-"created":"1965-07-31T00:00:00+0000",
-"ivarTest":"_ivarTest"
-}
