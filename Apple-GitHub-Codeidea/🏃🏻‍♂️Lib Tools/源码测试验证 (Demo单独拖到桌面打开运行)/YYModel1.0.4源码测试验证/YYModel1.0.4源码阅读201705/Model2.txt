@@ -1,8 +1,0 @@
-{
-"author":{
-    "name":"J.K.Rowling",
-    "birthday":"1965-07-31T00:00:00+0000"
-},
-"name":"Harry Potter",
-"pages":256
-}
