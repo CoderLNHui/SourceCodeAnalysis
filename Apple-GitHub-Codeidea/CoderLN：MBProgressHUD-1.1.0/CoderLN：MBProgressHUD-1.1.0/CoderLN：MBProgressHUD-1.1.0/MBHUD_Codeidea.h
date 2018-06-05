@@ -8,15 +8,19 @@
 //
 
 #pragma mark - ↑
-#pragma mark - MBProgressHUD 用户提示，Version = 1.1.0
-
-
-#pragma mark - ↑
-#pragma mark - 官方释义
+#pragma mark - MBProgressHUD
 
 /**
+ MBProgressHUD 用户提示
+ 
  官方释义：
  MBProgressHUD is an iOS drop-in class that displays a translucent HUD with an indicator and/or labels while work is being done in a background thread. The HUD is meant as a replacement for the undocumented, private UIKit UIProgressHUD with some additional features.
+ 
+ 
+ MBProgressHUD和SVProgressHUD的区别：
+ svprogresshud 使用起来很方便,但 可定制 差一些,看它的接口貌似只能添加一个全屏的HUD,不能把它添加到某个视图上面去.
+ MBProgressHUD 功能全一些,可定制 高一些,而且可以指定加到某一个View上去.用起来可能就没上面那个方便了.
+ 具体还要看你的使用场景.
  */
 
 
@@ -35,6 +39,10 @@
     MBBarProgressView
     MBBackgroundView
 
+ 重要属性
+ MBProgressHUDBackgroundStyle style;背景样式（SolidColor纯色、Blur模糊）
+ MBProgressHUDAnimation animationType;动画类型（Fade只有透明度、Zoom透明+形变）
+ MBProgressHUDMode mode;显示模式（Indeterminate系统自带、Determinate圆形饼图、HorizontalBar水平进度条、AnnularDeterminate圆环、CustomView自定义视图、Text只显示文字）
  */
 
 
@@ -122,7 +130,7 @@
 
 
 #pragma mark - ↑
-#pragma mark - SVHUD 基本使用
+#pragma mark - MBHUD 基本使用
 
 ```objc
 
@@ -136,10 +144,8 @@
 
 
 
-
-
-
-
+#pragma mark - ↑
+#pragma mark - MBHUD 抽取封装
 
 
 

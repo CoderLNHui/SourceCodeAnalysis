@@ -107,10 +107,10 @@
                 }
                 
                 if (CGColorEqualToColor(makeObj.xz_HUDColor.CGColor, rgba(0, 0, 0, 0.7).CGColor)) {
-                    hud.color = rgba(255, 255, 255, 0.8);
+                    hud.bezelView.color = rgba(255, 255, 255, 0.8);
                     hud.contentColor = [UIColor blackColor];
                 }else {
-                    hud.color = makeObj.xz_HUDColor;
+                    hud.bezelView.color = makeObj.xz_HUDColor;
                     hud.contentColor = makeObj.xz_ContentColor;
                 }
             }
@@ -264,8 +264,8 @@
 + (MBProgressHUD *)configHUDWithMakeObj:(XZMBProgressManager *)makeObj {
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:makeObj.xz_inView animated:makeObj.xz_animated];
     hud.detailsLabel.text=makeObj.xz_message;
-    hud.detailsLabelFont = [UIFont systemFontOfSize:16.0];
-    hud.color = makeObj.xz_HUDColor;
+    hud.detailsLabel.font = [UIFont systemFontOfSize:16.0];
+    hud.bezelView.color = makeObj.xz_HUDColor;
     hud.contentColor = makeObj.xz_ContentColor;
     hud.animationType = MBProgressHUDAnimationZoomOut;
     hud.userInteractionEnabled=makeObj.xz_maskType;

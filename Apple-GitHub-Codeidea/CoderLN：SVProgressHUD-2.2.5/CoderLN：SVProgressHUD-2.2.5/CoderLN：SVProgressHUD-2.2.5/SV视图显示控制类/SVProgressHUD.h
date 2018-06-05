@@ -18,12 +18,20 @@
 
 #pragma mark - ↑
 #pragma mark - const 常量通知
+
+/**
+ SVProgressHUD发布四个通知，NSNotificationCenter以响应被显示/拒绝：
+ 每个通知通过一个userInfo保存HUD状态字符串（如果有的话）的字典，可以通过检索SVProgressHUDStatusUserInfoKey。
+ 
+ SVProgressHUD SVProgressHUDDidReceiveTouchEventNotification当用户触摸整个屏幕或SVProgressHUDDidTouchDownInsideNotification用户直接触摸HUD时也会发布。由于此通知userInfo未被传递，而对象参数包含UIEvent与触摸相关的参数。
+ */
+
 extern NSString * _Nonnull const SVProgressHUDDidReceiveTouchEventNotification;
 extern NSString * _Nonnull const SVProgressHUDDidTouchDownInsideNotification;
-extern NSString * _Nonnull const SVProgressHUDWillDisappearNotification;
-extern NSString * _Nonnull const SVProgressHUDDidDisappearNotification;
-extern NSString * _Nonnull const SVProgressHUDWillAppearNotification;
-extern NSString * _Nonnull const SVProgressHUDDidAppearNotification;
+extern NSString * _Nonnull const SVProgressHUDWillDisappearNotification;//提示框即将消失
+extern NSString * _Nonnull const SVProgressHUDDidDisappearNotification;//提示框已经消失
+extern NSString * _Nonnull const SVProgressHUDWillAppearNotification;//提示框即将出现
+extern NSString * _Nonnull const SVProgressHUDDidAppearNotification;// 提示框已经出现
 
 extern NSString * _Nonnull const SVProgressHUDStatusUserInfoKey;
 
@@ -52,6 +60,7 @@ typedef NS_ENUM(NSUInteger, SVProgressHUDMaskType) {
 };
 
 
+
 // 设置动画类型
 typedef NS_ENUM(NSUInteger, SVProgressHUDAnimationType) {
     SVProgressHUDAnimationTypeFlat,     //显示黑色圆圈 default animation type, custom flat animation (indefinite animated ring)
@@ -73,7 +82,7 @@ typedef void (^SVProgressHUDDismissCompletion)(void);
 
 #pragma mark - 自定义HUD Customization UI_APPEARANCE_SELECTOR
 
-@property (assign, nonatomic) SVProgressHUDStyle defaultStyle ;                  // default is SVProgressHUDStyleLight
+@property (assign, nonatomic) SVProgressHUDStyle defaultStyle ;                  // 设置背景样式 default is SVProgressHUDStyleLight
 @property (assign, nonatomic) SVProgressHUDMaskType defaultMaskType ;             // default is SVProgressHUDMaskTypeNone
 @property (assign, nonatomic) SVProgressHUDAnimationType defaultAnimationType ;   // default is SVProgressHUDAnimationTypeFlat
 @property (strong, nonatomic, nullable) UIView *containerView;                              // if nil then use default window level
@@ -83,23 +92,23 @@ typedef void (^SVProgressHUDDismissCompletion)(void);
 @property (assign, nonatomic) CGFloat ringNoTextRadius ;              // default is 24 pt
 @property (assign, nonatomic) CGFloat cornerRadius ;                  // default is 14 pt
 @property (strong, nonatomic, nonnull) UIFont *font ;                 // default is [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline]
-@property (strong, nonatomic, nonnull) UIColor *backgroundColor ;     // default is [UIColor whiteColor]
-@property (strong, nonatomic, nonnull) UIColor *foregroundColor ;     // default is [UIColor blackColor]
+@property (strong, nonatomic, nonnull) UIColor *backgroundColor ;     // 设置背景颜色 default is [UIColor whiteColor]
+@property (strong, nonatomic, nonnull) UIColor *foregroundColor ;     // 设置前景(文本和动画)颜色 default is [UIColor blackColor]
 @property (strong, nonatomic, nonnull) UIColor *backgroundLayerColor ;// default is [UIColor colorWithWhite:0 alpha:0.4]
-@property (assign, nonatomic) CGSize imageViewSize ;                  // default is 28x28 pt
-@property (assign, nonatomic) BOOL shouldTintImages ;                 // default is YES
-@property (strong, nonatomic, nonnull) UIImage *infoImage ;           // default is the bundled info image provided by Freepik
-@property (strong, nonatomic, nonnull) UIImage *successImage ;        // default is the bundled success image provided by Freepik
-@property (strong, nonatomic, nonnull) UIImage *errorImage ;          // default is the bundled error image provided by Freepik
+@property (assign, nonatomic) CGSize imageViewSize ;                  // 设置动画图片大小 default is 28x28 pt
+@property (assign, nonatomic) BOOL shouldTintImages ;                 // 是否渲染自定义图片 default is YES
+@property (strong, nonatomic, nonnull) UIImage *infoImage ;           // 设置内容图片 default is the bundled info image provided by Freepik
+@property (strong, nonatomic, nonnull) UIImage *successImage ;        // 设置动画显示成功图片 default is the bundled success image provided by Freepik
+@property (strong, nonatomic, nonnull) UIImage *errorImage ;          // 设置动画显示失败图片 default is the bundled error image provided by Freepik
 @property (strong, nonatomic, nonnull) UIView *viewForExtension ;     // default is nil, only used if #define SV_APP_EXTENSIONS is set
-@property (assign, nonatomic) NSTimeInterval graceTimeInterval;                             // default is 0 seconds
-@property (assign, nonatomic) NSTimeInterval minimumDismissTimeInterval;                    // default is 5.0 seconds
-@property (assign, nonatomic) NSTimeInterval maximumDismissTimeInterval;                    // default is CGFLOAT_MAX
+@property (assign, nonatomic) NSTimeInterval graceTimeInterval;       // 设置HUD动画宽限时间 default is 0 seconds
+@property (assign, nonatomic) NSTimeInterval minimumDismissTimeInterval; // 设置HUD销毁的最短时间 default is 5.0 seconds
+@property (assign, nonatomic) NSTimeInterval maximumDismissTimeInterval; // 设置HUD销毁的最长时间 default is CGFLOAT_MAX
 
 @property (assign, nonatomic) UIOffset offsetFromCenter ; // default is 0, 0
 
-@property (assign, nonatomic) NSTimeInterval fadeInAnimationDuration ;    // default is 0.15
-@property (assign, nonatomic) NSTimeInterval fadeOutAnimationDuration ;   // default is 0.15
+@property (assign, nonatomic) NSTimeInterval fadeInAnimationDuration ;    // 设置HUD动画逐渐 出现的持续时间 default is 0.15
+@property (assign, nonatomic) NSTimeInterval fadeOutAnimationDuration ;   // 设置HUD动画逐渐 消失的持续时间 default is 0.15
 
 @property (assign, nonatomic) UIWindowLevel maxSupportedWindowLevel; // default is UIWindowLevelNormal
 
@@ -125,20 +134,20 @@ typedef void (^SVProgressHUDDismissCompletion)(void);
 + (void)setBorderColor:(nonnull UIColor*)color;                     // 设置圆边框颜色 default is nil
 + (void)setBorderWidth:(CGFloat)width;                              // 设置圆边框宽度 default is 0
 + (void)setFont:(nonnull UIFont*)font;                              // 设置文本字体大小  default is [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline]
-+ (void)setForegroundColor:(nonnull UIColor*)color;                 // 设置文本和动画颜色 default is [UIColor blackColor], only used for SVProgressHUDStyleCustom
++ (void)setForegroundColor:(nonnull UIColor*)color;                 // 设置前景(文本和动画)颜色 default is [UIColor blackColor], only used for SVProgressHUDStyleCustom
 + (void)setBackgroundColor:(nonnull UIColor*)color;                 // 设置背景颜色 default is [UIColor whiteColor], only used for SVProgressHUDStyleCustom
 + (void)setBackgroundLayerColor:(nonnull UIColor*)color;            // default is [UIColor colorWithWhite:0 alpha:0.5], only used for SVProgressHUDMaskTypeCustom
-+ (void)setImageViewSize:(CGSize)size;                              // default is 28x28 pt
-+ (void)setShouldTintImages:(BOOL)shouldTintImages;                 // default is YES
++ (void)setImageViewSize:(CGSize)size;                              // 设置动画图片大小 default is 28x28 pt
++ (void)setShouldTintImages:(BOOL)shouldTintImages;                 // 是否渲染自定义图片 default is YES
 + (void)setInfoImage:(nonnull UIImage*)image;                       // 设置内容图片 default is the bundled info image provided by Freepik
 + (void)setSuccessImage:(nonnull UIImage*)image;                    // 设置动画显示成功图片 default is the bundled success image provided by Freepik
 + (void)setErrorImage:(nonnull UIImage*)image;                      // 设置动画显示失败图片 default is the bundled error image provided by Freepik
 + (void)setViewForExtension:(nonnull UIView*)view;                  // default is nil, only used if #define SV_APP_EXTENSIONS is set
-+ (void)setGraceTimeInterval:(NSTimeInterval)interval;              // default is 0 seconds
-+ (void)setMinimumDismissTimeInterval:(NSTimeInterval)interval;     // 设置HUD销毁的最短时间default is 5.0 seconds
++ (void)setGraceTimeInterval:(NSTimeInterval)interval;              // 设置HUD动画宽限时间 default is 0 seconds
++ (void)setMinimumDismissTimeInterval:(NSTimeInterval)interval;     // 设置HUD销毁的最短时间 default is 5.0 seconds
 + (void)setMaximumDismissTimeInterval:(NSTimeInterval)interval;     // 设置HUD销毁的最长时间  default is infinite
-+ (void)setFadeInAnimationDuration:(NSTimeInterval)duration;        // default is 0.15 seconds
-+ (void)setFadeOutAnimationDuration:(NSTimeInterval)duration;       // default is 0.15 seconds
++ (void)setFadeInAnimationDuration:(NSTimeInterval)duration;        // 设置HUD动画逐渐 出现的持续时间 default is 0.15 seconds
++ (void)setFadeOutAnimationDuration:(NSTimeInterval)duration;       // 设置HUD动画逐渐 消失的持续时间 default is 0.15 seconds
 + (void)setMaxSupportedWindowLevel:(UIWindowLevel)windowLevel;      // default is UIWindowLevelNormal
 + (void)setHapticsEnabled:(BOOL)hapticsEnabled;						// default is NO
 
@@ -179,9 +188,9 @@ typedef void (^SVProgressHUDDismissCompletion)(void);
 #pragma mark - + Show 展示图片方法工作流程
 
 
-+ (void)showInfoWithStatus:(nullable NSString*)status;// 显示感叹号图片
-+ (void)showSuccessWithStatus:(nullable NSString*)status;// 显示打对勾图片
-+ (void)showErrorWithStatus:(nullable NSString*)status; // 显示叉号图片
++ (void)showInfoWithStatus:(nullable NSString*)status;// 显示感叹号图片+文本
++ (void)showSuccessWithStatus:(nullable NSString*)status;// 显示打对勾图片+文本
++ (void)showErrorWithStatus:(nullable NSString*)status; // 显示叉号图片+文本
 + (void)showImage:(nonnull UIImage*)image status:(nullable NSString*)status;// 显示自定义图片
 
 
@@ -207,16 +216,15 @@ typedef void (^SVProgressHUDDismissCompletion)(void);
 #pragma mark - ↑
 #pragma mark - dismiss Methods 隐藏方法
 
-+ (void)dismiss;
-+ (void)dismissWithCompletion:(nullable SVProgressHUDDismissCompletion)completion;
-// 多少秒后隐藏hud
-+ (void)dismissWithDelay:(NSTimeInterval)delay;
-// 多少秒后隐藏hud，且隐藏后的回调
-+ (void)dismissWithDelay:(NSTimeInterval)delay completion:(nullable SVProgressHUDDismissCompletion)completion;
++ (void)dismiss;// 直接隐藏
++ (void)dismissWithCompletion:(nullable SVProgressHUDDismissCompletion)completion;// dismiss Block回调
 
-+ (BOOL)isVisible;
++ (void)dismissWithDelay:(NSTimeInterval)delay;// 多少秒后隐藏hud
++ (void)dismissWithDelay:(NSTimeInterval)delay completion:(nullable SVProgressHUDDismissCompletion)completion;// 多少秒后隐藏hud，且隐藏后的回调
 
-+ (NSTimeInterval)displayDurationForString:(nullable NSString*)string;
++ (BOOL)isVisible;// 是否显示或隐藏
+
++ (NSTimeInterval)displayDurationForString:(nullable NSString*)string;// 显示持续时间
 
 @end
 

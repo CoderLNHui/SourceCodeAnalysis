@@ -60,7 +60,17 @@ typedef NS_ENUM(NSInteger, MBProgressHUDMode) {
 };
 
 
-#pragma mark - 动画效果
+#pragma mark - 背景样式
+typedef NS_ENUM(NSInteger, MBProgressHUDBackgroundStyle) {
+    /// Solid color background
+    MBProgressHUDBackgroundStyleSolidColor,
+    /// UIVisualEffectView or UIToolbar.layer background view
+    MBProgressHUDBackgroundStyleBlur
+};
+
+
+
+#pragma mark - 动画类型
 typedef NS_ENUM(NSInteger, MBProgressHUDAnimation) {
     /// Opacity animation默认效果，只有透明度变化
     MBProgressHUDAnimationFade,
@@ -72,14 +82,6 @@ typedef NS_ENUM(NSInteger, MBProgressHUDAnimation) {
     MBProgressHUDAnimationZoomIn
 };
 
-
-#pragma mark - 背景样式
-typedef NS_ENUM(NSInteger, MBProgressHUDBackgroundStyle) {
-    /// Solid color background
-    MBProgressHUDBackgroundStyleSolidColor,
-    /// UIVisualEffectView or UIToolbar.layer background view
-    MBProgressHUDBackgroundStyleBlur
-};
 
 
 #pragma mark - 完成回调Block
@@ -130,7 +132,7 @@ NS_ASSUME_NONNULL_BEGIN
  / 参数二animated:如果设置为YES，HUD将使用当前的animationType属性动画出现。否则，HUD将在出现时不会使用动画。
  / 返回值: 已经创建的此HUD的对象。
  */
-#pragma mark - 创建hud 添加到指定视图上并显示(内部做了hud在隐藏时会从父视图中自动移除)（常用）
+#pragma mark - 创建HUD 添加到指定视图上并显示(内部做了hud在隐藏时会从父视图中自动移除)（常用）
 + (instancetype)showHUDAddedTo:(UIView *)view animated:(BOOL)animated;
 
 /// @name Showing and hiding
@@ -179,7 +181,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  /// 参数view: 为HUD提供bounds的视图实例。应该和HUD的父视图是相同的实例。(HUD将添加到此view上)
  */
-#pragma mark - 使用view的bounds来初始化HUD对象
+#pragma mark - 初始化：使用view的bounds来初始化HUD对象
 - (instancetype)initWithView:(UIView *)view;
 
 /**
@@ -382,14 +384,14 @@ NS_ASSUME_NONNULL_BEGIN
  是指包括文本和指示器的视图，和自定义的 customView 类似
  提供元素 （indicator（指示器显示进度情况 这个视图由我们设定的mode属性决定）、label（显示标题文本）、detailLabel（显示详情文本）、button（添加点击事件））的背景。
  */
-#pragma mark - 包括文本和指示器的视图
+#pragma mark - 中间方框背景视图
 @property (strong, nonatomic, readonly) MBBackgroundView *bezelView;
 
 /**
  * View covering the entire HUD area, placed behind bezelView.
  /// 覆盖整个HUD区域的视图，放置在表圈视图的后面。
  */
-#pragma mark - 背景视图
+#pragma mark - HUD背景视图
 @property (strong, nonatomic, readonly) MBBackgroundView *backgroundView;
 
 /**

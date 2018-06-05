@@ -1,6 +1,6 @@
 //
 //  Masonry.h
-//  Masonry Masonry
+//  budle Version 1.0
 //
 //  Created by Jonas Budelmann on 20/07/13.
 //  Copyright (c) 2013 cloudling. All rights reserved.
