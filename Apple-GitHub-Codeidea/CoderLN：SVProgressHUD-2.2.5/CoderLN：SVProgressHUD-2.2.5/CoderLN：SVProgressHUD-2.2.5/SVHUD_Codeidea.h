@@ -57,6 +57,7 @@
 #pragma mark - ↑
 #pragma mark - 总结笔记
 
+```objc
 1、
 #pragma mark - + Show 显示方法工作流程
 + (void)show;// 显示白底黑色圆圈
@@ -90,6 +91,7 @@
 
 #pragma mark - + dismiss 隐藏核心方法实现原理
 - (void)dismissWithDelay:(NSTimeInterval)delay completion:(SVProgressHUDDismissCompletion)completion;
+```
 
 
 
@@ -112,18 +114,10 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 #pragma mark - ↑
 #pragma mark - SVHUD 实现原理(工作流程)
+
+```objc
 /**
  HUD显示时间(默认设置为0.5s)
  取决于minimumDismissTimeInterval(设置HUD销毁的最短时间) 给定字符串的长度，
@@ -131,16 +125,12 @@
  #pragma mark - Getters
  //根据文字的长度计算需要展示的时间大小
  + (NSTimeInterval)displayDurationForString:(NSString*)string {
-     CGFloat minimum = MAX((CGFloat)string.length * 0.06 + 0.5, [self sharedView].minimumDismissTimeInterval);
-     return MIN(minimum, [self sharedView].maximumDismissTimeInterval);
+ CGFloat minimum = MAX((CGFloat)string.length * 0.06 + 0.5, [self sharedView].minimumDismissTimeInterval);
+ return MIN(minimum, [self sharedView].maximumDismissTimeInterval);
  }
+ 
  */
-
-
-
-
-
-
+```
 
 
 
@@ -156,21 +146,47 @@
 #pragma mark - ↑
 #pragma mark - SVHUD 基本使用
 
-// 最简单的方式
-- (void)svhud
+```objc
+- (void)svhud2
 {
-    [SVProgressHUD show];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [SVProgressHUD dismiss];
-    });
+    if ([SVProgressHUD isVisible]) return;// 显示直接返回
+    
+    // 设置显示状态(显示白底黑色圆圈+提示文本)
+    [SVProgressHUD showWithStatus:@"加载中..."];
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleCustom];// 设置显示样式
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];// 设置HUD背景遮罩类型
+    [SVProgressHUD setDefaultAnimationType:SVProgressHUDAnimationTypeNative];//  设置动画类型(圆圈、菊花)
+    //    [SVProgressHUD setForegroundColor:[UIColor cyanColor]];// 设置文本和动画颜色
+    //    [SVProgressHUD setBackgroundColor:[UIColor grayColor]];// 设置背景颜色
+    //    [SVProgressHUD setImageViewSize:CGSizeMake(100, 100)];// 设置图片的大小-无效果
+    
+    
+    [SVProgressHUD dismissWithDelay:3.0 completion:^{
+        // 完成回调
+        NSLog(@"SVHUD 3s后隐藏");
+    }];
+    
+    - - -
+    // 1.只显示文本
+    [SVProgressHUD showImage:nil status:@"只显示文本"];
+    
+    // 2.只显示动画图片
+    [SVProgressHUD showImage:[UIImage imageWithGIFNamed:@"loading"] status:nil];
+    
+    // 3.自定义动画(显示图片+文本)
+    [SVProgressHUD showImage:[UIImage imageWithGIFNamed:@"loading"] status:@"自定义图片+文本"];
+    [SVProgressHUD setImageViewSize:CGSizeMake(70, 55)];
+    [SVProgressHUD setShouldTintImages:NO];// 是否渲染自定义图片
+    
+    
+    // 4.显示登录成功(显示打对勾图片+文本) 或 失败(显示打叉号图片+文本)
+    [SVProgressHUD showSuccessWithStatus:@"登录成功"];
+    [SVProgressHUD showErrorWithStatus:@"登录失败"];
+    [SVProgressHUD dismissWithDelay:2.0 completion:^{
+        NSLog(@"2s 登录成功");
+    }];
 }
-
-
-
-// 设置多少秒后隐藏
-[SVProgressHUD dismissWithDelay:3.0 completion:^{
-    NSLog(@"设置了 3 秒后隐藏");
-}];
+```
 
 
 
@@ -185,10 +201,7 @@
 
 
 
-
-
-
-
+ 
 
 
 

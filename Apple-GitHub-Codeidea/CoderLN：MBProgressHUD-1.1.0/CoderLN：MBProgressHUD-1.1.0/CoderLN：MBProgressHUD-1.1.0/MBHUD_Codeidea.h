@@ -39,7 +39,7 @@
     MBBarProgressView
     MBBackgroundView
 
- 重要属性
+ 重要属性：
  MBProgressHUDBackgroundStyle style;背景样式（SolidColor纯色、Blur模糊）
  MBProgressHUDAnimation animationType;动画类型（Fade只有透明度、Zoom透明+形变）
  MBProgressHUDMode mode;显示模式（Indeterminate系统自带、Determinate圆形饼图、HorizontalBar水平进度条、AnnularDeterminate圆环、CustomView自定义视图、Text只显示文字）
@@ -133,7 +133,51 @@
 #pragma mark - MBHUD 基本使用
 
 ```objc
-
+- (void)hud
+{
+    MBProgressHUD * hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+    hud.mode = MBProgressHUDModeCustomView;// 显示模式
+    // MBProgressHUDBackgroundStyle // 背景样式
+    hud.animationType = MBProgressHUDAnimationFade;// 动画类型
+    // 设置前景的颜色
+    //hud.label.textColor = [UIColor whiteColor];
+    //hud.detailsLabel.textColor = [UIColor whiteColor];
+    hud.contentColor = [UIColor whiteColor];
+    hud.bezelView.backgroundColor = [UIColor orangeColor];
+    // 设置HUD背景颜色
+    hud.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
+    // 是否当HUD隐藏时从它的父视图移除
+    hud.removeFromSuperViewOnHide = NO;
+    
+    - - -
+    // 1.只显示文本
+    hud.mode = MBProgressHUDModeText;// 显示模式
+    hud.label.text = @"登录失败";
+    hud.detailsLabel.text = @"请检查用户名和密码";
+    
+    // 2.只显示动画图片
+    hud.mode = MBProgressHUDModeCustomView;// 显示模式
+    hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageWithGIFNamed:@"loading"]];
+    
+    
+    // 3.自定义动画(显示图片+文本)
+    hud.mode = MBProgressHUDModeCustomView;// 显示模式
+    hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageWithGIFNamed:@"loading"]];
+    hud.label.text = @"努力加载中...";
+    
+    
+    // 4.显示登录成功(显示打对勾图片+文本) 或 失败(显示打叉号图片+文本)
+    hud.label.text = @"登录成功";// 文本
+    hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"MBProgressHUD.bundle/%@",@"success@2x.png"]]];// 自定义图片
+    
+    
+    [hud showAnimated:YES];
+    [hud hideAnimated:YES afterDelay:3.0];// 显示几秒后消失
+    hud.completionBlock = ^{
+        NSLog(@"mbhud 隐藏回调");
+    };
+}
 ```
 
 

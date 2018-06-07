@@ -86,8 +86,8 @@
 		7612286120BEBD43008A1AA6 /* 进度视图组件 */ = {
 			isa = PBXGroup;
 			children = (
-				7612286220BEBD43008A1AA6 /* SVProgressAnimatedView.m */,
 				7612286320BEBD43008A1AA6 /* SVProgressAnimatedView.h */,
+				7612286220BEBD43008A1AA6 /* SVProgressAnimatedView.m */,
 			);
 			path = "进度视图组件";
 			sourceTree = "<group>";

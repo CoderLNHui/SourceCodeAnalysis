@@ -1,0 +1,24 @@
+
+/* Class = "UINavigationItem"; title = "Root View Controller"; ObjectID = "0Su-Ej-eeJ"; */
+"0Su-Ej-eeJ.title" = "Root View Controller";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "Dg6-YQ-9en"; */
+"Dg6-YQ-9en.title" = "Item";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "Iv7-PA-lBt"; */
+"Iv7-PA-lBt.text" = "Subtitle";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "hIa-cL-CHu"; */
+"hIa-cL-CHu.title" = "Item";
+
+/* Class = "UINavigationItem"; title = "Root View Controller"; ObjectID = "oCC-mA-vdX"; */
+"oCC-mA-vdX.title" = "Root View Controller";
+
+/* Class = "UINavigationItem"; title = "MJRefresh演示"; ObjectID = "rSH-gE-746"; */
+"rSH-gE-746.title" = "MJRefresh演示";
+
+/* Class = "UIBarButtonItem"; title = "返回"; ObjectID = "vKU-iZ-uZG"; */
+"vKU-iZ-uZG.title" = "返回";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "veW-N9-syp"; */
+"veW-N9-syp.text" = "Title";
