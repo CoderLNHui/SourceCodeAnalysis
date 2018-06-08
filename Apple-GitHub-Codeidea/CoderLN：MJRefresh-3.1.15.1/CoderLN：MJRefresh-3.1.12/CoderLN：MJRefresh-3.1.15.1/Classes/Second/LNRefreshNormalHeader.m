@@ -11,6 +11,7 @@
 @interface LNRefreshNormalHeader ()
 
 @property (nonatomic, strong) UIImageView * logoImg;// 头部刷新
+
 @end
 
 @implementation LNRefreshNormalHeader
@@ -38,18 +39,13 @@
     [self setTitle:@"Codeidea 下拉试试刷新" forState:MJRefreshStateIdle];
     [self setTitle:@"松开就可以刷新" forState:MJRefreshStatePulling];
     [self setTitle:@"正在刷新中勿骚动" forState:MJRefreshStateRefreshing];
-    
-    // 怎么设置时间Label文字❓
-    [self setLastUpdatedTimeText:^NSString *(NSDate *lastUpdatedTime) {
-        return @"11";
-    }];
-    
+ 
     // 设置文字大小
     self.stateLabel.font = [UIFont systemFontOfSize:14.f];
     self.lastUpdatedTimeLabel.font = [UIFont systemFontOfSize:16.f];
     
     // 设置文字颜色
-    // 箭头会被渲染❓
+    // 设置stateLabel文字颜色同时系统箭头会被渲染❓
     self.stateLabel.textColor = [UIColor cyanColor];
     self.lastUpdatedTimeLabel.textColor = [UIColor redColor];
     
@@ -61,11 +57,17 @@
     self.automaticallyChangeAlpha = YES;
     
     // 设置文字距离圈圈、箭头的距离（默认25）
-    self.labelLeftInset = 80;
+    //self.labelLeftInset = 80;
     
     // 设置刷新控件高度（HeaderHeight = 54.0；FooterHeight = 44.0；）
     //self.mj_h = 100;
     
+    // 设置正在刷新状态下小菊花的样式
+    self.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
+    
+    
+    
+ 
     // 设置顶部logo
     self.logoImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo"]];
     self.logoImg.frame = CGRectMake(0, 0, 90, 54);
@@ -92,14 +94,31 @@
 
 
 
+/**
+ 场景需求：1、设置文字距离圈圈、箭头的距离（默认25）2、修改刷新图片arrowView)❓
+ 解决：
+ 重写【placeSubviews】的set方法
+ */
+- (void)placeSubviews
+{
+    [super placeSubviews];
+
+    self.arrowView.mj_x = 20;
+    [self setValue:@(self.arrowView.mj_x) forKeyPath:@"_loadingView.mj_x"];
+
+    // 设置自定义MJ刷新箭头的图片，怎么设置图片的大小❓
+    [self setValue:[UIImage imageNamed:@"自定义MJ刷新箭头"] forKeyPath:@"_arrowView.image"];
+}
+
+
 
 
 
 /**
  场景需求：
- 下拉刷新显示格式：2015-01-15 15:45:33 下午
+ 下拉刷新时间Label显示格式：2015-01-15 15:45:33 下午❓
  解决：
- 重写【lastUpdatedTimeKey】的set方法（这个key用来存储上一次下拉刷新成功的时间），修改时间显示格式。
+ 重写【lastUpdatedTimeKey:】的set方法（这个key用来存储上一次下拉刷新成功的时间），修改时间显示格式。
  */
 // 重写：这个key用来存储上一次下拉刷新成功的时间
 - (void)setLastUpdatedTimeKey:(NSString *)lastUpdatedTimeKey
@@ -119,14 +138,6 @@
     NSString *timeStr = [fmt stringFromDate:lastTime];
     self.lastUpdatedTimeLabel.text = timeStr;
 }
-
-
-
-
-//- (void)placeSubviews
-//{
-//
-//}
 
 
 

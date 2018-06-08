@@ -9,4 +9,14 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 #import "MJTempViewController.h"
+
+
+
+#define kScreenW [UIScreen mainScreen].bounds.size.width
+#define kScreenH [UIScreen mainScreen].bounds.size.height
+
+
+
 #endif /* PrefixHeader_pch */
+
+

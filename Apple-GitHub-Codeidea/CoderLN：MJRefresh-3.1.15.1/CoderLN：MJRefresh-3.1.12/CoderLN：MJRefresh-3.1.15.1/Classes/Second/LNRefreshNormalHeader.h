@@ -31,5 +31,31 @@
  数据请求下来后
  [tableView reloadData];// 刷新表格
  [header endRefreshing];// 结束刷新
+ 
  */
+
+
+
+
+
+
+
+/**
+ 子类继承父类就有父类所有的 属性和方法
+*/
+
+
+
+
+
 @end
+
+
+
+
+
+
+
+
+
+

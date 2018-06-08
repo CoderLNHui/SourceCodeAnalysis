@@ -22,6 +22,7 @@
 #import "MJDIYBackFooter.h"
 
 #import "LNRefreshNormalHeader.h"
+#import "LNRefreshBackNormalFooter.h"
 
 static const CGFloat MJDuration = 2.0;
 /**
@@ -233,7 +234,8 @@ static const CGFloat MJDuration = 2.0;
 - (void)example16
 {
     [self example01];
-    
+    /**
+  
     // 添加默认的上拉刷新
     // 设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的loadMoreData方法）
     MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
@@ -251,6 +253,14 @@ static const CGFloat MJDuration = 2.0;
     
     // 设置footer
     self.tableView.mj_footer = footer;
+ 
+     */
+    
+    LNRefreshBackNormalFooter * footer = [LNRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+ 
+    
+    [footer beginRefreshing];// 开始刷新
+    self.tableView.mj_footer = footer;// 设置底部刷新控件
 }
 
 

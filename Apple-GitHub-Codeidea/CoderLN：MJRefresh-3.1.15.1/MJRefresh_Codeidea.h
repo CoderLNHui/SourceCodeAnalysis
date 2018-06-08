@@ -26,16 +26,16 @@ An easy way to use pull-to-refresh
  ```objc
  MJRefresh 继承UIView的自定义刷新控件
  
- 支持哪些类型的刷新❓
+ 支持哪些类型的刷新 
  UIScrollView 滚动视图、UITableView 表格视图、UICollectionView 综合视图、UIWebView 网页视图
  
- 如何使用MJRefresh❓
+ 如何使用MJRefresh
  1.用CocoaPods：pod 'MJRefresh'，导入主文件：#import <MJRefresh/MJRefresh.h>
  2.手动导入：导入主文件：#import "MJRefresh.h"
  
  
  - - -
- 基础文件❓
+ 基础文件
  MJRefresh.bundle                作用：快捷获取Bundle中的图片资源 和 本地化语言
  MJRefresh.h                     作用：包含所有的头文件
  MJRefreshConst.h.m              作用：基础宏、常量
