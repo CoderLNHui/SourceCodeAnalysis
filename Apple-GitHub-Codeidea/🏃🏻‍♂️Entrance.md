@@ -1,7 +1,5 @@
  
 > Apple译文
-
-
 | [Public：Codeidea](http://upload-images.jianshu.io/upload_images/2230763-93b83d5b7a7b0a49.gif?imageMogr2/auto-orient/strip) #  Apple  | 译文 - 博文 - 源码 |
 | :- | :- | 
 |  [From NSURLConnection to NSURLSession](https://www.objc.io/issues/5-ios7/from-nsurlconnection-to-nsurlsession/)  |  [从 NSURLConnection 到 NSURLSession](https://githubidea.github.io/AppleTranslation/ConnectionToSession.html)  |
@@ -18,17 +16,9 @@
 |  [Stack Overflow 2017](https://insights.stackoverflow.com/survey/2017#technology-most-loved-dreaded-and-wanted-languages)  |  [Stack Overflow 2017 开发者调查报告](https://www.oschina.net/news/83164/stack-overflow-developer-survey-results-2017)  |
 |  [App Store 审核指南(2017 中文版)](https://developer.apple.com/app-store/review/guidelines/cn/)  |   [--]() |
 |     [GitHub发布2017年度开发者报告，用户超2400万](https://mp.weixin.qq.com/s?__biz=MzIwMzg1ODcwMw%3D%3D&mid=2247486939&idx=1&sn=60735a9b29e7ec2374ee44aec57178f7&scene=45#wechat_redirect)   |  [聊聊架构](https://octoverse.github.com)   |
- 
- 
-
   
-
-
-
-
-
+  
 ***
-
 > 常用优秀三方框架 
 
 | [Public：Codeidea](http://upload-images.jianshu.io/upload_images/2230763-93b83d5b7a7b0a49.gif?imageMogr2/auto-orient/strip) #  OC_Swift | 博文 - 源码 |
@@ -61,8 +51,6 @@
 ***
 
 > 三方集成 & 授权
-
-
 | [Public：Codeidea](http://upload-images.jianshu.io/upload_images/2230763-93b83d5b7a7b0a49.gif?imageMogr2/auto-orient/strip) # 三方服务   | 文档 - 博文 |
 | :- | :- | 
 |  [JPush 极光推送](http://docs.jiguang.cn/jpush/client/iOS/ios_sdk/)  |  [极光博客](http://blog.jiguang.cn/updates-2017-05/)   、   [Xcode8下快速集成并兼顾iOS10](http://www.jianshu.com/p/53e0244e6081) |
@@ -78,7 +66,6 @@
 
 
 ***
-
 > 开源项目源码
 
  [Public：Codeidea](http://upload-images.jianshu.io/upload_images/2230763-93b83d5b7a7b0a49.gif?imageMogr2/auto-orient/strip) #  GitHub  |  简阅
@@ -118,15 +105,10 @@
   
    
 
-
-
-
  
 
 ***
-
 > 学习资源
-
 
 地址  |  简阅
 ---- | ----
@@ -225,8 +207,14 @@
 [Public：Codeidea](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)     |     [...](http://upload-images.jianshu.io/upload_images/2230763-8002637133d35e0a.gif?imageMogr2/auto-orient/strip)    
 
 
+>每月末(`争取`)、更新 ~ ❓ [API & Tools ](https://github.com/CoderLN/Framework-Codeidea)
+
+## 说明：
+向优秀的创作者致敬！向优秀的分享者致敬！
+欢迎来自大厂的你，把你的创作（GitHub相关）、来此分享！
+
+内部有注解均摘录网络加以自己理解总结的 Data，在文件中都会有对应的链接体现， (`由于不知原因`) 如果你看到内部 Data 是你的 Data 且这里没有注明你的链接，请你[简信](https://www.jianshu.com/u/fd745d76c816)我，我会及时补充上。 
 
 
->未完、月末(`争取`)、更新 ~ ❓ [API & Tools ](https://github.com/CoderLN/Framework-Codeidea)
- 
+
 
