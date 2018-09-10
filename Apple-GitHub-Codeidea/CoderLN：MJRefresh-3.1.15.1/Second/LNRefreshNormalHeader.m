@@ -36,7 +36,7 @@
 - (void)setUpAttributes
 {
     // 设置文字
-    [self setTitle:@"Codeidea 下拉试试刷新" forState:MJRefreshStateIdle];
+    [self setTitle:@"CoderLN 下拉试试刷新" forState:MJRefreshStateIdle];
     [self setTitle:@"松开就可以刷新" forState:MJRefreshStatePulling];
     [self setTitle:@"正在刷新中勿骚动" forState:MJRefreshStateRefreshing];
  

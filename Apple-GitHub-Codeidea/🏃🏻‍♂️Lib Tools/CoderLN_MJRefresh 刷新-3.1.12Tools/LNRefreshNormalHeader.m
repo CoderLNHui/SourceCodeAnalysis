@@ -3,7 +3,7 @@
 //  LNBaisibudejie
 //
 //  Created by LN on 2018/7/19.
-//  Copyright © 2018年 Public-Codeidea. All rights reserved.
+//  Copyright © 2018年 Public-CoderLN. All rights reserved.
 //  自定义View
 
 #import "LNRefreshNormalHeader.h"

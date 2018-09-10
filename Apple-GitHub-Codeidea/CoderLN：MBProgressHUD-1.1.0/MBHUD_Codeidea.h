@@ -2,8 +2,9 @@
 //  MBProgressHUD_Codeidea
 //  Version 1.1.0
 //
-//  About ME『Public：Codeidea / https://githubidea.github.io』.
-//  Copyright © All members (Star|Fork) have the right to read and write『https://github.com/CoderLN』.
+// 不知名刘先生
+// Public：Codeidea / https://githubidea.github.io / https://github.com/CoderLN
+// Welcome your star|fork, Our sharing can be combined; Convenient to review and help others.
 
 //
 
@@ -24,10 +25,6 @@
  */
 
 
-
-
-
-#pragma mark - ↑
 #pragma mark - MBHUD 组成(层次结构)
 /*
  MBProgressHUD 主要由四部分组成：
@@ -46,12 +43,6 @@
  */
 
 
-
-
-
-
-
-#pragma mark - ↑
 #pragma mark - 总结笔记
 
 1、
@@ -124,12 +115,6 @@
 
 
 
-
-
-
-
-
-#pragma mark - ↑
 #pragma mark - MBHUD 基本使用
 
 ```objc
@@ -181,14 +166,6 @@
 ```
 
 
-
-
-
-
-
-
-
-#pragma mark - ↑
 #pragma mark - MBHUD 抽取封装
 
 

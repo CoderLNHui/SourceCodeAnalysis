@@ -3,7 +3,7 @@
 //  LNBaisibudejie
 //
 //  Created by LN on 2018/6/28.
-//  Copyright © 2018年 Public-Codeidea. All rights reserved.
+//  Copyright © 2018年 Public-CoderLN. All rights reserved.
 //
 /**
  作用：数据请求模块 - 子类化AFN

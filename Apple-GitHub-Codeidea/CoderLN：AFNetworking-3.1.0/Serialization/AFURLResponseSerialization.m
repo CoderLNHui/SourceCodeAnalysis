@@ -6,7 +6,7 @@
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
-// WechatPublic：Codeidea  -  Repository：github.com/CoderLN/Apple-GitHub-Codeidea
+// Public-CoderLN  -  Repository：github.com/CoderLN/Apple-GitHub-CoderLN
 //
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
