@@ -1,15 +1,3 @@
-/*
-* NSString.m
-*
-* UIKit © 1994-2017
-*
-* 不知名刘先生
-* Public：Codeidea / https://githubidea.github.io / https://github.com/CoderLN
-* Welcome your star|fork, Our sharing can be combined; Convenient to review and help others.
-*
-* 🏃🏻‍♂️ ◕ 尊重熬夜整理的作者，该模块将系统化学习，后续替换、补充文章内容 ~
-*/
-
 #### 分享和开源精神值得俱备
 
 
@@ -116,11 +104,6 @@
 
 - 程序员是聪明勇敢的，而且我们也很风趣。“内向不是我们的DNA，所以我们并不是生来就内向，我可以调整我的态度和社交能力”。
 
-
-
- 
-
- 
 ######## 说明 
 该内容部分整理摘录于大神的Issues中的一个topic【什么是开源精神 #167】https://github.com/lifesinger/blog/issues/167
 、[GitHub开源项目贡献指南中文版](https://github.com/CustomPBWaters/OfficialTranslation-SourceAnnotation/tree/master/github%20开源贡献指南中文版本)
