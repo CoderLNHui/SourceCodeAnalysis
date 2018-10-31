@@ -23,9 +23,5 @@ GitHub Library
 
 
 
-#### Reading
-
-
-###### - 如果在阅读过程中遇到 error || new ideas，希望你能 issue 我，我会及时补充谢谢。
-
-###### - 喜欢可点击右上角的 star 和 watch 按钮，可以 fork 收藏本仓库，提交你的分享；并在文档、issue、Demo更新时收到邮件通知。
+##### [不知名开发者](https://upload-images.jianshu.io/upload_images/2230763-a98b15f328e7cf69.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+###### - 各位厂友，由于「时间 & 知识」有限，总结的文章难免有「未全、不足」，该模块将系统化学习，后续「坚持新增文章，替换、补充文章内容」.
