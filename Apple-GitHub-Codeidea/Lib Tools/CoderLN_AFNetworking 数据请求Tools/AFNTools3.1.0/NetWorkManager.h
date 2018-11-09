@@ -1,10 +1,9 @@
 //
 //  NetWorkManager.h
-//  LNBaisibudejie
+// 「Public_不知名开发者 | https://github.com/CoderLN | https://www.jianshu.com/u/fd745d76c816」
+//  各位厂友, 由于「时间 & 知识」有限, 总结的文章难免有「未全、不足」, 该模块将系统化学习, 后续「坚持新增文章, 替换、补充文章内容」.
 //
-//  Created by LN on 2018/6/28.
-//  Copyright © 2018年 Public-CoderLN. All rights reserved.
-//
+
 /**
  作用：数据请求模块 - 子类化AFN
  */

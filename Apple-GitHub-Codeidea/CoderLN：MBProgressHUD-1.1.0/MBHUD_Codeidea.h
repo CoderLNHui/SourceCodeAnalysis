@@ -1,15 +1,5 @@
 //
 //  MBProgressHUD_Codeidea
-//  Version 1.1.0
-//
-// 不知名刘先生
-// Public：Codeidea / https://githubidea.github.io / https://github.com/CoderLN
-// Welcome your star|fork, Our sharing can be combined; Convenient to review and help others.
-
-//
-
-#pragma mark - ↑
-#pragma mark - MBProgressHUD
 
 /**
  MBProgressHUD 用户提示
@@ -19,7 +9,7 @@
  
  
  MBProgressHUD和SVProgressHUD的区别：
- svprogresshud 使用起来很方便,但 可定制 差一些,看它的接口貌似只能添加一个全屏的HUD,不能把它添加到某个视图上面去.
+ SVProgresshud 使用起来很方便,但 可定制 差一些,看它的接口貌似只能添加一个全屏的HUD,不能把它添加到某个视图上面去.
  MBProgressHUD 功能全一些,可定制 高一些,而且可以指定加到某一个View上去.用起来可能就没上面那个方便了.
  具体还要看你的使用场景.
  */
@@ -164,9 +154,6 @@
     };
 }
 ```
-
-
-#pragma mark - MBHUD 抽取封装
 
 
 
