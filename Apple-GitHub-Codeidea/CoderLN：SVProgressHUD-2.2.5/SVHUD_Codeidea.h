@@ -2,13 +2,11 @@
 //  SVProgressHUD_Codeidea
 //  Version 2.2.5
 //
-// 不知名刘先生
-// Public：Codeidea / https://githubidea.github.io / https://github.com/CoderLN
-// Welcome your star|fork, Our sharing can be combined; Convenient to review and help others.
-
+//「Public|JShu_不知名开发者 | https://github.com/CoderLN | https://dwz.cn/rC1LGk2f」
 //
 
-#pragma mark - ↑
+
+
 #pragma mark - SVProgressHUD
 /**
  SVProgressHUD 用户提示 
@@ -26,11 +24,6 @@
  */
 
 
-
-
-
- 
-#pragma mark - ↑
 #pragma mark - SVHUD 组成(层次结构)
 /**
  SVHUD 组成(层次结构)
@@ -50,12 +43,6 @@
  */
 
 
-
-
-
-
-
-#pragma mark - ↑
 #pragma mark - 总结笔记
 
 ```objc
@@ -81,8 +68,6 @@
 - (void)showImage:(UIImage*)image status:(NSString*)status duration:(NSTimeInterval)duration;
 
 
-
-
 3、
 #pragma mark - + dismiss 隐藏方法工作流程
 + (void)dismiss;
@@ -93,8 +78,6 @@
 #pragma mark - + dismiss 隐藏核心方法实现原理
 - (void)dismissWithDelay:(NSTimeInterval)delay completion:(SVProgressHUDDismissCompletion)completion;
 ```
-
-
 
 
 
@@ -111,11 +94,6 @@
 
 
 
-
-
-
-
-#pragma mark - ↑
 #pragma mark - SVHUD 实现原理(工作流程)
 
 ```objc
@@ -136,15 +114,6 @@
 
 
 
-
-
-
-
-
-
-
-
-#pragma mark - ↑
 #pragma mark - SVHUD 基本使用
 
 ```objc
@@ -191,9 +160,6 @@
 
 
 
-
-
-#pragma mark - ↑
 #pragma mark - SVHUD 抽取封装
 
 

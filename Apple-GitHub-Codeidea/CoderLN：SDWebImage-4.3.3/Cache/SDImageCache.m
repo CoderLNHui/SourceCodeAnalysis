@@ -489,7 +489,6 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
 
 
 
-#pragma mark - ↑
 #pragma mark - 业务层
 #pragma mark - 缓存&&磁盘操作：SDImageCache；Bundle version 4.3.3
 

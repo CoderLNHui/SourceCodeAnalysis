@@ -4,7 +4,7 @@
 //
 //  Created by Jonas Budelmann on 20/07/13.
 //  Copyright (c) 2013 cloudling. All rights reserved.
-//
+//  Public|JShu_不知名开发者 / Address_https://github.com/CoderLN/Apple-GitHub-Codeidea
 
 #import <Foundation/Foundation.h>
 
@@ -28,3 +28,5 @@ FOUNDATION_EXPORT const unsigned char MasonryVersionString[];
 #import "MASLayoutConstraint.h"
 #import "NSLayoutConstraint+MASDebugAdditions.h"
    
+
+#pragma mark - CoderLN：Masonry-1.1.0 更新目录分解

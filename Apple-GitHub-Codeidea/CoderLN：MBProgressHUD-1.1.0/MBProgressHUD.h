@@ -3,9 +3,8 @@
 //  Version 1.1.0
 //  Created by Matej Bukovinski on 2.4.09.
 //
-// 不知名刘先生
-// Public：Codeidea / https://githubidea.github.io / https://github.com/CoderLN
-// Welcome your star|fork, Our sharing can be combined; Convenient to review and help others.
+//「Public|JShu_不知名开发者 | https://github.com/CoderLN | https://dwz.cn/rC1LGk2f」
+//
 
 // This code is distributed under the terms and conditions of the MIT license.
 
@@ -41,7 +40,6 @@
 
 extern CGFloat const MBProgressMaxOffset;
 
-#pragma mark - ↑
 #pragma mark - NS_ENUM
 
 #pragma mark - 显示模式
@@ -93,7 +91,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-#pragma mark - ↑
 #pragma mark - MBProgressHUD : UIView
 
 /**
@@ -111,7 +108,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-#pragma mark - ↑
 #pragma mark - Methods
 
 /**
@@ -239,7 +235,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-#pragma mark - ↑
 #pragma mark - @name property
 
 /**
@@ -356,7 +351,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-#pragma mark - ↑
 #pragma mark - @name Progress
 
 /**
@@ -377,7 +371,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-#pragma mark - ↑
 #pragma mark - @name Views
 
 /**
@@ -443,7 +436,6 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-#pragma mark - ↑
 #pragma mark - MBRoundProgressView : UIView
 
 /**
@@ -482,7 +474,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-#pragma mark - ↑
 #pragma mark - MBBarProgressView : UIView
 
 /**
@@ -521,7 +512,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-#pragma mark - ↑
 #pragma mark - MBBackgroundView : UIView
 
 @interface MBBackgroundView : UIView

@@ -57,7 +57,6 @@ static char TAG_ACTIVITY_SHOW;
 
 
  
-#pragma mark - ↑
 #pragma mark - 最上层：UIView+WebCache； Bundle version 4.3.3
 #pragma mark - 核心代码：读取下载图片 (所有外部API sd_setImageWithURL:入口方法都将会汇总到这，只是传递的参数不同而已)
 

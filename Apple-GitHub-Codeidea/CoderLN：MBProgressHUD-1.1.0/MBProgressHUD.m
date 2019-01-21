@@ -3,9 +3,8 @@
 //  Version 1.1.0
 //  Created by Matej Bukovinski on 2.4.09.
 //
-// 不知名刘先生
-// Public：Codeidea / https://githubidea.github.io / https://github.com/CoderLN
-// Welcome your star|fork, Our sharing can be combined; Convenient to review and help others.
+//「Public|JShu_不知名开发者 | https://github.com/CoderLN | https://dwz.cn/rC1LGk2f」
+//
 
 
 #import "MBProgressHUD.h"
@@ -306,7 +305,6 @@ static const CGFloat MBDefaultDetailsLabelFontSize = 12.f;
 
 
 
-#pragma mark - ↑
 #pragma mark - 是否动画放大，动画类型，是否完成回调
 /// animated 为真时调用，消失或出现时的伸缩效果，以及透明度
 - (void)animateIn:(BOOL)animatingIn withType:(MBProgressHUDAnimation)type completion:(void(^)(BOOL finished))completion {

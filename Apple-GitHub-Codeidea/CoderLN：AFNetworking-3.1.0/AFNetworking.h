@@ -1,6 +1,6 @@
 // AFNetworking.h
 //
-// Author: https://github.com/CoderLN 
+// Public|JShu_不知名开发者 / https://github.com/CoderLN/Apple-GitHub-Codeidea
 //
 // Created by on Elegant programming.
 // Copyright © Unauthorized shall not be reproduced reprinted.
@@ -73,7 +73,7 @@ FOUNDATION_EXPORT const unsigned char AFNetworkingVersionString[];
 
 
 /**
- AFN 功能模块
+ AFNetworking 功能模块
  1.NSURLSession 网络通信模块管理者
     AFURLSessionManager
     AFHTTPSessionManager -> AFNURL 继承
@@ -92,8 +92,30 @@ FOUNDATION_EXPORT const unsigned char AFNetworkingVersionString[];
  Additional Functionality 额外的功能
     3.AFSecurityPolicy 网络通信安全策略模块
     4.AFNetworkReachabilityManager 网络状态监听管理者
-    `HTTPS`（HTTP+SSL加密协议）
+    5.`HTTPS`（HTTP+SSL加密协议）
  
- 5.UIKit+AFNetworking UIKit类库的扩展与工具类
-
+ 6.UIKit+AFNetworking UIKit类库的扩展与工具类(可以汲取抽取封装思想)
  */
+
+#pragma mark - CoderLN_AFNetworking-3.1.0 更新目录分解
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -4,9 +4,7 @@
 //
 //  Copyright (c) 2017 Tobias Tiemerding. All rights reserved.
 //
-// 不知名刘先生
-// Public：Codeidea / https://githubidea.github.io / https://github.com/CoderLN
-// Welcome your star|fork, Our sharing can be combined; Convenient to review and help others.
+//「Public|JShu_不知名开发者 | https://github.com/CoderLN | https://dwz.cn/rC1LGk2f」
 //
 
 #import "SVProgressAnimatedView.h"

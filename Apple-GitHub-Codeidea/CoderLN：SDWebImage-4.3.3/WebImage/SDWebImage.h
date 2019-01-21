@@ -5,7 +5,7 @@
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
- * Copyright © All members (Star|Fork) have the right to read and write『https://github.com/CoderLN』.
+ * Public|JShu_不知名开发者 / Address_https://github.com/CoderLN/Apple-GitHub-Codeidea
  */
 
 #import <SDWebImage/SDWebImageCompat.h>
@@ -71,3 +71,30 @@ FOUNDATION_EXPORT const unsigned char WebImageVersionString[];
     #endif
 
 #endif
+
+
+
+#pragma mark - CoderLN：SDWebImage-4.3.3 更新目录分解
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

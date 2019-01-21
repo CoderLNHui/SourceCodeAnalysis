@@ -4,6 +4,7 @@
 //
 //  Created by Florent Vilmart on 2015-03-14.
 //  Copyright (c) 2015 Dailymotion. All rights reserved.
+//  Public|JShu_不知名开发者 / Address_https://github.com/CoderLN/Apple-GitHub-Codeidea
 //
 
 #import <UIKit/UIKit.h>
@@ -35,3 +36,7 @@ FOUNDATION_EXPORT const unsigned char WebImageVersionString[];
 #import <WebImage/UIImage+WebP.h>
 #import <WebImage/UIImage+GIF.h>
 #import <WebImage/NSData+ImageContentType.h>
+
+
+
+#pragma mark - CoderLN：SDWebImage-3.7.5 更新目录分解

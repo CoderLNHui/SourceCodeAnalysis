@@ -219,7 +219,6 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
     return filename;
 }
 
-#pragma mark - ↑
 #pragma mark - SDImageCache.m
 
 // Init the disk cache

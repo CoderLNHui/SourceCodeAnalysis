@@ -1,9 +1,3 @@
-/**
- MJRefresh 刷新思想
- 
- */
-
-#pragma mark - ↑
 #pragma mark - 官方释义
 ```objc
 An easy way to use pull-to-refresh
@@ -12,17 +6,8 @@ An easy way to use pull-to-refresh
 ```
 
 
-
-
-
-
-
-#pragma mark - ↑
-#pragma mark - 组成（层次结构）->（.h系统文件 -> 作用、使用、注解）
-
 #pragma mark - 组成（层次结构）
 /**
- 
  ```objc
  MJRefresh 继承UIView的自定义刷新控件
  
@@ -79,16 +64,6 @@ An easy way to use pull-to-refresh
 
 
 
-
-
-
-
-
-#pragma mark - ↑
-#pragma mark -
-
-
-
 #### UIRefreshControl
 ```objc
 1、UIRefresh是苹果自带的刷新控件
@@ -120,16 +95,9 @@ control.tintColor = [UIColor redColor];
 ```
 
 
-
-
-
-
-
-
     
 #### 场景示例代码
-    ```objc
-#pragma mark - ↑
+```objc
 #pragma mark UITableView + 下拉刷新 默认
     - (void)example01
 {
@@ -232,7 +200,7 @@ control.tintColor = [UIColor redColor];
 }
     
     
-#pragma mark - ↑
+
 #pragma mark UITableView + 上拉刷新 默认
     - (void)example11
 {
@@ -515,10 +483,7 @@ control.tintColor = [UIColor redColor];
     [weakSelf.tableView.mj_footer endRefreshing];
     ```
 
-
-
-
-    
+ 
     
 #### MJRefresh自定义控件
     ```objc

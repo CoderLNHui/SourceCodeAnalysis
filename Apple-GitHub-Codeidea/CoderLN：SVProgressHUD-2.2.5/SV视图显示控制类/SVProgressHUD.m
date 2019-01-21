@@ -877,7 +877,6 @@ static const CGFloat SVProgressHUDLabelSpacing = 8.0f;
 }
 
 
-#pragma mark - ↑
 #pragma mark - + Show 展示图片核心方法实现原理
 
 - (void)showImage:(UIImage*)image status:(NSString*)status duration:(NSTimeInterval)duration {
@@ -931,7 +930,6 @@ static const CGFloat SVProgressHUDLabelSpacing = 8.0f;
 
 
 
-#pragma mark - ↑
 #pragma mark - 最终会调用fadeIn:
 
 
@@ -1044,7 +1042,6 @@ static const CGFloat SVProgressHUDLabelSpacing = 8.0f;
 }
 
 
-#pragma mark - ↑
 #pragma mark - + dismiss 隐藏核心方法实现原理
 
 - (void)dismissWithDelay:(NSTimeInterval)delay completion:(SVProgressHUDDismissCompletion)completion {

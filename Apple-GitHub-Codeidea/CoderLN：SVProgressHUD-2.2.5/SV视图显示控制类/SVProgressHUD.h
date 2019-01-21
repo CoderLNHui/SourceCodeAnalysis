@@ -16,7 +16,6 @@
 //#import <AvailabilityMacwros.h>
 
 
-#pragma mark - ↑
 #pragma mark - const 常量通知
 
 /**
@@ -39,7 +38,6 @@ extern NSString * _Nonnull const SVProgressHUDStatusUserInfoKey;
 
 
 
-#pragma mark - ↑
 #pragma mark - NS_ENUM 枚举
 
 // 设置显示样式
@@ -74,7 +72,6 @@ typedef void (^SVProgressHUDDismissCompletion)(void);
 
 
 
-#pragma mark - ↑
 #pragma mark - SVProgressHUD : UIView
 
 @interface SVProgressHUD : UIView
@@ -160,7 +157,6 @@ typedef void (^SVProgressHUDDismissCompletion)(void);
 
 
 
-#pragma mark - ↑
 #pragma mark - Show Methods 显示方法
 
 
@@ -184,7 +180,6 @@ typedef void (^SVProgressHUDDismissCompletion)(void);
 
 
 
-#pragma mark - ↑
 #pragma mark - + Show 展示图片方法工作流程
 
 
@@ -213,7 +208,6 @@ typedef void (^SVProgressHUDDismissCompletion)(void);
 
 
 
-#pragma mark - ↑
 #pragma mark - dismiss Methods 隐藏方法
 
 + (void)dismiss;// 直接隐藏

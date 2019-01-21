@@ -4,9 +4,7 @@
 //
 //  Copyright (c) 2011-2017 Sam Vermette and contributors. All rights reserved.
 //
-// 不知名刘先生
-// Public：Codeidea / https://githubidea.github.io / https://github.com/CoderLN
-// Welcome your star|fork, Our sharing can be combined; Convenient to review and help others.
+//「Public|JShu_不知名开发者 | https://github.com/CoderLN | https://dwz.cn/rC1LGk2f」
 //
 
 #if !__has_feature(objc_arc)
@@ -865,7 +863,6 @@ static const CGFloat SVProgressHUDLabelSpacing = 8.0f;
 }
 
 
-#pragma mark - ↑
 #pragma mark - + Show 展示图片核心方法实现原理
 
 - (void)showImage:(UIImage*)image status:(NSString*)status duration:(NSTimeInterval)duration {
@@ -908,7 +905,6 @@ static const CGFloat SVProgressHUDLabelSpacing = 8.0f;
 
 
 
-#pragma mark - ↑
 #pragma mark - showStatus:
 
 - (void)showStatus:(NSString*)status {
@@ -1027,7 +1023,6 @@ static const CGFloat SVProgressHUDLabelSpacing = 8.0f;
         
         
         
-#pragma mark - ↑
 #pragma mark - + dismiss 隐藏核心方法实现原理
         
 - (void)dismissWithDelay:(NSTimeInterval)delay completion:(SVProgressHUDDismissCompletion)completion {

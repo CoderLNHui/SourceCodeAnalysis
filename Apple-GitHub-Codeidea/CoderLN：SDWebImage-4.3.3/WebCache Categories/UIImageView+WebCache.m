@@ -17,7 +17,6 @@
 @implementation UIImageView (WebCache)
 
 
-#pragma mark - ↑
 #pragma mark - SD图片下载：外部API入口
 
 - (void)sd_setImageWithURL:(nullable NSURL *)url {

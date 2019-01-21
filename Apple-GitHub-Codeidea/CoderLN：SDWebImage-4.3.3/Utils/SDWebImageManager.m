@@ -117,7 +117,6 @@
 
 
 
-#pragma mark - ↑
 #pragma mark - 逻辑层：SDWebImageManager；Bundle version 4.3.3
 #pragma mark - 加载图片核心方法；调度图片的下载(Downloader)和缓存(Cache)，并不依托于 UIView+WebCache，完全可单独使用。
 

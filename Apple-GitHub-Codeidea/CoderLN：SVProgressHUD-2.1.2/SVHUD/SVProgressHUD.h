@@ -4,9 +4,7 @@
 //
 //  Copyright (c) 2011-2017 Sam Vermette and contributors. All rights reserved.
 //
-// 不知名刘先生
-// Public：Codeidea / https://githubidea.github.io / https://github.com/CoderLN
-// Welcome your star|fork, Our sharing can be combined; Convenient to review and help others.
+//「Public|JShu_不知名开发者 | https://github.com/CoderLN | https://dwz.cn/rC1LGk2f」
 //
 
 
@@ -37,7 +35,6 @@
 
 
 
-#pragma mark - ↑
 #pragma mark - const 常量通知
 
 extern NSString * _Nonnull const SVProgressHUDDidReceiveTouchEventNotification;
@@ -51,7 +48,6 @@ extern NSString * _Nonnull const SVProgressHUDStatusUserInfoKey;
 
 
 
-#pragma mark - ↑
 #pragma mark - NS_ENUM 枚举
 
 // 设置显示样式
@@ -91,7 +87,6 @@ typedef void (^SVProgressHUDDismissCompletion)(void);
 @interface SVProgressHUD : UIView
 
 
-#pragma mark - ↑
 #pragma mark - 自定义HUD Customization UI_APPEARANCE_SELECTOR
 
 @property (assign, nonatomic) SVProgressHUDStyle defaultStyle ;                   // default is SVProgressHUDStyleLight
@@ -162,7 +157,6 @@ typedef void (^SVProgressHUDDismissCompletion)(void);
 
 
 
-#pragma mark - ↑
 #pragma mark - Show Methods 显示方法
 
 
@@ -186,7 +180,6 @@ typedef void (^SVProgressHUDDismissCompletion)(void);
 
 
 
-#pragma mark - ↑
 #pragma mark - + Show 展示图片方法工作流程
 
 + (void)showInfoWithStatus:(nullable NSString*)status;
@@ -212,7 +205,6 @@ typedef void (^SVProgressHUDDismissCompletion)(void);
 
 
  
-#pragma mark - ↑
 #pragma mark - + dismiss 隐藏方法工作流程
 
 + (void)dismiss;
