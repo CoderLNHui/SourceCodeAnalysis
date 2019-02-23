@@ -2,7 +2,7 @@
 //  Masonry_Codeidea
 //  Bundle Version 1.0
 //
-//「Public|JShu_不知名开发者 | https://github.com/CoderLN | https://dwz.cn/rC1LGk2f」
+// 简/众_不知名开发者 | https://github.com/CoderLN
 //
 
 #pragma mark - Masonry

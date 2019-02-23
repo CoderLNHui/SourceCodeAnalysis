@@ -3,7 +3,7 @@
 //  Version 1.1.0
 //  Created by Matej Bukovinski on 2.4.09.
 //
-//「Public|JShu_不知名开发者 | https://github.com/CoderLN | https://dwz.cn/rC1LGk2f」
+// 简/众_不知名开发者 | https://github.com/CoderLN
 //
 
 

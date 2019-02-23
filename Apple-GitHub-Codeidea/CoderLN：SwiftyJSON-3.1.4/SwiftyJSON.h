@@ -20,7 +20,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-//「Public|JShu_不知名开发者 | https://github.com/CoderLN | https://dwz.cn/rC1LGk2f」
+// 简/众_不知名开发者 | https://github.com/CoderLN
 //
 
 @import Foundation;

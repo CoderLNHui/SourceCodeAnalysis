@@ -4,7 +4,7 @@
 //
 //  Copyright (c) 2017 Tobias Tiemerding. All rights reserved.
 //
-//「Public|JShu_不知名开发者 | https://github.com/CoderLN | https://dwz.cn/rC1LGk2f」
+// 简/众_不知名开发者 | https://github.com/CoderLN
 //
 
 #import "SVProgressAnimatedView.h"

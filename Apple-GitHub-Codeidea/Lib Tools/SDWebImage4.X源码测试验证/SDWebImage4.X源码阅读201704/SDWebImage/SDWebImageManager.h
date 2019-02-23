@@ -63,7 +63,7 @@ typedef NS_OPTIONS(NSUInteger, SDWebImageOptions) {
      * Use this flag only if you can't make your URLs static with embedded cache busting parameter.
      */
     /*
-     *即使本地已经缓存了图片，但是根据HTTP的缓存策略去网络上加载图片。也就是说本地缓存了也不管了，尝试从网络上加载数据。但是具体是从代理加载、HTTP缓存加载、还是原始服务器加载这个就更具HTTP的请求头配置。
+     *即使本地已经缓存了图片，但是根据HTTP的缓存策略去网络上加载图片。也就是说本地缓存了也不管了，尝试从网络上加载数据。但是具体是从代理加载、HTTP缓存加载、还是原始服务器加载这个就根据HTTP的请求头配置。
      *使用NSURLCache而不是SDWebImage来处理磁盘缓存。从而可能会导致轻微的性能损害。
      *这个选项专门用于处理，url地址没有变，但是url对于的图片数据在服务器改变的情况。
      *如果一个缓存图片更新了，则completion这个回调会被调用两次，一次返回缓存图片，一次返回最终图片。
