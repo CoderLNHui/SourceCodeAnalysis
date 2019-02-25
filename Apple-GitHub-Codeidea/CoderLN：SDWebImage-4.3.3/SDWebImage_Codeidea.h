@@ -24,8 +24,8 @@
  业务层：负责具体业务的实现
  
     #import "SDImageCache.h"// 缓存&&磁盘操作
-    #import "SDWebImageDownloader.h"//下载操作
-    #import "SDWebImageDownloaderOperation.h"//下载操作
+    #import "SDWebImageDownloader.h"//下载
+    #import "SDWebImageDownloaderOperation.h"//具体下载操作
  
  
  SD 主要类就上面几个。
