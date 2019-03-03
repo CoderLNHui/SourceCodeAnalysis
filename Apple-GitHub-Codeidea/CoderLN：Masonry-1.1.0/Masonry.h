@@ -4,7 +4,7 @@
 //
 //  Created by Jonas Budelmann on 20/07/13.
 //  Copyright (c) 2013 cloudling. All rights reserved.
-//  Public|JShu_不知名开发者 / Address_https://github.com/CoderLN/Apple-GitHub-Codeidea
+// Public_不知名开发者 https://dwz.cn/rC1LGk2f | 原始注解版本仓库_https://github.com/CoderLN/Apple-GitHub-Codeidea
 
 #import <Foundation/Foundation.h>
 

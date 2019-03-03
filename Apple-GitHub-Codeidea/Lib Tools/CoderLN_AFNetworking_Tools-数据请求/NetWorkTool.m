@@ -1,8 +1,5 @@
 //
 //  NetWorkTool.m
-//  简/众_不知名开发者 | https://github.com/CoderLN
-//  各位厂友, 由于「时间 & 知识」有限, 难免有「未全、不足」, 该模块后续「坚持新增、替换、补充, 内容」.
-//
 
 #import "NetWorkTool.h"
 
