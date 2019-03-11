@@ -134,10 +134,11 @@
     }];
 }
 
-#pragma mark - 加载图片核心方法；调度图片的下载(Downloader)和缓存(Cache)，并不依托于 UIView+WebCache，完全可单独使用。
-
-//加载图片的核心方法
-/*
+#pragma mark - 逻辑层：SDWebImageManager 加载图片核心方法 👣
+/**
+ 调度图片的下载(Downloader)和缓存(Cache)，并不依托于 UIView+WebCache，完全可单独使用
+    该方法内部，调用了 imageCache的根据URLKEY查找对应的图片缓存是否存在方法。还调用了 imageDownloader的使用下载器下载图片的方法。并不依托于 UIView+WebCache，完全可单独使用。
+ 
  * 如果URL对应的图像在缓存中不存在，那么就下载指定的图片，否则返回缓存的图像
  * @param url 图片的URL地址
  * @param options 指定此次请求策略的选项
@@ -159,7 +160,7 @@
  思路：
  1）首先先判断url是否正确，
  2）如果正确，封装一个下载操作的对象，这个对象主要有cancell的方法，通过self.runningOperations，和self.failedURLs 两个数组来记录正在下载的对象和失败的url
- 3）到缓存当中异步查询图片是否在缓存里，有缓存直接返回图片，没有缓存区下载。在后面的文章中，我们会一块一块详细剖析SDWebImage是如何拿到图片的
+ 3）到缓存当中异步查询图片是否在缓存里，有缓存直接返回图片，没有缓存就下载。在后面的文章中，我们会一块一块详细剖析SDWebImage是如何拿到图片的
  */
 - (id <SDWebImageOperation>)loadImageWithURL:(nullable NSURL *)url
                                      options:(SDWebImageOptions)options
@@ -216,6 +217,8 @@
     if (options & SDWebImageScaleDownLargeImages) cacheOptions |= SDImageCacheScaleDownLargeImages;
     
     __weak SDWebImageCombinedOperation *weakOperation = operation;
+    
+    // 👣
     //该方法查找URLKEY对应的图片缓存是否存在，查找完毕之后把该图片（存在|不存在）和该图片的缓存方法以block的方式传递
     //缓存情况查找完毕之后，在block块中进行后续处理（如果该图片没有缓存·下载|如果缓存存在|如果用户设置了下载的缓存策略是刷新缓存如何处理等等）
     operation.cacheOperation = [self.imageCache queryCacheOperationForKey:key options:cacheOptions done:^(UIImage *cachedImage, NSData *cachedData, SDImageCacheType cacheType) {
@@ -272,8 +275,7 @@
             
             // `SDWebImageCombinedOperation` -> `SDWebImageDownloadToken` -> `downloadOperationCancelToken`, which is a `SDCallbacksDictionary` and retain the completed block below, so we need weak-strong again to avoid retain cycle
             
-            //核心方法：使用下载器，下载图片
-
+            // 使用下载器下载图片 👣
             __weak typeof(strongOperation) weakSubOperation = strongOperation;
             strongOperation.downloadToken = [self.imageDownloader downloadImageWithURL:url options:downloaderOptions progress:progressBlock completed:^(UIImage *downloadedImage, NSData *downloadedData, NSError *error, BOOL finished) {
                 
@@ -331,6 +333,11 @@
                     //如果下载策略为SDWebImageRefreshCached且该图片缓存中存在且未下载下来，那么什么都不做
                     if (options & SDWebImageRefreshCached && cachedImage && !downloadedImage) {
                         // Image refresh hit the NSURLCache cache, do not call the completion block
+                        
+                        
+                    // 👣
+                    //是否需要转换图片
+                    //成功下载图片、自定义实现了图片处理的代理
                     } else if (downloadedImage && (!downloadedImage.images || (options & SDWebImageTransformAnimatedImage)) && [self.delegate respondsToSelector:@selector(imageManager:transformDownloadedImage:withURL:)]) {
                         //否则，如果下载图片存在且（不是可动画图片数组||下载策略为SDWebImageTransformAnimatedImage&&transformDownloadedImage方法可用）
                         //开子线程处理

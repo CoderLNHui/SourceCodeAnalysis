@@ -99,6 +99,7 @@ CG_EXTERN BOOL SDCGImageRefContainsAlpha(_Nullable CGImageRef imageRef);
  This is the image coder protocol to provide custom progressive image decoding.
  These methods are all required to implement.
  @note Pay attention that these methods are not called from main queue.
+ 
  SDWebImageImageIOCoder，SDWebImageGIFCoder，SDWebImageWebPCoder
  
  这三个类主要实现SDWebImageCoder的SDWebImageProgressiveCoder协议

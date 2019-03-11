@@ -208,21 +208,21 @@
 		76CB1C6A222B96B400043ADC /* WebCache Categories */ = {
 			isa = PBXGroup;
 			children = (
+				76CB1C70222B96B400043ADC /* 最上层：UIView+WebCache下载核心方法.png */,
+				76CB1C74222B96B400043ADC /* MKAnnotationView+WebCache.h */,
 				76CB1C6B222B96B400043ADC /* MKAnnotationView+WebCache.m */,
 				76CB1C6C222B96B400043ADC /* NSButton+WebCache.h */,
-				76CB1C6D222B96B400043ADC /* NSImage+WebCache.h */,
-				76CB1C6E222B96B400043ADC /* UIImageView+WebCache.h */,
-				76CB1C6F222B96B400043ADC /* UIImageView+HighlightedWebCache.m */,
-				76CB1C70222B96B400043ADC /* 最上层：UIView+WebCache下载核心方法.png */,
-				76CB1C71222B96B400043ADC /* UIButton+WebCache.h */,
-				76CB1C72222B96B400043ADC /* UIView+WebCache.h */,
 				76CB1C73222B96B400043ADC /* NSButton+WebCache.m */,
-				76CB1C74222B96B400043ADC /* MKAnnotationView+WebCache.h */,
-				76CB1C75222B96B400043ADC /* UIImageView+HighlightedWebCache.h */,
-				76CB1C76222B96B400043ADC /* UIImageView+WebCache.m */,
+				76CB1C6D222B96B400043ADC /* NSImage+WebCache.h */,
 				76CB1C77222B96B400043ADC /* NSImage+WebCache.m */,
-				76CB1C78222B96B400043ADC /* UIView+WebCache.m */,
+				76CB1C71222B96B400043ADC /* UIButton+WebCache.h */,
 				76CB1C79222B96B400043ADC /* UIButton+WebCache.m */,
+				76CB1C75222B96B400043ADC /* UIImageView+HighlightedWebCache.h */,
+				76CB1C6F222B96B400043ADC /* UIImageView+HighlightedWebCache.m */,
+				76CB1C6E222B96B400043ADC /* UIImageView+WebCache.h */,
+				76CB1C76222B96B400043ADC /* UIImageView+WebCache.m */,
+				76CB1C72222B96B400043ADC /* UIView+WebCache.h */,
+				76CB1C78222B96B400043ADC /* UIView+WebCache.m */,
 			);
 			path = "WebCache Categories";
 			sourceTree = "<group>";

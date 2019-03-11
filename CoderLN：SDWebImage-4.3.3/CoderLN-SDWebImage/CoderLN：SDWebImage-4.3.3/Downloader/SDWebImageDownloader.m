@@ -199,7 +199,10 @@
 
 
 
-#pragma mark - SDWebImageDownloader_4.3.3 下载处理
+#pragma mark - SDWebImageDownloader_4.3.3 下载处理 👣
+/**
+ 之所以返回SDWebImageDownloadToken,应该主要是为了返回后面取消下载操作用的。
+ */
 - (nullable SDWebImageDownloadToken *)downloadImageWithURL:(nullable NSURL *)url
                                                    options:(SDWebImageDownloaderOptions)options
                                                   progress:(nullable SDWebImageDownloaderProgressBlock)progressBlock

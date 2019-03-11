@@ -57,7 +57,7 @@ static char TAG_ACTIVITY_SHOW;
 
 
 
-#pragma mark - 最上层：UIView+WebCache_4.3.3 API入口汇总核心方法：读取下载图片
+#pragma mark - 最上层：UIView+WebCache_4.3.3 API入口汇总核心方法：读取下载图片 👣
 /**
    所有外部API sd_setImageWithURL:入口方法都将会汇总到这，只是传递的参数不同而已
     1.内部先判断如果传入的下载选项options不是延迟显示占位图片，那么在主线程中 sd_setImage:设置占位图片
@@ -126,9 +126,10 @@ static char TAG_ACTIVITY_SHOW;
         }
         
         __weak __typeof(self)wself = self;// 避免循环引用
+        //实例化 SDWebImageOperation 获取一个加载任务 👣
         id <SDWebImageOperation> operation = [manager loadImageWithURL:url options:options progress:progressBlock completed:^(UIImage *image, NSData *data, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
             
-            //图片下载||读取完成，回调传值图片 👣
+            //图片下载||读取完成，回调传值图片
             __strong __typeof (wself) sself = wself;
             //移除小菊花
             [self sd_removeActivityIndicator];

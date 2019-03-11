@@ -38,13 +38,9 @@ typedef NSMapTable<NSString *, id<SDWebImageOperation>> SDOperationsDictionary;
  如果为空那么使用NSMapTable创建并返回,这里会通过关联对象以loadOperationKey保存这个operations,
  NSMapTable和字典类似，不过它的key不是一定需要遵守NSCoding协议并且他可以指定key和value的内存管理语义
  
- NSMapTable类似于NSDictionary，但是NSDictionary只提供了key->value的映射。NSMapTable还提供了对象->对象的映射。
+ NSMapTable类似于NSDictionary，但是NSDictionary只提供了key->object的映射。NSMapTable还提供了对象->对象的映射。
  NSDictionary的局限性：
- NSDictionary 中存储的 object 位置是由 key 来索引的。由于对象存储在特定位置，NSDictionary 中要求 key 的值不能改变（否则 object 的位置会错误）。为了保证这一点，NSDictionary 会始终复制 key 到自己私有空间。但这也有一个限制：你只能使用 OC 对象作为 NSDictionary 的 key，并且必须支持 NSCopying 协议。这意味着，NSDictionary 中真的只适合将值类型的对象作为 key（如简短字符串和数字）。并不适合自己的模型类来做对象到对象的映射
- 
-
- 
- 
+ NSDictionary 中存储的 object 位置是由 key 来索引的。由于对象存储在特定位置，NSDictionary 中要求 key 的值不能改变（否则 object 的位置会错误）。为了保证这一点，NSDictionary 会始终复制 key 到自己私有空间。但这也有一个限制：你只能使用 OC 对象作为 NSDictionary 的 key，并且必须支持 NSCopying 协议。这意味着，NSDictionary 中真的只适合将值类型的对象作为 key（如简短字符串和数字）。并不适合自己的模型类来做对象到对象的映射。
  */
 
 - (SDOperationsDictionary *)sd_operationDictionary {
@@ -60,6 +56,7 @@ typedef NSMapTable<NSString *, id<SDWebImageOperation>> SDOperationsDictionary;
          1.遵循NSCache不复制key的文档。
          2.当收到内存警告，缓存被清理的时候，可以保存image实例。这个时候我们可以同步弱缓存表，不需要从磁盘加载。
          */
+        // 如果为空那么使用NSMapTable创建并返回,这里会通过关联对象以loadOperationKey保存这个operations,
         operations = [[NSMapTable alloc] initWithKeyOptions:NSPointerFunctionsStrongMemory valueOptions:NSPointerFunctionsWeakMemory capacity:0];
         objc_setAssociatedObject(self, &loadOperationKey, operations, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         return operations;

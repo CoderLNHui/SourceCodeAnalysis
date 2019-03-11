@@ -399,11 +399,11 @@ didReceiveResponse:(NSURLResponse *)response
         // progressive decode the image in coder queue
         /*
          线程管理
-         整个SDWebImage一共有四个队列
-         Main queue,主队列，在这个队列上进行UIKit对象的更新，发送notification
-         ioQueue，用在图片的磁盘操作
-         downloadQueue（NSOperationQueue），用来全局的管理下载的任务
-         coderQueue专门复杂解压图片的队列。
+        整个SDWebImage一共有四个队列
+        Main queue,主队列，在这个队列上进行UIKit对象的更新，发送notification
+        ioQueue，用在图片的磁盘操作
+        downloadQueue（NSOperationQueue），用来全局的管理下载的任务
+        coderQueue专门复杂解压图片的队列。
          注意：barrierQueue已经被废掉了，统一使用信号量来确保线程的安全。
          */
         //在coderQueue队列解压图片

@@ -20,6 +20,7 @@ static const NSInteger kDefaultCacheMaxCacheAge = 60 * 60 * 24 * 7; // 1 week
         _shouldUseWeakMemoryCache = YES;
         _diskCacheReadingOptions = 0;
         _diskCacheWritingOptions = NSDataWritingAtomic;
+        //默认一周的缓存时间
         _maxCacheAge = kDefaultCacheMaxCacheAge;
         _maxCacheSize = 0;
         _diskCacheExpireType = SDImageCacheConfigExpireTypeModificationDate;

@@ -17,7 +17,6 @@
 @implementation UIImageView (WebCache)
 
 
-#pragma mark - UIImageView+WebCache SD图片加载，外部API入口方法
 
 - (void)sd_setImageWithURL:(nullable NSURL *)url {
     [self sd_setImageWithURL:url placeholderImage:nil options:0 progress:nil completed:nil];
@@ -42,6 +41,8 @@
 - (void)sd_setImageWithURL:(nullable NSURL *)url placeholderImage:(nullable UIImage *)placeholder options:(SDWebImageOptions)options completed:(nullable SDExternalCompletionBlock)completedBlock {
     [self sd_setImageWithURL:url placeholderImage:placeholder options:options progress:nil completed:completedBlock];
 }
+
+#pragma mark - UIImageView+WebCache SD图片加载，外部API入口方法 👣
 
 - (void)sd_setImageWithURL:(nullable NSURL *)url
           placeholderImage:(nullable UIImage *)placeholder

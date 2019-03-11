@@ -212,7 +212,7 @@
         && (![self.delegate respondsToSelector:@selector(imageManager:shouldDownloadImageForURL:)] || [self.delegate imageManager:self shouldDownloadImageForURL:url]);
         if (shouldDownload) {
             //从此处开始，一直在处理downloaderOptions（即下载策略）
-            //如果图像存在，但是下载策略为刷新缓存，则通知缓存图像并尝试重新下载 // ⦁
+            //如果图像存在，但是下载策略为刷新缓存，则通知缓存图像并尝试重新下载 // 👣
             if (cachedImage && options & SDWebImageRefreshCached) {
                 // If image was found in the cache but SDWebImageRefreshCached is provided, notify about the cached image
                 // AND try to re-download it in order to let a chance to NSURLCache to refresh it from server.
@@ -296,7 +296,7 @@
                         // Image refresh hit the NSURLCache cache, do not call the completion block
                     }
                     
-                    // ⦁
+                    // 👣
                     //是否需要转换图片
                     //成功下载图片、自定义实现了图片处理的代理
                     else if (downloadedImage && (!downloadedImage.images || (options & SDWebImageTransformAnimatedImage)) && [self.delegate respondsToSelector:@selector(imageManager:transformDownloadedImage:withURL:)]) {

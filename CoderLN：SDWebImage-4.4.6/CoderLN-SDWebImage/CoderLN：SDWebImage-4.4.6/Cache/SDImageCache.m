@@ -33,7 +33,9 @@
 @interface SDMemoryCache <KeyType, ObjectType> ()
 
 @property (nonatomic, strong, nonnull) SDImageCacheConfig *config;
+//弱引用表
 @property (nonatomic, strong, nonnull) NSMapTable<KeyType, ObjectType> *weakCache; // strong-weak cache
+//多线程锁保证多线程环境下weakCache数据安全
 @property (nonatomic, strong, nonnull) dispatch_semaphore_t weakCacheLock; // a lock to keep the access to `weakCache` thread-safe
 
 - (instancetype)init NS_UNAVAILABLE;
@@ -57,6 +59,8 @@
         // Use a strong-weak maptable storing the secondary cache. Follow the doc that NSCache does not copy keys
         // This is useful when the memory warning, the cache was purged. However, the image instance can be retained by other instance such as imageViews and alive.
         // At this case, we can sync weak cache back and do not need to load from disk cache
+        //初始化弱引用表，当收到内存警告，内存缓存虽然被清理，但是有些图片已经被其他对象强引用着，这时weakCache维持这些图片的弱引用。如果需要获取这些图片就不用去硬盘获取了
+        //NSPointerFunctionsWeakMemory，对值进行弱引用，不会对引用计数+1
         self.weakCache = [[NSMapTable alloc] initWithKeyOptions:NSPointerFunctionsStrongMemory valueOptions:NSPointerFunctionsWeakMemory capacity:0];
         self.weakCacheLock = dispatch_semaphore_create(1);
         self.config = config;
@@ -71,10 +75,16 @@
 
 - (void)didReceiveMemoryWarning:(NSNotification *)notification {
     // Only remove cache, but keep weak cache
+    //当收到内存警告通知，移除内存中缓存的图片
+    //同时保留weakCache，维持对被强引用着的图片的访问
     [super removeAllObjects];
 }
 
 // `setObject:forKey:` just call this with 0 cost. Override this is enough
+/*
+ SDMemoryCache继承自NSCache。NSCache可以设置totalCostLimit，来限制缓存的总成本消耗，所以我们再添加缓存的时候需要
+ - (void)setObject:(ObjectType)obj forKey:(KeyType)key cost:(NSUInteger)g;通过cost来指定缓存对象消耗的成本
+ */
 - (void)setObject:(id)obj forKey:(id)key cost:(NSUInteger)g {
     [super setObject:obj forKey:key cost:g];
     if (!self.config.shouldUseWeakMemoryCache) {
@@ -85,6 +95,7 @@
         LOCK(self.weakCacheLock);
         // Do the real copy of the key and only let NSMapTable manage the key's lifetime
         // Fixes issue #2507 https://github.com/SDWebImage/SDWebImage/issues/2507
+        // 存入弱引用表
         [self.weakCache setObject:obj forKey:[[key mutableCopy] copy]];
         UNLOCK(self.weakCacheLock);
     }
@@ -102,6 +113,8 @@
         UNLOCK(self.weakCacheLock);
         if (obj) {
             // Sync cache
+            // 把通过弱引用表获取的图片添加到内存缓存中
+            //SDImageCache把图片的像素点来计算图片的消耗成本
             NSUInteger cost = 0;
             if ([obj isKindOfClass:[UIImage class]]) {
                 cost = [(UIImage *)obj sd_memoryCost];
@@ -119,6 +132,7 @@
     }
     if (key) {
         // Remove weak cache
+        // 从weakCache移除
         LOCK(self.weakCacheLock);
         [self.weakCache removeObjectForKey:key];
         UNLOCK(self.weakCacheLock);
@@ -130,6 +144,7 @@
     if (!self.config.shouldUseWeakMemoryCache) {
         return;
     }
+    // 清除弱引用表
     // Manually remove should also remove weak cache
     LOCK(self.weakCacheLock);
     [self.weakCache removeAllObjects];
@@ -152,9 +167,10 @@
 #pragma mark - Properties
 @property (strong, nonatomic, nonnull) SDMemoryCache *memCache;//内存缓存
 @property (strong, nonatomic, nonnull) NSString *diskCachePath;//磁盘缓存路径
+//读取缓存图片额外的路径，以通过addReadOnlyCachePath:这个方法往里边添加路径
 @property (strong, nonatomic, nullable) NSMutableArray<NSString *> *customPaths;//自定义路径（数组
 @property (strong, nonatomic, nullable) dispatch_queue_t ioQueue;//处理IO操作的队列
-@property (strong, nonatomic, nonnull) NSFileManager *fileManager;//文件管理者
+@property (strong, nonatomic, nonnull) NSFileManager *fileManager;//存储图片到硬盘的文件管理者
 
 @end
 
@@ -219,9 +235,9 @@
         });
 
 #if SD_UIKIT
-        // Subscribe to app events
+        //Subscribe to app events
         //在App关闭的时候清除过期图片
-          //当监听到UIApplicationWillTerminateNotification（程序将终止）调用cleanDisk方法,清理过期(默认大于一周)的磁盘缓存
+        //当监听到UIApplicationWillTerminateNotification（程序将终止）调用cleanDisk方法,清理过期(默认大于一周)的磁盘缓存
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(deleteOldFiles)
                                                      name:UIApplicationWillTerminateNotification
@@ -353,6 +369,7 @@
     if (toDisk) {
         //异步函数+串行队列：开子线程异步处理block中的任务
         dispatch_async(self.ioQueue, ^{
+             //一般图片的大小都不会很小，对图片进行编码过程中也会产出一些开销不小的临时对象,在子线程中添加自动释放池，可以提前释放这些对象，缓解内存压力。
             @autoreleasepool {
                 //拿到服务器返回的图片二进制数据
                 NSData *data = imageData;
@@ -366,7 +383,7 @@
                     } else {
                         format = SDImageFormatJPEG;
                     }
-                    //编码
+                    //把图片进行编码，得到可以存储的二进制数据
                     data = [[SDWebImageCodersManager sharedInstance] encodedDataWithImage:image format:format];
                 }
                 [self _storeImageDataToDisk:data forKey:key];
@@ -414,7 +431,7 @@
     // transform to NSUrl
     //转换为NSURL
     NSURL *fileURL = [NSURL fileURLWithPath:cachePathForKey];
-    //写入到文件中
+    //保存到硬盘
     [imageData writeToURL:fileURL options:self.config.diskCacheWritingOptions error:nil];
     
     // disable iCloud backup 判断是否需要iCloud备份
@@ -425,6 +442,7 @@
 }
 
 #pragma mark - Query and Retrieve Ops
+//因为从硬盘查询是否有缓存图片会是一个比较耗时的操作，所以SDImageCache还提供了异步的方式，通过block回调查询结果
 //异步检查图像是否已经在磁盘缓存中存在（不加载图像）
 - (void)diskImageExistsWithKey:(nullable NSString *)key completion:(nullable SDWebImageCheckCacheCompletionBlock)completionBlock {
     //开子线程异步检查文件是否存在
@@ -491,12 +509,14 @@
     return [self.memCache objectForKey:key];
 }
 
+//从硬盘中获取图片(同步的方式获取)，查询到图片后shouldCacheImagesInMemory=YES同步保存到内存缓存中，下次再获取的时候直接从内存中获取
 //查询内存缓存之后同步查询磁盘缓存
 - (nullable UIImage *)imageFromDiskCacheForKey:(nullable NSString *)key {
     //接下来检查磁盘缓存，如果图片存在，且可以保存到内存缓存，则保存一份到内存缓存中
     UIImage *diskImage = [self diskImageForKey:key];
     if (diskImage && self.config.shouldCacheImagesInMemory) {
         NSUInteger cost = diskImage.sd_memoryCost;
+        //同步缓存到内存
         [self.memCache setObject:diskImage forKey:key cost:cost];
     }
     //返回图片
@@ -517,12 +537,13 @@
     image = [self imageFromDiskCacheForKey:key];
     return image;
 }
-
+//在命名空间指定的目录和自定义只读路径中查询获取图片
 //在全路径搜索image的key的data
 - (nullable NSData *)diskImageDataBySearchingAllPathsForKey:(nullable NSString *)key {
     //第一步：在默认路径中取出data
     //获得给key对应的默认的缓存路径
     NSString *defaultPath = [self defaultCachePathForKey:key];
+    //在缓存目录查找获取图片
     //加载该路径下面的二进制数据
     NSData *data = [NSData dataWithContentsOfFile:defaultPath options:self.config.diskCacheReadingOptions error:nil];
     //如果有值，则直接返回
@@ -539,6 +560,7 @@
         return data;
     }
 
+    //在自定义的只读路径中查询获取图片
     //第三部：通过常用的储存路径获取filePath，从而获得imageData，customPaths 需要外包设置
     NSArray<NSString *> *customPaths = [self.customPaths copy];
     //遍历customPaths，若有值，则直接返回
@@ -573,6 +595,7 @@
 //获取KEY对应的磁盘缓存，如果不存在则直接返回nil
 - (nullable UIImage *)diskImageForKey:(nullable NSString *)key data:(nullable NSData *)data options:(SDImageCacheOptions)options {
     if (data) {
+        //实例化一个uiimage，此时的uiimage还没有进行解码
         //把对应的二进制数据转换为图片
         UIImage *image = [[SDWebImageCodersManager sharedInstance] decodedImageWithData:data];
         //处理图片的缩放
@@ -580,6 +603,7 @@
         image = [self scaledImageForKey:key image:image];
         //判断是否需要解压缩（解码）并进行相应的处理
         if (self.config.shouldDecompressImages) {
+            //对image进行预解码
             //根据设备来缩放图片
             BOOL shouldScaleDown = options & SDImageCacheScaleDownLargeImages;
             image = [[SDWebImageCodersManager sharedInstance] decompressedImageWithImage:image data:&data options:@{SDWebImageCoderScaleDownLargeImagesKey: @(shouldScaleDown)}];
@@ -600,14 +624,14 @@
     return [self queryCacheOperationForKey:key options:0 done:doneBlock];
 }
 
-#pragma mark - 缓存&&磁盘操作：SDImageCache；Bundle version 4.3.3
-//检查要下载图片的缓存情况
+#pragma mark - 业务层 SDImageCache 根据URLKEY检查要下载图片的缓存情况(缓存&磁盘)
 /*
- 0.首先判断这里的传入的key是否为空，如果为nil了直接return
- 1.先检查是否有内存缓存
- 2.如果没有内存缓存则检查是否有沙盒缓存
- 3.如果有沙盒缓存，则把该图片做内存缓存并处理doneBlock回调
+ 根据URLKEY检查要下载图片的缓存情况(缓存&磁盘)
+ 1.通过 imageFromMemoryCacheForKey: 方法，根据 URLKEY 先检查是否有内存缓存；如果有内存缓存，再从磁盘读取diskData一起回调，并把图片和存储方式（内存缓存）通过block块以参数的形式传递。
+ 2.如果没有内存缓存，就创建一个操作operation，然后再通过 diskImageForKey: 方法，检查该KEY对应的磁盘缓存。
+ 3.如果有磁盘缓存，则把该图片保存一份到内存缓存（使用NSChache缓存），然后回到主线程处理doneBlock查找完成回调。
  */
+//异步的方式获取硬盘缓存图片
 - (nullable NSOperation *)queryCacheOperationForKey:(nullable NSString *)key options:(SDImageCacheOptions)options done:(nullable SDCacheQueryCompletedBlock)doneBlock {
   
     //如果缓存对应的key为空，则直接返回，并把存储方式（无缓存）通过block块以参数的形式传递
@@ -649,15 +673,18 @@
             SDImageCacheType cacheType = SDImageCacheTypeNone;
             if (image) {
                 // the image is from in-memory cache
+                // 如果内存本来就有缓存图片，则把内存缓存的图片返回，可以省去对图片再一次解码
                 diskImage = image;
                 cacheType = SDImageCacheTypeMemory;
             } else if (diskData) {
+                // 如果内存没有缓存的图片，那么从硬盘得到的是图片压缩的二进制数据，使用前需要先解码
                 cacheType = SDImageCacheTypeDisk;
                 // decode image data only if in-memory cache missed
                 //获取KEY对应的磁盘缓存，如果不存在则直接返回nil
                 diskImage = [self diskImageForKey:key data:diskData options:options];
                 //如果存在磁盘缓存，且应该把该图片保存一份到内存缓存中，则先计算该图片的cost(成本）并把该图片保存到内存缓存中
                 if (diskImage && self.config.shouldCacheImagesInMemory) {
+                    //同步保存到内存缓存中
                     NSUInteger cost = diskImage.sd_memoryCost;
                     [self.memCache setObject:diskImage forKey:key cost:cost];
                 }
@@ -778,6 +805,7 @@
     [self deleteOldFilesWithCompletionBlock:nil];
 }
 
+//SDImageCache在app退出，或者进入到后台，都会对缓存目录下的图片进行清理，把过期的图片移除掉
 //异步清除所有失效的缓存图片-因为可以设定缓存时间，超过则失效
 - (void)deleteOldFilesWithCompletionBlock:(nullable SDWebImageNoParamsBlock)completionBlock {
     dispatch_async(self.ioQueue, ^{
@@ -787,10 +815,12 @@
         NSURLResourceKey cacheContentDateKey = NSURLContentModificationDateKey;
         switch (self.config.diskCacheExpireType) {
             case SDImageCacheConfigExpireTypeAccessDate:
+                //最近访问的时间到现在作为过期时间
                 cacheContentDateKey = NSURLContentAccessDateKey;
                 break;
 
             case SDImageCacheConfigExpireTypeModificationDate:
+                //最近修改的时间到现在作为过期时间
                 cacheContentDateKey = NSURLContentModificationDateKey;
                 break;
 
@@ -799,7 +829,7 @@
         }
         
         //resourceKeys数组包含遍历文件的属性，NSURLIsDirectoryKey判断遍历到的URL所指对象是否是目录，
-        //NSURLContentModificationDateKey判断遍历返回的URL所指项目的最后修改时间，NSURLTotalFileAllocatedSizeKey判断URL目录中所分配的空间大小
+        //NSURLContentModificationDateKey，判断遍历返回的URL所指项目的最后修改时间，NSURLTotalFileAllocatedSizeKey判断URL目录中所分配的空间大小
         NSArray<NSString *> *resourceKeys = @[NSURLIsDirectoryKey, cacheContentDateKey, NSURLTotalFileAllocatedSizeKey];
 
         // This enumerator prefetches useful properties for our cache files.
@@ -809,8 +839,10 @@
                                                    includingPropertiesForKeys:resourceKeys
                                                                       options:NSDirectoryEnumerationSkipsHiddenFiles
                                                                  errorHandler:NULL];
+        //通过SDImageCacheConfig.maxCacheAge计算出该被移除的缓存时间边界值
         //计算过期时间，默认1周以前的缓存文件是过期失效
         NSDate *expirationDate = [NSDate dateWithTimeIntervalSinceNow:-self.config.maxCacheAge];
+        //用来保存未过期的缓存图片
         //保存遍历的文件url
         NSMutableDictionary<NSURL *, NSDictionary<NSString *, id> *> *cacheFiles = [NSMutableDictionary dictionary];
         //保存当前缓存的大小
@@ -825,6 +857,7 @@
         //  2. 保存文件属性以计算磁盘缓存占用空间
         //保存删除的文件url
         NSMutableArray<NSURL *> *urlsToDelete = [[NSMutableArray alloc] init];
+        // 在缓存目录下遍历图片，把过期的缓存图片移除掉，把未过期的图片添加到cacheFiles来进行下一步的清理工作(以size作为清理标准)
         //遍历目录枚举器，目的1删除过期文件 2纪录文件大小，以便于之后删除使用
         for (NSURL *fileURL in fileEnumerator) {
             NSError *error;
@@ -841,6 +874,7 @@
             // 记录要删除的过期文件
             //获取指定url文件对应的修改日期
             NSDate *modifiedDate = resourceValues[cacheContentDateKey];
+            //laterDate:返回的是较晚的时间，如果修改时间比上面计算的缓存时间边界值还早，就说明该缓存图片已经过期了，添加到urlsToDelete等待删除
             //如果修改日期大于指定日期，则加入要移除的数组里
             if ([[modifiedDate laterDate:expirationDate] isEqualToDate:expirationDate]) {
                 [urlsToDelete addObject:fileURL];
@@ -865,11 +899,13 @@
         // size-based cleanup pass.  We delete the oldest files first.
         //如果当前缓存的大小超过了默认大小，则按照日期删除，直到缓存大小<默认大小的一半
         // 如果剩余磁盘缓存空间超出最大限额，再次执行清理操作，删除最早的文件
+        // 如果我们设置了SDImageCacheConfig.maxCacheSize，并且当前缓存目录的大小大于config.maxCacheSize，需要对缓存目录进行二次清理，直到缓存目录大小 <= config.maxCacheSize/2
         if (self.config.maxCacheSize > 0 && currentCacheSize > self.config.maxCacheSize) {
             // Target half of our maximum cache size for this cleanup pass.
             const NSUInteger desiredCacheSize = self.config.maxCacheSize / 2;
 
             // Sort the remaining cache files by their last modification time or last access time (oldest first).
+            //把缓存的图片从新排序，较早的图片放在前面
             //根据文件创建的时间排序
             NSArray<NSURL *> *sortedFiles = [cacheFiles keysSortedByValueWithOptions:NSSortConcurrent
                                                                      usingComparator:^NSComparisonResult(id obj1, id obj2) {
@@ -879,6 +915,7 @@
             // Delete files until we fall below our desired cache size.
             // 循环依次删除文件，直到低于期望的缓存限额的1/2
             //迭代删除缓存，直到缓存大小是默认缓存大小的一半
+            // 删除图片知道缓存目录大小 <= config.maxCacheSize/2
             for (NSURL *fileURL in sortedFiles) {
                 if ([self.fileManager removeItemAtURL:fileURL error:nil]) {
                     NSDictionary<NSString *, id> *resourceValues = cacheFiles[fileURL];
@@ -961,6 +998,7 @@
 }
 
 //异步计算磁盘缓存的大小
+//异步的方式获取缓存目录的大小和文件数，block回调
 - (void)calculateSizeWithCompletionBlock:(nullable SDWebImageCalculateSizeBlock)completionBlock {
     //把文件路径转换为URL
     NSURL *diskCacheURL = [NSURL fileURLWithPath:self.diskCachePath isDirectory:YES];

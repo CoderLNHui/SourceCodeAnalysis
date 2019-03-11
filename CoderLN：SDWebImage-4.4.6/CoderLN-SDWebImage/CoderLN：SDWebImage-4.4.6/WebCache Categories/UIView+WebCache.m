@@ -71,9 +71,13 @@ static char TAG_ACTIVITY_SHOW;
     [self sd_internalSetImageWithURL:url placeholderImage:placeholder options:options operationKey:operationKey internalSetImageBlock:internalSetImageBlock progress:progressBlock completed:completedBlock context:context];
 }
 
-#pragma mark - 核心代码：读取下载图片 (所有外部API sd_setImageWithURL:入口方法都将会汇总到这，只是传递的参数不同而已)
-//下载图片的核心方法
-/*
+#pragma mark - 最上层：UIView+WebCache API入口汇总核心方法：读取下载图片 👣
+/**
+ 所有外部API sd_setImageWithURL:入口方法都将会汇总到这，只是传递的参数不同而已
+    1.内部先判断如果传入的下载选项options不是延迟显示占位图片，那么在主线程中 sd_setImage:设置占位图片
+    2.如果url不为空，先加载指示器。然后指定一个manager来进行加载操作。
+    3.如果url为空，就移除指示器，回调错误信息。
+ 
  * 图片下载方法；请求一个 URL 获取图片
  * url          图片的URL地址
  * placeholder  占位图片
@@ -97,9 +101,7 @@ static char TAG_ACTIVITY_SHOW;
  保存此次operation
  cache查询是否已经下载过了，先检查内存，后检查磁盘
  利用NSURLSession来下载图片，根据需要解码，回调给imageview，存储到缓存
- 
  */
-
 - (void)sd_internalSetImageWithURL:(nullable NSURL *)url
                   placeholderImage:(nullable UIImage *)placeholder
                            options:(SDWebImageOptions)options
@@ -112,6 +114,7 @@ static char TAG_ACTIVITY_SHOW;
     // 以当前实例的class作为OperationKey
     NSString *validOperationKey = operationKey ?: NSStringFromClass([self class]);
     // 取消当前正在下载的任务
+    // 第一步：取消老的下载，这就是UITableViewCell重用后，快速滑动时，中间部分的图片不会被下载的原因。
     [self sd_cancelImageLoadOperationWithKey:validOperationKey];
     
     // 利用运行时 objc_setAssociatedObject 关联对象
@@ -166,7 +169,7 @@ static char TAG_ACTIVITY_SHOW;
             }
         };
         
-        //实例化 SDWebImageOperation 获取一个加载任务
+        //实例化 SDWebImageOperation 获取一个加载任务 👣
         id <SDWebImageOperation> operation = [manager loadImageWithURL:url options:options progress:combinedProgressBlock completed:^(UIImage *image, NSData *data, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
             __strong __typeof (wself) sself = wself;
             if (!sself) { return; }

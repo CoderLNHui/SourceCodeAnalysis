@@ -11,6 +11,7 @@
 
 //计算图片成本？
 //计算图片的大小,注意乘以屏幕的比例
+//图片的像素点来计算图片的消耗成本
 FOUNDATION_STATIC_INLINE NSUInteger SDMemoryCacheCostForImage(UIImage *image) {
 #if SD_MAC
     return image.size.height * image.size.width;

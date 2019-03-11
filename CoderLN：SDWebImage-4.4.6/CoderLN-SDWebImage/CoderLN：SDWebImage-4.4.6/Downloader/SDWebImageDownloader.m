@@ -342,8 +342,10 @@
     UNLOCK(self.operationsLock);
 }
 
-#pragma mark - 下载操作核心方法：下载图片的操作
-//之所以返回SDWebImageDownloadToken,应该主要是为了返回后面取消下载操作用的。
+#pragma mark - SDWebImageDownloader 下载处理 👣
+/**
+ 之所以返回SDWebImageDownloadToken,应该主要是为了返回后面取消下载操作用的。
+ */
 - (nullable SDWebImageDownloadToken *)downloadImageWithURL:(nullable NSURL *)url
                                                    options:(SDWebImageDownloaderOptions)options
                                                   progress:(nullable SDWebImageDownloaderProgressBlock)progressBlock
