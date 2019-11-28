@@ -3,7 +3,7 @@
  * (c) Olivier Poitrey <rs@dailymotion.com>
  * (c) Florent Vilmart
  *
- * Public|JShu_不知名开发者 / Address_https://github.com/CoderLN/Apple-GitHub-Codeidea
+ * 不知名开发者 https://dwz.cn/rC1LGk2f / Address_https://github.com/CoderLN/Apple-GitHub-Codeidea
  */
 
 

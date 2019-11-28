@@ -5,7 +5,7 @@
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
- * Public|JShu_不知名开发者 / Address_https://github.com/CoderLN/Apple-GitHub-Codeidea
+ * 不知名开发者 https://dwz.cn/rC1LGk2f / Address_https://github.com/CoderLN/Apple-GitHub-Codeidea
  */
 
 #import <SDWebImage/SDWebImageCompat.h>

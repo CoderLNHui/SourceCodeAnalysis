@@ -1,3 +1,0 @@
-/*
- * LNExtensionTools.m 
- */

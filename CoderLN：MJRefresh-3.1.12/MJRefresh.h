@@ -1,6 +1,6 @@
 /*
  * MJRefresh.h
- * Public|JShu_不知名开发者 / Address_https://github.com/CoderLN/Apple-GitHub-Codeidea
+ * 不知名开发者 https://dwz.cn/rC1LGk2f / Address_https://github.com/CoderLN/Apple-GitHub-Codeidea
  *
  * (c) 14-1-15 小码哥
  * Created by  on Elegant programming.

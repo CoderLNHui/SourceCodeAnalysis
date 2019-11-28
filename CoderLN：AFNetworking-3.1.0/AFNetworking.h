@@ -1,6 +1,6 @@
 // AFNetworking.h
 //
-// Public_不知名开发者 https://dwz.cn/rC1LGk2f | 原始注解版本仓库_https://github.com/CoderLN/Apple-GitHub-Codeidea
+// 不知名开发者 https://dwz.cn/rC1LGk2f | 原始注解版本仓库_https://github.com/CoderLN/Apple-GitHub-Codeidea
 //
 // Created by on Elegant programming.
 // Copyright © Unauthorized shall not be reproduced reprinted.
